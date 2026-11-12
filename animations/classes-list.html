@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda visual · Lista de clases</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="contacts.css">
+  <link rel="stylesheet" href="classes-list.css">
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="https://ilovebiodanza.top/">Yo<span class="heart">❤</span>Biodanza</a>
+      <span class="demo-topbar-note">Ayuda audiovisual · Lista de clases</span>
+      <a class="demo-back" href="index.html">← Todas las animaciones</a>
+    </header>
+
+    <main class="demo-grid">
+      <aside class="demo-intro">
+        <span class="demo-kicker">Animación 08</span>
+        <h1>Cómo usar la lista de clases</h1>
+        <p>Encuentra, comparte, descarga y resume el repertorio de tus clases.</p>
+        <ol class="demo-steps">
+          <li><span class="demo-step-number">1</span><span>Busca y abre una clase.</span></li>
+          <li><span class="demo-step-number">2</span><span>Consulta sus danzas y comparte.</span></li>
+          <li><span class="demo-step-number">3</span><span>Descarga o genera un resumen.</span></li>
+        </ol>
+        <a class="demo-back" href="index.html">Volver a la galería</a>
+      </aside>
+
+      <div class="demo-stage-wrap">
+        <section class="demo-stage" data-audio-demo data-manifest="classes-list.manifest.json" data-rate="0.9" data-chapter-mode="true" aria-label="Ayuda de la lista de clases con audio">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+              <span class="demo-url">ilovebiodanza.top / clases</span>
+            </div>
+            <div class="demo-app">
+              <div class="demo-app-nav">
+                <span class="demo-app-brand">Yo<span class="heart">❤</span>Biodanza</span>
+                <span class="demo-app-nav-right">Clases <span class="demo-avatar">A</span></span>
+              </div>
+              <div class="demo-content">
+                <div class="demo-screen is-active" data-screen="classes-list">
+                  <div class="contacts-screen classes-screen">
+                    <div class="classes-heading-row">
+                      <div><span class="contacts-eyebrow">Directorio</span><h2 class="demo-heading classes-heading">Clases</h2><p class="contacts-count">4 resultados</p></div>
+                      <div class="classes-heading-actions"><button class="demo-button is-secondary" id="summary-button" type="button"><i class="bi bi-list-columns"></i></button><button class="demo-button" id="add-class-button" type="button">+ Agregar clase</button></div>
+                    </div>
+                    <div class="classes-toolbar">
+                      <div class="contacts-search" id="classes-search">⌕ <span>Buscar clases...</span></div>
+                      <span class="classes-page-size">Por página <b>25</b></span>
+                    </div>
+                    <div class="classes-list-card">
+                      <div class="classes-list-head"><span>Clase</span></div>
+                      <div class="class-row"><div><div class="class-row-title">Bienvenida Vida Música (BV) <i class="bi bi-info-circle class-info"></i></div><small>Clase regular · Danzas desplegables</small></div><div class="class-row-actions"><button class="contact-edit" type="button">Editar</button><button class="contact-more" id="class-menu" type="button">⋯</button></div></div>
+                      <div class="class-row"><div><div class="class-row-title">Clase y curva (Enseñando)</div><small>Clase regular</small></div><div class="class-row-actions"><button class="contact-edit" type="button">Editar</button><button class="contact-more" type="button">⋯</button></div></div>
+                      <div class="class-row"><div><div class="class-row-title">Alas y vuelo alto (Renacer)</div><small>Clase especial</small></div><div class="class-row-actions"><button class="contact-edit" type="button">Editar</button><button class="contact-more" type="button">⋯</button></div></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="classes-search">
+                  <div class="contacts-screen classes-screen">
+                    <div class="classes-heading-row"><div><span class="contacts-eyebrow">Directorio</span><h2 class="demo-heading">Clases</h2><p class="contacts-count">4 resultados</p></div><button class="demo-button" type="button">+ Agregar clase</button></div>
+                    <div class="classes-toolbar"><div class="contacts-search is-search-active">⌕ <span class="demo-value" id="classes-search-input">clase</span><span class="demo-caret"></span></div><span class="classes-page-size">Por página <b>25</b></span></div>
+                    <div class="classes-list-card"><div class="classes-list-head"><span>Clase</span></div><div class="class-row"><div><div class="class-row-title">Clase y curva (Enseñando)</div><small>Clase regular</small></div><div class="class-row-actions"><button class="contact-edit" type="button">Editar</button><button class="contact-more" type="button">⋯</button></div></div><div class="class-row"><div><div class="class-row-title">Camino a lo sublime (Semanal)</div><small>Clase semanal</small></div><div class="class-row-actions"><button class="contact-edit" type="button">Editar</button><button class="contact-more" type="button">⋯</button></div></div></div>
+                    <div class="classes-pagination" id="classes-pagination"><span>‹ Anterior</span><span>Página 1 de 1</span><span>Siguiente ›</span></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="classes-open">
+                  <div class="contacts-screen classes-screen">
+                    <div class="classes-heading-row"><div><span class="contacts-eyebrow">Directorio</span><h2 class="demo-heading">Clases</h2><p class="contacts-count">4 resultados</p></div><button class="demo-button" id="add-class-open" type="button">+ Agregar clase</button></div>
+                    <div class="classes-list-card"><div class="classes-list-head"><span>Clase</span></div><div class="class-row is-highlighted"><div><div class="class-row-title" id="open-class-title">Bienvenida Vida Música (BV) <i class="bi bi-info-circle class-info" id="open-class-info"></i></div><small>Clase regular</small></div><div class="class-row-actions"><button class="contact-edit is-pressed" type="button">Editar</button><button class="contact-more" type="button">⋯</button></div></div></div>
+                    <div class="class-description-pop"><span class="contacts-eyebrow">Descripción</span><strong>Bienvenida Vida Música (BV)</strong><p>Una clase para abrir el cuerpo, la mirada y el encuentro.</p></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="classes-dances">
+                  <div class="contacts-screen classes-screen">
+                    <div class="classes-heading-row"><div><span class="contacts-eyebrow">Directorio</span><h2 class="demo-heading">Clases</h2><p class="contacts-count">4 resultados</p></div></div>
+                    <div class="classes-list-card"><div class="classes-list-head"><span>Clase</span></div><div class="class-row is-highlighted"><div><div class="class-row-title">Bienvenida Vida Música (BV)</div><small>Clase regular</small></div><div class="class-row-actions"><button class="contact-edit" type="button">Editar</button><button class="contact-more" type="button">⋯</button></div></div><div class="class-dances-row"><div class="class-dances-toggle">❤ Danzas</div><div class="class-dance-item"><span class="class-dance-actions"><i>▶</i><i>↓</i><i>☰</i></span><span>01. Ronda de iniciación dulce · BLV01-01 · 00:03:53</span></div><div class="class-dance-item"><span class="class-dance-actions"><i>▶</i><i>↓</i><i>☰</i></span><span>02. Danza de la gestación · BLV01-02 · 00:03:11</span></div><div class="class-duration">Duración total de la música: 00:07:04</div></div></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="classes-share">
+                  <div class="contacts-screen classes-screen">
+                    <div class="classes-heading-row"><div><span class="contacts-eyebrow">Directorio</span><h2 class="demo-heading">Clases</h2><p class="contacts-count">4 resultados</p></div></div>
+                    <div class="classes-list-card"><div class="classes-list-head"><span>Clase</span></div><div class="class-row is-highlighted"><div><div class="class-row-title">Bienvenida Vida Música (BV)</div><small>Clase regular</small></div><div class="class-row-actions"><button class="contact-edit" type="button">Editar</button><button class="contact-more" type="button">⋯</button></div></div></div>
+                    <div class="class-menu-pop classes-menu-show" id="class-menu-share"><span>Compartir</span><span>Copiar enlace</span><span>Copiar a WhatsApp</span><span>Descargar</span><span>Duplicar</span><span class="text-danger">Eliminar</span></div>
+                    <div class="classes-qr"><div class="qr-box">QR</div><div><strong>Clase compartida</strong><small>Enlace y QR generados</small><p class="share-state">Dejar de compartir</p></div></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="classes-actions">
+                  <div class="contacts-screen classes-screen">
+                    <div class="classes-heading-row"><div><span class="contacts-eyebrow">Directorio</span><h2 class="demo-heading">Clases</h2><p class="contacts-count">4 resultados</p></div></div>
+                    <div class="classes-list-card"><div class="classes-list-head"><span>Clase</span></div><div class="class-row is-highlighted"><div><div class="class-row-title">Bienvenida Vida Música (BV)</div><small>Clase regular</small></div><div class="class-row-actions"><button class="contact-edit" type="button">Editar</button><button class="contact-more" type="button">⋯</button></div></div></div>
+                    <div class="class-menu-pop classes-menu-actions"><span id="download-class">Descargar</span><span id="duplicate-class">Duplicar</span><span id="delete-class" class="text-danger">Eliminar</span><small>HTML y PDF + músicas</small></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="classes-summary">
+                  <div class="contacts-screen classes-screen">
+                    <div class="classes-heading-row"><div><span class="contacts-eyebrow">Directorio</span><h2 class="demo-heading">Clases</h2><p class="contacts-count">4 resultados</p></div><button class="demo-button is-secondary" id="summary-button-2" type="button"><i class="bi bi-list-columns"></i></button></div>
+                    <div class="summary-demo-card">
+                      <div class="summary-head"><span class="contacts-eyebrow">Opciones de resumen</span><h2 class="demo-heading">Resumen de músicas y danzas</h2></div>
+                      <label class="demo-label">Tipo</label><div class="demo-input" id="summary-type"><span class="demo-value">Resumen de músicas</span></div>
+                      <label class="demo-label">Rango de fechas</label><div class="demo-input"><span class="demo-value">Mes actual</span></div>
+                      <button class="demo-button" id="summary-submit" type="button">Enviar</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-caption" data-caption></div>
+                <div class="demo-cursor" data-cursor aria-hidden="true"></div>
+                <div class="demo-progress"><span data-progress></span></div>
+                <div class="demo-audio-gate" data-audio-gate>
+                  <span class="demo-gate-icon">▶</span>
+                  <strong>Ayuda con audio</strong>
+                  <p>Escucha la explicación capítulo por capítulo.</p>
+                  <button class="demo-button" data-play-audio type="button" disabled>Reproducir con audio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="classes-chapter-panel">
+          <div class="classes-chapter-status" data-chapter-status>Capítulo 1 de 7 · Qué muestra la lista</div>
+          <div class="classes-chapter-nav" data-chapter-menu></div>
+          <button class="demo-button classes-continue" data-continue-chapter type="button" hidden>Continuar con el siguiente capítulo</button>
+        </div>
+
+        <button class="demo-replay" data-replay type="button" hidden>↻ Repetir desde el inicio</button>
+        <p class="demo-footnote">Voz generada provisional · Velocidad 0.9× · Subtítulos incluidos · Cada capítulo se detiene al finalizar.</p>
+      </div>
+    </main>
+  </div>
+  <script src="registration-audio.js"></script>
+</body>
+</html>

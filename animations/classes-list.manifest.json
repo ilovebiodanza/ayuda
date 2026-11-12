@@ -1,0 +1,354 @@
+{
+  "id": "classes-list",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo usar la lista de clases",
+  "status": "script-approved",
+  "format": "audio-driven-html-with-chapters",
+  "chapterMode": true,
+  "voice": {
+    "type": "generated",
+    "provider": "Google Translate TTS (provisional)",
+    "language": "es",
+    "speed": "135-150 wpm",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [
+      0.75,
+      0.9,
+      1,
+      1.25
+    ],
+    "autoplay": false,
+    "captions": true,
+    "stopAtChapterEnd": true
+  },
+  "audio": {
+    "directory": "audio/classes-list/",
+    "format": "mp3",
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitrate": "64k",
+    "status": "generated-provisional"
+  },
+  "visual": {
+    "screenSequence": [
+      "classes-list",
+      "classes-search",
+      "classes-open",
+      "classes-dances",
+      "classes-share",
+      "classes-actions",
+      "classes-summary"
+    ]
+  },
+  "chapters": [
+    {
+      "id": "que-es",
+      "number": 1,
+      "title": "Qué muestra la lista",
+      "caption": "Clases guarda el repertorio de tus clases."
+    },
+    {
+      "id": "buscar",
+      "number": 2,
+      "title": "Buscar y navegar",
+      "caption": "Busca por título o clasificación."
+    },
+    {
+      "id": "abrir",
+      "number": 3,
+      "title": "Crear y abrir una clase",
+      "caption": "Agregar clase; título o Editar para abrir."
+    },
+    {
+      "id": "danzas",
+      "number": 4,
+      "title": "Ver las danzas",
+      "caption": "Reproduce, descarga o consulta cada danza."
+    },
+    {
+      "id": "compartir",
+      "number": 5,
+      "title": "Compartir y copiar",
+      "caption": "Enlace, QR y texto para WhatsApp."
+    },
+    {
+      "id": "acciones",
+      "number": 6,
+      "title": "Descargar, duplicar y eliminar",
+      "caption": "HTML, PDF y músicas; copia o elimina."
+    },
+    {
+      "id": "resumen",
+      "number": 7,
+      "title": "Resumen de músicas y danzas",
+      "caption": "Informe por rango de fechas."
+    }
+  ],
+  "segments": [
+    {
+      "id": "01-01",
+      "chapter": "que-es",
+      "audio": "01-01.mp3",
+      "scene": "classes-list",
+      "caption": "Lista de clases.",
+      "narration": "Esta es la lista de clases.",
+      "durationSeconds": 2.376,
+      "onStart": [
+        "focus:.classes-heading"
+      ]
+    },
+    {
+      "id": "01-02",
+      "chapter": "que-es",
+      "audio": "01-02.mp3",
+      "scene": "classes-list",
+      "caption": "Cada clase reúne título, danzas y música.",
+      "narration": "Aquí guardas el repertorio de tus clases: el título, las danzas y la música que las acompañan.",
+      "durationSeconds": 8.04,
+      "onStart": [
+        "focus:.classes-list-card"
+      ]
+    },
+    {
+      "id": "01-03",
+      "chapter": "que-es",
+      "audio": "01-03.mp3",
+      "scene": "classes-list",
+      "caption": "Las sesiones se gestionan en Actividades.",
+      "narration": "No es una sesión con participantes; esa información se gestiona en Actividades.",
+      "durationSeconds": 6.696,
+      "onStart": [
+        "focus:.classes-list-card"
+      ]
+    },
+    {
+      "id": "02-01",
+      "chapter": "buscar",
+      "audio": "02-01.mp3",
+      "scene": "classes-search",
+      "caption": "Cantidad de clases y buscador.",
+      "narration": "Arriba ves la cantidad de clases y el buscador.",
+      "durationSeconds": 3.6,
+      "onStart": [
+        "focus:.classes-heading"
+      ]
+    },
+    {
+      "id": "02-02",
+      "chapter": "buscar",
+      "audio": "02-02.mp3",
+      "scene": "classes-search",
+      "caption": "Busca por título o clasificación.",
+      "narration": "Busca por título o clasificación.",
+      "durationSeconds": 2.976,
+      "onStart": [
+        "focus:#classes-search"
+      ]
+    },
+    {
+      "id": "02-03",
+      "chapter": "buscar",
+      "audio": "02-03.mp3",
+      "scene": "classes-search",
+      "caption": "Ajusta la página y recorre la lista.",
+      "narration": "Ajusta cuántas clases quieres ver por página y usa Anterior o Siguiente para recorrer la lista.",
+      "durationSeconds": 7.344,
+      "onStart": [
+        "focus:#classes-pagination"
+      ]
+    },
+    {
+      "id": "03-01",
+      "chapter": "abrir",
+      "audio": "03-01.mp3",
+      "scene": "classes-open",
+      "caption": "Agregar clase.",
+      "narration": "Para crear una clase pulsa Agregar clase.",
+      "durationSeconds": 3.48,
+      "onStart": [
+        "focus:#add-class-open"
+      ]
+    },
+    {
+      "id": "03-02",
+      "chapter": "abrir",
+      "audio": "03-02.mp3",
+      "scene": "classes-open",
+      "caption": "Título o Editar para abrir.",
+      "narration": "Para abrir una existente, pulsa su título o Editar.",
+      "durationSeconds": 4.44,
+      "onStart": [
+        "focus:#open-class-title"
+      ]
+    },
+    {
+      "id": "03-03",
+      "chapter": "abrir",
+      "audio": "03-03.mp3",
+      "scene": "classes-open",
+      "caption": "El icono de información abre la descripción.",
+      "narration": "Si la clase tiene descripción, el icono de información la muestra.",
+      "durationSeconds": 5.424,
+      "onStart": [
+        "focus:#open-class-info"
+      ]
+    },
+    {
+      "id": "04-01",
+      "chapter": "danzas",
+      "audio": "04-01.mp3",
+      "scene": "classes-dances",
+      "caption": "Despliega Danzas.",
+      "narration": "Despliega Danzas para ver la secuencia de la clase.",
+      "durationSeconds": 3.792,
+      "onStart": [
+        "focus:.class-dances-toggle"
+      ]
+    },
+    {
+      "id": "04-02",
+      "chapter": "danzas",
+      "audio": "04-02.mp3",
+      "scene": "classes-dances",
+      "caption": "Reproducir, descargar y consigna.",
+      "narration": "Cada danza tiene botones para reproducir la música, descargarla y ver su consigna.",
+      "durationSeconds": 7.128,
+      "onStart": [
+        "focus:.class-dance-actions"
+      ]
+    },
+    {
+      "id": "04-03",
+      "chapter": "danzas",
+      "audio": "04-03.mp3",
+      "scene": "classes-dances",
+      "caption": "Duración total de la música.",
+      "narration": "Al final de la lista aparece la duración total de la música.",
+      "durationSeconds": 4.968,
+      "onStart": [
+        "focus:.class-duration"
+      ]
+    },
+    {
+      "id": "05-01",
+      "chapter": "compartir",
+      "audio": "05-01.mp3",
+      "scene": "classes-share",
+      "caption": "Compartir, copiar enlace o WhatsApp.",
+      "narration": "En el menú de tres puntos puedes compartir la clase, copiar su enlace o copiar el texto para WhatsApp.",
+      "durationSeconds": 8.448,
+      "onStart": [
+        "focus:#class-menu-share"
+      ]
+    },
+    {
+      "id": "05-02",
+      "chapter": "compartir",
+      "audio": "05-02.mp3",
+      "scene": "classes-share",
+      "caption": "Enlace y código QR.",
+      "narration": "Al compartir se genera un enlace y un código QR.",
+      "durationSeconds": 4.344,
+      "onStart": [
+        "focus:.classes-qr"
+      ]
+    },
+    {
+      "id": "05-03",
+      "chapter": "compartir",
+      "audio": "05-03.mp3",
+      "scene": "classes-share",
+      "caption": "Dejar de compartir la vuelve privada.",
+      "narration": "Si eliges Dejar de compartir, la clase vuelve a quedar privada.",
+      "durationSeconds": 5.28,
+      "onStart": [
+        "focus:.share-state"
+      ]
+    },
+    {
+      "id": "06-01",
+      "chapter": "acciones",
+      "audio": "06-01.mp3",
+      "scene": "classes-actions",
+      "caption": "HTML, PDF y músicas; sin TXT.",
+      "narration": "Descargar genera la clase en HTML y PDF, junto con sus músicas.",
+      "durationSeconds": 7.08,
+      "onStart": [
+        "focus:#download-class"
+      ]
+    },
+    {
+      "id": "06-02",
+      "chapter": "acciones",
+      "audio": "06-02.mp3",
+      "scene": "classes-actions",
+      "caption": "Duplicar crea una copia.",
+      "narration": "Duplicar crea una copia de la clase.",
+      "durationSeconds": 3.144,
+      "onStart": [
+        "focus:#duplicate-class"
+      ]
+    },
+    {
+      "id": "06-03",
+      "chapter": "acciones",
+      "audio": "06-03.mp3",
+      "scene": "classes-actions",
+      "caption": "Eliminar borra la clase.",
+      "narration": "Eliminar borra la clase, así que revisa bien antes de usarlo.",
+      "durationSeconds": 5.256,
+      "onStart": [
+        "focus:#delete-class"
+      ]
+    },
+    {
+      "id": "07-01",
+      "chapter": "resumen",
+      "audio": "07-01.mp3",
+      "scene": "classes-summary",
+      "caption": "Resumen de músicas o danzas.",
+      "narration": "El botón de resumen abre un informe de músicas o de danzas.",
+      "durationSeconds": 5.16,
+      "onStart": [
+        "focus:#summary-button-2"
+      ]
+    },
+    {
+      "id": "07-02",
+      "chapter": "resumen",
+      "audio": "07-02.mp3",
+      "scene": "classes-summary",
+      "caption": "Elige tipo y fechas.",
+      "narration": "Elige el tipo de resumen y el rango de fechas.",
+      "durationSeconds": 3.768,
+      "onStart": [
+        "focus:#summary-type"
+      ]
+    },
+    {
+      "id": "07-03",
+      "chapter": "resumen",
+      "audio": "07-03.mp3",
+      "scene": "classes-summary",
+      "caption": "Confirma y abre el informe.",
+      "narration": "Confirma el informe para abrirlo en una nueva pestaña.",
+      "durationSeconds": 4.032,
+      "onStart": [
+        "focus:#summary-submit"
+      ]
+    }
+  ],
+  "completionCaption": "Clases: crea, comparte y descarga el repertorio de tus clases.",
+  "totalDurationSeconds": 106.776,
+  "totalAtDefaultRateSeconds": 118.64,
+  "decisions": [
+    "La ayuda se abre desde el botón general de Ayuda.",
+    "Cada capítulo se detiene al finalizar.",
+    "Voz Google Translate TTS provisional.",
+    "La descarga ya no genera TXT."
+  ]
+}
