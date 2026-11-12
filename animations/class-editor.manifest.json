@@ -1,0 +1,512 @@
+{
+  "id": "class-editor",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo crear y editar una clase",
+  "status": "script-approved",
+  "format": "audio-driven-html-with-chapters",
+  "chapterMode": true,
+  "voice": {
+    "type": "generated",
+    "provider": "Google Translate TTS (provisional)",
+    "language": "es",
+    "speed": "135-150 wpm",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [
+      0.75,
+      0.9,
+      1,
+      1.25
+    ],
+    "autoplay": false,
+    "captions": true,
+    "stopAtChapterEnd": true
+  },
+  "audio": {
+    "directory": "audio/class-editor/",
+    "format": "mp3",
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitrate": "64k",
+    "status": "generated-provisional"
+  },
+  "visual": {
+    "screenSequence": [
+      "editor-map",
+      "editor-basic",
+      "editor-add-dance",
+      "editor-dance-detail",
+      "editor-dance-list",
+      "editor-graph",
+      "editor-test",
+      "editor-execute",
+      "editor-save"
+    ]
+  },
+  "chapters": [
+    {
+      "id": "mapa",
+      "number": 1,
+      "title": "Mapa del editor",
+      "caption": "Datos básicos, gráfico, danzas, prueba y ejecución."
+    },
+    {
+      "id": "datos",
+      "number": 2,
+      "title": "Datos básicos",
+      "caption": "Título, clasificación y descripción general."
+    },
+    {
+      "id": "agregar",
+      "number": 3,
+      "title": "Agregar una danza",
+      "caption": "Busca la danza, elige la música y escúchala."
+    },
+    {
+      "id": "detalles",
+      "number": 4,
+      "title": "Detalles de la danza",
+      "caption": "Slogan, evolución y más detalle."
+    },
+    {
+      "id": "editar",
+      "number": 5,
+      "title": "Editar y ordenar danzas",
+      "caption": "Reproducir, editar, eliminar y reordenar."
+    },
+    {
+      "id": "grafico",
+      "number": 6,
+      "title": "Gráfico de evolución",
+      "caption": "La curva muestra la evolución de la energía."
+    },
+    {
+      "id": "prueba",
+      "number": 7,
+      "title": "Prueba de música",
+      "caption": "Prueba fragmentos y transiciones."
+    },
+    {
+      "id": "ejecucion",
+      "number": 8,
+      "title": "Ejecución controlada",
+      "caption": "Ejecuta la clase danza por danza."
+    },
+    {
+      "id": "guardar",
+      "number": 9,
+      "title": "Guardar y salir",
+      "caption": "Guarda los cambios o vuelve a la lista."
+    }
+  ],
+  "segments": [
+    {
+      "id": "01-01",
+      "chapter": "mapa",
+      "audio": "01-01.mp3",
+      "scene": "editor-map",
+      "caption": "El editor de clases.",
+      "narration": "Este es el editor de clases.",
+      "durationSeconds": 2.544,
+      "onStart": [
+        "focus:.editor-heading"
+      ]
+    },
+    {
+      "id": "01-02",
+      "chapter": "mapa",
+      "audio": "01-02.mp3",
+      "scene": "editor-map",
+      "caption": "Describe la sesión con vivencias o danzas.",
+      "narration": "Aquí describes la sesión de una clase con sus vivencias o danzas.",
+      "durationSeconds": 5.376,
+      "onStart": [
+        "focus:.editor-heading"
+      ]
+    },
+    {
+      "id": "01-03",
+      "chapter": "mapa",
+      "audio": "01-03.mp3",
+      "scene": "editor-map",
+      "caption": "Cinco pestañas para construir la clase.",
+      "narration": "Arriba están las pestañas: datos básicos, gráfico, danzas, prueba de música y ejecución controlada.",
+      "durationSeconds": 9.456,
+      "onStart": [
+        "focus:.editor-tabs"
+      ]
+    },
+    {
+      "id": "01-04",
+      "chapter": "mapa",
+      "audio": "01-04.mp3",
+      "scene": "editor-map",
+      "caption": "Guardar y salir están a la derecha.",
+      "narration": "A la derecha tienes los botones para las acciones de guardar y salir de la edición de la clase.",
+      "durationSeconds": 6.84,
+      "onStart": [
+        "focus:.editor-save-actions"
+      ]
+    },
+    {
+      "id": "02-01",
+      "chapter": "datos",
+      "audio": "02-01.mp3",
+      "scene": "editor-basic",
+      "caption": "Título y clasificación.",
+      "narration": "En Datos básicos escribe el título y la clasificación de la clase.",
+      "durationSeconds": 5.592,
+      "onStart": [
+        "focus:#editor-title"
+      ]
+    },
+    {
+      "id": "02-02",
+      "chapter": "datos",
+      "audio": "02-02.mp3",
+      "scene": "editor-basic",
+      "caption": "La descripción presenta la clase.",
+      "narration": "La descripción es la presentación general.",
+      "durationSeconds": 3.24,
+      "onStart": [
+        "focus:#editor-description"
+      ]
+    },
+    {
+      "id": "02-03",
+      "chapter": "datos",
+      "audio": "02-03.mp3",
+      "scene": "editor-basic",
+      "caption": "Guardar no cierra el editor.",
+      "narration": "Guarda con el botón Guardar o con Control S. Guardar no cierra el editor: puedes seguir trabajando.",
+      "durationSeconds": 7.824,
+      "onStart": [
+        "focus:.editor-save"
+      ]
+    },
+    {
+      "id": "03-01",
+      "chapter": "agregar",
+      "audio": "03-01.mp3",
+      "scene": "editor-add-dance",
+      "caption": "Danzas → botón +.",
+      "narration": "Para agregar una danza, entra en la pestaña Danzas y pulsa el botón más.",
+      "durationSeconds": 6.264,
+      "onStart": [
+        "focus:#add-dance-button"
+      ]
+    },
+    {
+      "id": "03-02",
+      "chapter": "agregar",
+      "audio": "03-02.mp3",
+      "scene": "editor-add-dance",
+      "caption": "Busca danza y música.",
+      "narration": "Busca la danza por su nombre. Después busca la música.",
+      "durationSeconds": 4.368,
+      "onStart": [
+        "focus:#dance-search"
+      ]
+    },
+    {
+      "id": "03-03",
+      "chapter": "agregar",
+      "audio": "03-03.mp3",
+      "scene": "editor-add-dance",
+      "caption": "Escucha antes de elegir.",
+      "narration": "Puedes escuchar una muestra con el botón verde antes de elegirla.",
+      "durationSeconds": 4.536,
+      "onStart": [
+        "focus:#preview-music"
+      ]
+    },
+    {
+      "id": "03-04",
+      "chapter": "agregar",
+      "audio": "03-04.mp3",
+      "scene": "editor-add-dance",
+      "caption": "Aprovecha las sugerencias.",
+      "narration": "El buscador también muestra danzas y músicas sugeridas.",
+      "durationSeconds": 4.416,
+      "onStart": [
+        "focus:#suggestions"
+      ]
+    },
+    {
+      "id": "04-01",
+      "chapter": "detalles",
+      "audio": "04-01.mp3",
+      "scene": "editor-dance-detail",
+      "caption": "Añade el slogan.",
+      "narration": "Añade el slogan que quieres recordar durante la ejecución.",
+      "durationSeconds": 4.248,
+      "onStart": [
+        "focus:#dance-slogan"
+      ]
+    },
+    {
+      "id": "04-02",
+      "chapter": "detalles",
+      "audio": "04-02.mp3",
+      "scene": "editor-dance-detail",
+      "caption": "La evolución ubica la danza en la curva.",
+      "narration": "La evolución sitúa la danza en la curva de energía de la clase.",
+      "durationSeconds": 5.208,
+      "onStart": [
+        "focus:#dance-evolution"
+      ]
+    },
+    {
+      "id": "04-03",
+      "chapter": "detalles",
+      "audio": "04-03.mp3",
+      "scene": "editor-dance-detail",
+      "caption": "Línea, clasificación, objetivo y presentación.",
+      "narration": "En Más detalle puedes indicar la línea, la clasificación, el objetivo y quién la presenta.",
+      "durationSeconds": 7.56,
+      "onStart": [
+        "focus:#more-detail"
+      ]
+    },
+    {
+      "id": "04-04",
+      "chapter": "detalles",
+      "audio": "04-04.mp3",
+      "scene": "editor-dance-detail",
+      "caption": "Guarda la danza y repite.",
+      "narration": "Pulsa Guardar danza. Repite el proceso para cada danza de la clase.",
+      "durationSeconds": 5.448,
+      "onStart": [
+        "focus:#save-dance-detail"
+      ]
+    },
+    {
+      "id": "05-01",
+      "chapter": "editar",
+      "audio": "05-01.mp3",
+      "scene": "editor-dance-list",
+      "caption": "Reproducir, editar, descripción o eliminar.",
+      "narration": "Cada danza tiene un botón para escucharla, otro para editarla y un menú para ver su descripción o eliminarla.",
+      "durationSeconds": 8.688,
+      "onStart": [
+        "focus:.dance-row-actions"
+      ]
+    },
+    {
+      "id": "05-02",
+      "chapter": "editar",
+      "audio": "05-02.mp3",
+      "scene": "editor-dance-list",
+      "caption": "Arrastra o usa doble clic para reordenar.",
+      "narration": "Para cambiar el orden, arrastra la danza a su nueva posición o haz doble clic en ella y luego en el lugar de destino.",
+      "durationSeconds": 9.096,
+      "onStart": [
+        "focus:.dance-row-main"
+      ]
+    },
+    {
+      "id": "05-03",
+      "chapter": "editar",
+      "audio": "05-03.mp3",
+      "scene": "editor-dance-list",
+      "caption": "Pega danzas copiadas desde Música y Danzas.",
+      "narration": "Si copiaste una lista desde Música y Danzas, puedes pegarla con el botón de lista.",
+      "durationSeconds": 6.576,
+      "onStart": [
+        "focus:.paste-dances"
+      ]
+    },
+    {
+      "id": "06-01",
+      "chapter": "grafico",
+      "audio": "06-01.mp3",
+      "scene": "editor-graph",
+      "caption": "La curva de evolución.",
+      "narration": "En la pestaña Gráfico ves la curva de evolución de la clase.",
+      "durationSeconds": 4.968,
+      "onStart": [
+        "focus:#editor-graph"
+      ]
+    },
+    {
+      "id": "06-02",
+      "chapter": "grafico",
+      "audio": "06-02.mp3",
+      "scene": "editor-graph",
+      "caption": "Arrastra los puntos para ajustar la energía.",
+      "narration": "Cada punto representa una danza. Puedes arrastrar los puntos para ajustar la energía.",
+      "durationSeconds": 6.6,
+      "onStart": [
+        "focus:#editor-graph"
+      ]
+    },
+    {
+      "id": "06-03",
+      "chapter": "grafico",
+      "audio": "06-03.mp3",
+      "scene": "editor-graph",
+      "caption": "La curva se guarda con la clase.",
+      "narration": "La curva se guarda junto con la clase.",
+      "durationSeconds": 3.0,
+      "onStart": [
+        "focus:#editor-graph"
+      ]
+    },
+    {
+      "id": "07-01",
+      "chapter": "prueba",
+      "audio": "07-01.mp3",
+      "scene": "editor-test",
+      "caption": "Revisa un fragmento de la clase.",
+      "narration": "La prueba de música permite revisar un fragmento de la clase.",
+      "durationSeconds": 4.632,
+      "onStart": [
+        "focus:#test-range"
+      ]
+    },
+    {
+      "id": "07-02",
+      "chapter": "prueba",
+      "audio": "07-02.mp3",
+      "scene": "editor-test",
+      "caption": "Elige el rango de danzas.",
+      "narration": "Elige desde qué danza y hasta cuál quieres probar.",
+      "durationSeconds": 3.648,
+      "onStart": [
+        "focus:#test-range"
+      ]
+    },
+    {
+      "id": "07-03",
+      "chapter": "prueba",
+      "audio": "07-03.mp3",
+      "scene": "editor-test",
+      "caption": "Ajusta inicio, parte media y final.",
+      "narration": "Ajusta los segundos de inicio, parte media y final.",
+      "durationSeconds": 4.128,
+      "onStart": [
+        "focus:#test-times"
+      ]
+    },
+    {
+      "id": "07-04",
+      "chapter": "prueba",
+      "audio": "07-04.mp3",
+      "scene": "editor-test",
+      "caption": "Comenzar prueba.",
+      "narration": "Pulsa Comenzar prueba para escuchar la transición.",
+      "durationSeconds": 3.768,
+      "onStart": [
+        "focus:#begin-test"
+      ]
+    },
+    {
+      "id": "08-01",
+      "chapter": "ejecucion",
+      "audio": "08-01.mp3",
+      "scene": "editor-execute",
+      "caption": "La ejecución controlada te guía.",
+      "narration": "La ejecución controlada te guía durante la clase.",
+      "durationSeconds": 3.792,
+      "onStart": [
+        "focus:#execute-range"
+      ]
+    },
+    {
+      "id": "08-02",
+      "chapter": "ejecucion",
+      "audio": "08-02.mp3",
+      "scene": "editor-execute",
+      "caption": "Elige el rango y comienza.",
+      "narration": "Elige el rango de danzas y pulsa Comenzar ejecución controlada.",
+      "durationSeconds": 4.92,
+      "onStart": [
+        "focus:#begin-execute"
+      ]
+    },
+    {
+      "id": "08-03",
+      "chapter": "ejecucion",
+      "audio": "08-03.mp3",
+      "scene": "editor-execute",
+      "caption": "Slogan y detalles en cada danza.",
+      "narration": "En cada danza verás su slogan y sus detalles.",
+      "durationSeconds": 3.648,
+      "onStart": [
+        "focus:#execute-modal"
+      ]
+    },
+    {
+      "id": "08-04",
+      "chapter": "ejecucion",
+      "audio": "08-04.mp3",
+      "scene": "editor-execute",
+      "caption": "Invita a bailar o muestra la danza.",
+      "narration": "Puedes invitar a bailar o mostrar la danza después de unos segundos.",
+      "durationSeconds": 5.472,
+      "onStart": [
+        "focus:#execute-modal"
+      ]
+    },
+    {
+      "id": "08-05",
+      "chapter": "ejecucion",
+      "audio": "08-05.mp3",
+      "scene": "editor-execute",
+      "caption": "O reproduce toda la secuencia.",
+      "narration": "También puedes reproducir toda la secuencia con Reproducir todo.",
+      "durationSeconds": 4.728,
+      "onStart": [
+        "focus:#play-all"
+      ]
+    },
+    {
+      "id": "09-01",
+      "chapter": "guardar",
+      "audio": "09-01.mp3",
+      "scene": "editor-save",
+      "caption": "Pulsa Guardar.",
+      "narration": "Pulsa Guardar para conservar los cambios.",
+      "durationSeconds": 3.24,
+      "onStart": [
+        "focus:.editor-save"
+      ]
+    },
+    {
+      "id": "09-02",
+      "chapter": "guardar",
+      "audio": "09-02.mp3",
+      "scene": "editor-save",
+      "caption": "Salir sin guardar pide confirmación.",
+      "narration": "Si sales sin guardar, el editor te pedirá confirmación.",
+      "durationSeconds": 4.464,
+      "onStart": [
+        "focus:.editor-exit"
+      ]
+    },
+    {
+      "id": "09-03",
+      "chapter": "guardar",
+      "audio": "09-03.mp3",
+      "scene": "editor-save",
+      "caption": "Vuelve a la lista de clases.",
+      "narration": "Al terminar, vuelve a la lista de clases.",
+      "durationSeconds": 3.456,
+      "onStart": [
+        "focus:.editor-save-actions"
+      ]
+    }
+  ],
+  "completionCaption": "Clases: guarda los cambios o vuelve a la lista.",
+  "totalDurationSeconds": 171.744,
+  "totalAtDefaultRateSeconds": 190.827,
+  "decisions": [
+    "Se eliminó la pestaña Ayuda del editor.",
+    "La ayuda se abre desde el botón general de Ayuda.",
+    "Cada capítulo se detiene al finalizar.",
+    "Voz Google Translate TTS provisional."
+  ]
+}

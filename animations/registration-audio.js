@@ -15,6 +15,16 @@
   const caption = root.querySelector('[data-caption]');
   const progress = root.querySelector('[data-progress]');
   const cursor = root.querySelector('[data-cursor]');
+  const chapterMode = root.dataset.chapterMode === 'true';
+  const chapterMenu =
+    root.querySelector('[data-chapter-menu]') ||
+    document.querySelector('[data-chapter-menu]');
+  const continueButton =
+    root.querySelector('[data-continue-chapter]') ||
+    document.querySelector('[data-continue-chapter]');
+  const chapterStatus =
+    root.querySelector('[data-chapter-status]') ||
+    document.querySelector('[data-chapter-status]');
   const audio = new Audio();
   audio.preload = 'auto';
   audio.playbackRate = rate;
@@ -37,6 +47,68 @@
     if (!caption) return;
     caption.innerHTML = text || '';
     caption.classList.toggle('is-visible', Boolean(text));
+  }
+
+  function chapterOf(segment) {
+    return (segment && segment.chapter) || 'chapter-1';
+  }
+
+  function chapterMeta(chapterId) {
+    const list = (manifest && manifest.chapters) || [];
+    return list.find(chapter => chapter.id === chapterId) || null;
+  }
+
+  function chapterIndexForSegment(segmentIndex) {
+    const segment = manifest && manifest.segments[segmentIndex];
+    if (!segment) return -1;
+    return ((manifest && manifest.chapters) || []).findIndex(
+      chapter => chapter.id === chapterOf(segment),
+    );
+  }
+
+  function updateChapterMenu() {
+    if (!chapterMenu || !manifest) return;
+    const active = chapterIndexForSegment(index);
+    chapterMenu.querySelectorAll('[data-chapter-index]').forEach(button => {
+      const value = Number(button.dataset.chapterIndex);
+      button.classList.toggle('is-active', value === active);
+    });
+    if (chapterStatus) {
+      const chapter = chapterMeta(chapterOf(manifest.segments[index]));
+      if (chapter) {
+        chapterStatus.textContent = `Capítulo ${chapter.number} de ${manifest.chapters.length} · ${chapter.title}`;
+      }
+    }
+  }
+
+  function showChapterContinue(nextIndex) {
+    if (!continueButton) return;
+    const next = manifest.segments[nextIndex];
+    const chapter = chapterMeta(chapterOf(next));
+    continueButton.textContent = `Continuar con el capítulo ${chapter ? chapter.number : nextIndex + 1}`;
+    continueButton.hidden = false;
+    updateChapterMenu();
+  }
+
+  function playChapter(chapterIndex) {
+    if (!manifest || !manifest.chapters) return;
+    const chapter = manifest.chapters[chapterIndex];
+    if (!chapter) return;
+    const first = manifest.segments.findIndex(segment => chapterOf(segment) === chapter.id);
+    if (first < 0) return;
+    if (holdTimer) clearTimeout(holdTimer);
+    holdTimer = null;
+    completedSeconds = manifest.segments
+      .slice(0, first)
+      .reduce((sum, segment) => sum + Number(segment.durationSeconds || 0), 0);
+    index = first;
+    playing = true;
+    resetFocus();
+    if (gate) gate.hidden = true;
+    if (continueButton) continueButton.hidden = true;
+    if (replay) replay.hidden = true;
+    updateChapterMenu();
+    playSegment();
   }
 
   function focus(selector) {
@@ -126,19 +198,25 @@
     progress.style.width = `${Math.min(100, percent)}%`;
   }
 
+  function finishAnimation() {
+    playing = false;
+    const last = manifest.segments[manifest.segments.length - 1];
+    setCaption(
+      manifest.completionCaption ||
+        (last && last.caption) ||
+        'Animación completada.',
+    );
+    if (continueButton) continueButton.hidden = true;
+    if (replay) replay.hidden = false;
+    updateChapterMenu();
+  }
+
   function advanceSegment() {
-    index += 1;
-    if (index >= manifest.segments.length) {
-      playing = false;
-      const last = manifest.segments[manifest.segments.length - 1];
-      setCaption(
-        manifest.completionCaption ||
-          (last && last.caption) ||
-          'Animación completada.',
-      );
-      if (replay) replay.hidden = false;
+    if (index + 1 >= manifest.segments.length) {
+      finishAnimation();
       return;
     }
+    index += 1;
     playSegment();
   }
 
@@ -148,11 +226,29 @@
     if (previous) runActions(previous.onEnd);
     completedSeconds += Number(previous && previous.durationSeconds) || 0;
     const hold = Number(previous && previous.holdAfterSeconds) || 0;
+    const go = () => {
+      if (
+        chapterMode &&
+        index + 1 < manifest.segments.length &&
+        chapterOf(manifest.segments[index]) !==
+          chapterOf(manifest.segments[index + 1])
+      ) {
+        index += 1;
+        playing = false;
+        const finished = chapterMeta(chapterOf(previous));
+        setCaption(
+          `Capítulo ${finished ? finished.number : ''} completado. Pulsa continuar cuando quieras seguir.`,
+        );
+        showChapterContinue(index);
+        return;
+      }
+      advanceSegment();
+    };
     if (holdTimer) clearTimeout(holdTimer);
     if (hold > 0) {
-      holdTimer = setTimeout(advanceSegment, hold * 1000);
+      holdTimer = setTimeout(go, hold * 1000);
     } else {
-      advanceSegment();
+      go();
     }
   }
 
@@ -180,6 +276,8 @@
     completedSeconds = 0;
     resetFocus();
     if (gate) gate.hidden = true;
+    if (continueButton) continueButton.hidden = true;
+    updateChapterMenu();
     playSegment();
   }
 
@@ -195,6 +293,7 @@
           (data.audio && data.audio.directory) || 'audio/registration/',
         ).replace(/\/?$/, '/');
         screen((data.segments && data.segments[0] && data.segments[0].scene) || 'signup');
+        renderChapterMenu();
         setCaption('Pulsa reproducir para ver la animación con audio.');
         if (playButton) playButton.disabled = false;
       })
@@ -204,10 +303,36 @@
       });
   }
 
+  function renderChapterMenu() {
+    if (!chapterMenu || !manifest || !manifest.chapters) return;
+    chapterMenu.innerHTML = manifest.chapters
+      .map(
+        (chapter, position) =>
+          `<button type="button" class="editor-chapter-button" data-chapter-index="${position}">${chapter.number}. ${chapter.title}</button>`,
+      )
+      .join('');
+    chapterMenu.querySelectorAll('[data-chapter-index]').forEach(button => {
+      button.addEventListener('click', () => {
+        playChapter(Number(button.dataset.chapterIndex));
+      });
+    });
+    updateChapterMenu();
+  }
+
   audio.addEventListener('ended', nextSegment);
   audio.addEventListener('timeupdate', updateProgress);
   audio.addEventListener('loadedmetadata', updateProgress);
   if (playButton) playButton.addEventListener('click', start);
+  if (continueButton) {
+    continueButton.hidden = true;
+    continueButton.addEventListener('click', () => {
+      if (!manifest || playing) return;
+      if (index >= manifest.segments.length) return;
+      continueButton.hidden = true;
+      playing = true;
+      playSegment();
+    });
+  }
   if (replay) {
     replay.hidden = true;
     replay.addEventListener('click', () => {

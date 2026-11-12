@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda visual · Editor de clases</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="contacts.css">
+  <link rel="stylesheet" href="class-editor.css">
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="https://ilovebiodanza.top/">Yo<span class="heart">❤</span>Biodanza</a>
+      <span class="demo-topbar-note">Ayuda audiovisual · Editor de clases</span>
+      <a class="demo-back" href="index.html">← Todas las animaciones</a>
+    </header>
+
+    <main class="demo-grid">
+      <aside class="demo-intro">
+        <span class="demo-kicker">Animación 07</span>
+        <h1>Cómo crear y editar una clase</h1>
+        <p>Un recorrido por capítulos para construir una clase con sus danzas, música y ejecución.</p>
+        <ol class="demo-steps">
+          <li><span class="demo-step-number">1</span><span>Completa los datos básicos.</span></li>
+          <li><span class="demo-step-number">2</span><span>Agrega y ordena las danzas.</span></li>
+          <li><span class="demo-step-number">3</span><span>Prueba y ejecuta la clase.</span></li>
+        </ol>
+        <a class="demo-back" href="index.html">Volver a la galería</a>
+      </aside>
+
+      <div class="demo-stage-wrap">
+        <section class="demo-stage" data-audio-demo data-manifest="class-editor.manifest.json" data-rate="0.9" data-chapter-mode="true" aria-label="Ayuda del editor de clases con audio">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+              <span class="demo-url">ilovebiodanza.top / clases / editar</span>
+            </div>
+            <div class="demo-app">
+              <div class="demo-app-nav">
+                <span class="demo-app-brand">Yo<span class="heart">❤</span>Biodanza</span>
+                <span class="demo-app-nav-right">Clases <span class="demo-avatar">A</span></span>
+              </div>
+              <div class="demo-content">
+                <div class="demo-screen is-active" data-screen="editor-map">
+                  <div class="editor-shell">
+                    <div class="editor-topline">
+                      <div class="editor-heading"><span class="contacts-eyebrow">Editor</span><h2 class="demo-heading">Clase de apertura</h2></div>
+                      <div class="editor-save-actions"><button class="demo-button" type="button">Guardar</button><button class="demo-button is-danger" type="button">Salir</button></div>
+                    </div>
+                    <div class="editor-tabs">
+                      <span class="editor-tab is-active"><i class="bi bi-list-check"></i><small>Datos</small></span>
+                      <span class="editor-tab"><i class="bi bi-graph-up"></i><small>Gráfico</small></span>
+                      <span class="editor-tab"><i class="bi bi-person-arms-up"></i><small>Danzas</small></span>
+                      <span class="editor-tab"><i class="bi bi-music-note-list"></i><small>Prueba</small></span>
+                      <span class="editor-tab"><i class="bi bi-collection-play"></i><small>Ejecución</small></span>
+                    </div>
+                    <div class="editor-map-card">
+                      <span class="contacts-eyebrow">Mapa del editor</span>
+                      <h3>Cinco espacios para tu clase</h3>
+                      <p>Datos básicos, gráfico, danzas, prueba de música y ejecución controlada.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-basic">
+                  <div class="editor-shell">
+                    <div class="editor-topline">
+                      <div class="editor-heading"><span class="contacts-eyebrow">Datos básicos</span><h2 class="demo-heading">Clase de apertura</h2></div>
+                      <div class="editor-save-actions"><button class="demo-button editor-save" type="button">Guardar</button><button class="demo-button is-danger editor-exit" type="button">Salir</button></div>
+                    </div>
+                    <div class="editor-tabs"><span class="editor-tab is-active"><i class="bi bi-list-check"></i><small>Datos</small></span><span class="editor-tab"><i class="bi bi-graph-up"></i><small>Gráfico</small></span><span class="editor-tab"><i class="bi bi-person-arms-up"></i><small>Danzas</small></span><span class="editor-tab"><i class="bi bi-music-note-list"></i><small>Prueba</small></span><span class="editor-tab"><i class="bi bi-collection-play"></i><small>Ejecución</small></span></div>
+                    <div class="editor-form-card">
+                      <label class="demo-label">Título</label><div class="demo-input" id="editor-title"><span class="demo-value">Clase de apertura</span><span class="demo-caret"></span></div>
+                      <label class="demo-label">Clasificación</label><div class="demo-input"><span class="demo-value">Clase regular</span></div>
+                      <label class="demo-label">Descripción</label><div class="demo-input editor-textarea" id="editor-description"><span class="demo-value">Una clase para abrir el cuerpo, la mirada y el encuentro.</span><span class="demo-caret"></span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-add-dance">
+                  <div class="editor-shell editor-dim">
+                    <div class="editor-modal">
+                      <div class="editor-modal-head"><span class="contacts-eyebrow">Danza</span><h2 class="demo-heading">Agregar danza</h2><button class="contact-close" type="button">×</button></div>
+                      <label class="demo-label">Buscar danza</label><div class="demo-input" id="dance-search"><span class="demo-value">Danza de prueba</span><span class="demo-caret"></span></div>
+                      <label class="demo-label">Buscar música</label><div class="demo-input" id="music-search"><span class="demo-value">Canción de prueba</span><button class="editor-preview" id="preview-music" type="button">▶</button></div>
+                      <div class="editor-suggestions" id="suggestions"><small>Sugerencias</small><span>Otras danzas y músicas relacionadas</span></div>
+                      <div class="editor-modal-actions"><button class="demo-button is-secondary" type="button">Cancelar</button><button class="demo-button" id="save-dance" type="button">Guardar danza</button></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-dance-detail">
+                  <div class="editor-shell editor-dim">
+                    <div class="editor-modal editor-modal-wide">
+                      <div class="editor-modal-head"><span class="contacts-eyebrow">Danza</span><h2 class="demo-heading">Detalles de la danza</h2><button class="contact-close" type="button">×</button></div>
+                      <label class="demo-label">Slogan</label><div class="demo-input" id="dance-slogan"><span class="demo-value">Caminar juntos, mirarnos y encuentrarnos.</span></div>
+                      <label class="demo-label">Curva evolución</label><div class="demo-input" id="dance-evolution"><span class="demo-value">+2</span></div>
+                      <div class="editor-more" id="more-detail"><strong>Más detalle</strong><span>Línea de vivencia · Clasificación · Objetivo · Presenta</span></div>
+                      <div class="editor-modal-actions"><button class="demo-button is-secondary" type="button">Cancelar</button><button class="demo-button" id="save-dance-detail" type="button">Guardar danza</button></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-dance-list">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Danzas</span><h2 class="demo-heading">3 danzas</h2></div><div class="editor-save-actions"><button class="demo-button" type="button">Guardar</button></div></div>
+                    <div class="dance-editor-list">
+                      <div class="dance-editor-row"><span class="dance-number">01</span><div class="dance-row-main"><strong>Ronda de iniciación dulce</strong><small>BLV01-01 · 00:03:53</small></div><div class="dance-row-actions"><span>▶</span><span>✎</span><span>⋯</span></div></div>
+                      <div class="dance-editor-row"><span class="dance-number">02</span><div class="dance-row-main"><strong>Danza de la gestación</strong><small>BLV01-02 · 00:03:11</small></div><div class="dance-row-actions"><span>▶</span><span>✎</span><span>⋯</span></div></div>
+                      <div class="dance-editor-row"><span class="dance-number">03</span><div class="dance-row-main"><strong>Juego estoy en tu barriga</strong><small>BLV01-03 · 00:02:14</small></div><div class="dance-row-actions"><span>▶</span><span>✎</span><span>⋯</span></div></div>
+                    </div>
+                    <div class="dance-editor-footer"><button class="demo-button is-secondary paste-dances" type="button">Pegar danzas</button><span>Arrastra o haz doble clic para ordenar</span></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-graph">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Gráfico</span><h2 class="demo-heading">Evolución de la clase</h2></div><div class="editor-save-actions"><button class="demo-button" type="button">Guardar</button></div></div>
+                    <div class="editor-graph-card" id="editor-graph">
+                      <div class="graph-labels"><span>Adrenérgico</span><span>Colinérgico</span></div>
+                      <div class="graph-line"><i style="--x:4%;--y:62%"></i><i style="--x:20%;--y:38%"></i><i style="--x:38%;--y:24%"></i><i style="--x:56%;--y:55%"></i><i style="--x:74%;--y:72%"></i><i style="--x:94%;--y:58%"></i></div>
+                      <div class="graph-caption">Arrastra los puntos para ajustar la energía de cada danza.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-test">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Prueba de música</span><h2 class="demo-heading">Escucha la transición</h2></div><div class="editor-save-actions"><button class="demo-button" type="button">Guardar</button></div></div>
+                    <div class="editor-test-card">
+                      <div class="editor-test-row" id="test-range"><label>Desde</label><span>01. Ronda de iniciación dulce</span><label>Hasta</label><span>03. Juego estoy en tu barriga</span></div>
+                      <div class="editor-test-times" id="test-times"><span>Inicio <b>10 s</b></span><span>Media <b>10 s</b></span><span>Final <b>15 s</b></span></div>
+                      <button class="demo-button" id="begin-test" type="button">Comenzar prueba</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-execute">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Ejecución controlada</span><h2 class="demo-heading">Conduce la clase</h2></div><div class="editor-save-actions"><button class="demo-button" type="button">Guardar</button></div></div>
+                    <div class="editor-execute-card" id="execute-range">
+                      <div class="editor-test-row"><label>Desde</label><span>01. Ronda de iniciación dulce</span><label>Hasta</label><span>03. Juego estoy en tu barriga</span></div>
+                      <button class="demo-button" id="begin-execute" type="button">Comenzar ejecución controlada</button>
+                      <button class="demo-button is-secondary" id="play-all" type="button">Reproducir todo</button>
+                    </div>
+                    <div class="editor-execute-modal" id="execute-modal"><small>Slogan</small><strong>Caminar juntos, mirarnos y encuentrarnos.</strong><p>Invita a bailar o muestra la danza después de unos segundos.</p></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-save">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Guardar</span><h2 class="demo-heading">Clase de apertura</h2></div><div class="editor-save-actions"><button class="demo-button editor-save" type="button">Guardar</button><button class="demo-button is-danger editor-exit" type="button">Salir</button></div></div>
+                    <div class="editor-save-card"><i class="bi bi-check2-circle"></i><div><strong>Cambios guardados</strong><p>Puedes seguir editando o volver a la lista de clases.</p></div></div>
+                  </div>
+                </div>
+
+                <div class="demo-caption" data-caption></div>
+                <div class="demo-cursor" data-cursor aria-hidden="true"></div>
+                <div class="demo-progress"><span data-progress></span></div>
+                <div class="demo-audio-gate" data-audio-gate>
+                  <span class="demo-gate-icon">▶</span>
+                  <strong>Ayuda con audio</strong>
+                  <p>Escucha la explicación capítulo por capítulo.</p>
+                  <button class="demo-button" data-play-audio type="button" disabled>Reproducir con audio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="editor-chapter-panel">
+          <div class="editor-chapter-status" data-chapter-status>Capítulo 1 de 9 · Mapa del editor</div>
+          <div class="editor-chapter-nav" data-chapter-menu></div>
+          <button class="demo-button editor-continue" data-continue-chapter type="button" hidden>Continuar con el siguiente capítulo</button>
+        </div>
+
+        <button class="demo-replay" data-replay type="button" hidden>↻ Repetir desde el inicio</button>
+        <p class="demo-footnote">Voz generada provisional · Velocidad 0.9× · Subtítulos incluidos · Cada capítulo se detiene al finalizar.</p>
+      </div>
+    </main>
+  </div>
+  <script src="registration-audio.js"></script>
+</body>
+</html>
