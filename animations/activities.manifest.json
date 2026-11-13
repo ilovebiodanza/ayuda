@@ -1,0 +1,370 @@
+{
+  "id": "activities",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo usar Actividades",
+  "status": "audio-generated-provisional",
+  "format": "audio-driven-html-with-chapters",
+  "chapterMode": true,
+  "voice": {
+    "type": "generated",
+    "provider": "Google Translate TTS (provisional)",
+    "language": "es",
+    "speed": "135-150 wpm",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [
+      0.75,
+      0.9,
+      1,
+      1.25
+    ],
+    "autoplay": false,
+    "captions": true,
+    "stopAtChapterEnd": true
+  },
+  "audio": {
+    "directory": "audio/activities/",
+    "format": "mp3",
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitrate": "64k",
+    "status": "generated-provisional"
+  },
+  "visual": {
+    "screenSequence": [
+      "activities-list",
+      "activities-search",
+      "activities-participants",
+      "activities-bulk",
+      "activities-expenses",
+      "activities-summary"
+    ]
+  },
+  "completionCaption": "Actividades reúne el seguimiento completo de cada encuentro.",
+  "chapters": [
+    {
+      "id": "que-muestra",
+      "number": 1,
+      "title": "Qué muestra Actividades",
+      "caption": "Cada actividad reúne datos, participantes, gastos y su resumen.",
+      "durationSeconds": 28.752
+    },
+    {
+      "id": "buscar",
+      "number": 2,
+      "title": "Buscar y filtrar",
+      "caption": "Busca por actividad, persona o lugar; combina los filtros y la paginación.",
+      "durationSeconds": 24.504
+    },
+    {
+      "id": "participantes",
+      "number": 3,
+      "title": "Participantes y asistencia",
+      "caption": "Marca pagó, exención y asistencia; la nota se guarda al instante.",
+      "durationSeconds": 36.528
+    },
+    {
+      "id": "acciones",
+      "number": 4,
+      "title": "Acciones masivas y grupos",
+      "caption": "Cobra o marca asistencia en bloque; un grupo se expande en personas individuales.",
+      "durationSeconds": 33.816
+    },
+    {
+      "id": "gastos",
+      "number": 5,
+      "title": "Gastos de la actividad",
+      "caption": "Ajusta importes desde la lista; agrega o elimina gastos desde Editar.",
+      "durationSeconds": 28.296
+    },
+    {
+      "id": "resumen",
+      "number": 6,
+      "title": "Resumen, reporte y certificado",
+      "caption": "Resumen por actividad, reporte por fechas y certificado verificado.",
+      "durationSeconds": 41.736
+    }
+  ],
+  "segments": [
+    {
+      "id": "01-01",
+      "chapter": "que-muestra",
+      "audio": "01-01.mp3",
+      "scene": "activities-list",
+      "caption": "Lista de actividades.",
+      "narration": "Esta es la lista de actividades.",
+      "durationSeconds": 2.64,
+      "onStart": [
+        "focus:#activity-row"
+      ]
+    },
+    {
+      "id": "01-02",
+      "chapter": "que-muestra",
+      "audio": "01-02.mp3",
+      "scene": "activities-list",
+      "caption": "Cada fila resume una actividad.",
+      "narration": "Cada fila reúne una actividad: su tipo, título, fechas, participantes y gastos.",
+      "durationSeconds": 8.136,
+      "onStart": [
+        "focus:#activity-row"
+      ]
+    },
+    {
+      "id": "01-03",
+      "chapter": "que-muestra",
+      "audio": "01-03.mp3",
+      "scene": "activities-list",
+      "caption": "Registrados, pagaron, asistieron y total de gastos.",
+      "narration": "Los chips muestran cuántas personas están registradas, cuántas pagaron y cuántas asistieron. El encabezado de Gastos muestra el total de esa actividad.",
+      "durationSeconds": 11.808,
+      "onStart": [
+        "focus:#participant-chips"
+      ]
+    },
+    {
+      "id": "01-04",
+      "chapter": "que-muestra",
+      "audio": "01-04.mp3",
+      "scene": "activities-list",
+      "caption": "Editar, resumen o eliminar desde la fila.",
+      "narration": "Desde los botones de la derecha puedes editar, abrir el resumen o eliminar.",
+      "durationSeconds": 6.168,
+      "onStart": [
+        "focus:#row-actions"
+      ]
+    },
+    {
+      "id": "02-01",
+      "chapter": "buscar",
+      "audio": "02-01.mp3",
+      "scene": "activities-search",
+      "caption": "Busca por actividad, persona o lugar.",
+      "narration": "Arriba está el buscador. Puedes buscar por actividad, por una persona registrada o por un lugar.",
+      "durationSeconds": 7.68,
+      "onStart": [
+        "focus:#activities-search"
+      ]
+    },
+    {
+      "id": "02-02",
+      "chapter": "buscar",
+      "audio": "02-02.mp3",
+      "scene": "activities-search",
+      "caption": "Filtra por modalidad, fecha y estado.",
+      "narration": "Los filtros permiten acotar por modalidad, por fecha y por estado: con o sin participantes, evaluadas o certificadas.",
+      "durationSeconds": 10.104,
+      "onStart": [
+        "focus:#activities-filters"
+      ]
+    },
+    {
+      "id": "02-03",
+      "chapter": "buscar",
+      "audio": "02-03.mp3",
+      "scene": "activities-search",
+      "caption": "Ajusta la página y recorre los resultados.",
+      "narration": "Ajusta cuántos resultados ves por página y usa la paginación para recorrer la lista.",
+      "durationSeconds": 6.72,
+      "onStart": [
+        "focus:#activities-pagination"
+      ]
+    },
+    {
+      "id": "03-01",
+      "chapter": "participantes",
+      "audio": "03-01.mp3",
+      "scene": "activities-participants",
+      "caption": "Abre la sección de participantes.",
+      "narration": "Despliega Participantes para trabajar con las personas de la actividad.",
+      "durationSeconds": 5.04,
+      "onStart": [
+        "focus:#participants-section"
+      ]
+    },
+    {
+      "id": "03-02",
+      "chapter": "participantes",
+      "audio": "03-02.mp3",
+      "scene": "activities-participants",
+      "caption": "Los estados tienen texto e icono.",
+      "narration": "Cada persona muestra su estado con texto e icono: pagó, exento, asistió o tiene una nota pendiente.",
+      "durationSeconds": 9.24,
+      "onStart": [
+        "focus:.participant-status.is-success"
+      ]
+    },
+    {
+      "id": "03-03",
+      "chapter": "participantes",
+      "audio": "03-03.mp3",
+      "scene": "activities-participants",
+      "caption": "Pago, exención y asistencia.",
+      "narration": "Marca Pagó para registrar el pago; se abre un formulario para indicar la forma de pago. Marca Exento cuando no corresponde cobrar. Marca Asistió para registrar la asistencia.",
+      "durationSeconds": 13.848,
+      "onStart": [
+        "focus:#pay-check"
+      ]
+    },
+    {
+      "id": "03-04",
+      "chapter": "participantes",
+      "audio": "03-04.mp3",
+      "scene": "activities-participants",
+      "caption": "La nota se guarda al instante.",
+      "narration": "Si la actividad es evaluada, escribe la nota entre cero y cien. Los cambios se guardan en el momento.",
+      "durationSeconds": 8.4,
+      "onStart": [
+        "focus:#grade-input"
+      ]
+    },
+    {
+      "id": "04-01",
+      "chapter": "acciones",
+      "audio": "04-01.mp3",
+      "scene": "activities-bulk",
+      "caption": "Acciones masivas para todo el grupo.",
+      "narration": "Para ahorrar tiempo usa las acciones masivas.",
+      "durationSeconds": 3.6,
+      "onStart": [
+        "focus:#bulk-actions"
+      ]
+    },
+    {
+      "id": "04-02",
+      "chapter": "acciones",
+      "audio": "04-02.mp3",
+      "scene": "activities-bulk",
+      "caption": "Marca pagos o asistencia en bloque.",
+      "narration": "Marcar todos como pagados solicita una sola forma de pago y la aplica a todo el grupo. Marcar todos como asistentes registra la asistencia de todas las personas.",
+      "durationSeconds": 12.936,
+      "onStart": [
+        "click:#bulk-paid"
+      ]
+    },
+    {
+      "id": "04-03",
+      "chapter": "acciones",
+      "audio": "04-03.mp3",
+      "scene": "activities-bulk",
+      "caption": "Carga un grupo ya registrado.",
+      "narration": "Cargar grupo permite elegir un grupo ya registrado y agregar a sus integrantes.",
+      "durationSeconds": 6.576,
+      "onStart": [
+        "focus:#bulk-group"
+      ]
+    },
+    {
+      "id": "04-04",
+      "chapter": "acciones",
+      "audio": "04-04.mp3",
+      "scene": "activities-bulk",
+      "caption": "El grupo es una plantilla; el control es individual.",
+      "narration": "El grupo solo sirve como plantilla: después cada persona se controla individualmente. Los participantes que ya estaban no se duplican.",
+      "durationSeconds": 10.704,
+      "onStart": [
+        "focus:#bulk-note"
+      ]
+    },
+    {
+      "id": "05-01",
+      "chapter": "gastos",
+      "audio": "05-01.mp3",
+      "scene": "activities-expenses",
+      "caption": "El total de gastos está visible.",
+      "narration": "El encabezado de Gastos muestra el total de la actividad.",
+      "durationSeconds": 4.2,
+      "onStart": [
+        "focus:#expense-demo-total"
+      ]
+    },
+    {
+      "id": "05-02",
+      "chapter": "gastos",
+      "audio": "05-02.mp3",
+      "scene": "activities-expenses",
+      "caption": "Ajusta un importe y mira el total.",
+      "narration": "Despliega la sección para revisar la descripción y ajustar un importe. Al cambiarlo, el total se actualiza automáticamente.",
+      "durationSeconds": 9.84,
+      "onStart": [
+        "focus:#expense-input"
+      ]
+    },
+    {
+      "id": "05-03",
+      "chapter": "gastos",
+      "audio": "05-03.mp3",
+      "scene": "activities-expenses",
+      "caption": "Agrega o elimina gastos desde Editar.",
+      "narration": "Para agregar, corregir la descripción o eliminar un gasto, abre la actividad en Editar y entra en la pestaña Gastos.",
+      "durationSeconds": 9.72,
+      "onStart": [
+        "focus:#expense-editor-hint"
+      ]
+    },
+    {
+      "id": "05-04",
+      "chapter": "gastos",
+      "audio": "05-04.mp3",
+      "scene": "activities-expenses",
+      "caption": "Descripción e importe son obligatorios.",
+      "narration": "Cada gasto necesita una descripción y un importe válido.",
+      "durationSeconds": 4.536,
+      "onStart": [
+        "focus:#expense-demo-total"
+      ]
+    },
+    {
+      "id": "06-01",
+      "chapter": "resumen",
+      "audio": "06-01.mp3",
+      "scene": "activities-summary",
+      "caption": "Abre el resumen desde el menú.",
+      "narration": "En el menú de tres puntos elige Resumen para abrir el resumen profesional de esa actividad.",
+      "durationSeconds": 7.152,
+      "onStart": [
+        "focus:#summary-link"
+      ]
+    },
+    {
+      "id": "06-02",
+      "chapter": "resumen",
+      "audio": "06-02.mp3",
+      "scene": "activities-summary",
+      "caption": "Elige las secciones del reporte.",
+      "narration": "El botón de reportes genera un informe por rango de fechas. Allí eliges qué incluir: datos básicos, participantes, ingresos y gastos, o varias secciones a la vez.",
+      "durationSeconds": 13.944,
+      "onStart": [
+        "focus:#report-options"
+      ]
+    },
+    {
+      "id": "06-03",
+      "chapter": "resumen",
+      "audio": "06-03.mp3",
+      "scene": "activities-summary",
+      "caption": "Incluye el día final y ordena por fecha.",
+      "narration": "El reporte incluye el día final y se ordena de la actividad más reciente a la más antigua.",
+      "durationSeconds": 7.2,
+      "onStart": [
+        "focus:#report-date"
+      ]
+    },
+    {
+      "id": "06-04",
+      "chapter": "resumen",
+      "audio": "06-04.mp3",
+      "scene": "activities-summary",
+      "caption": "El certificado abre la página pública de verificación.",
+      "narration": "Si una persona cumple los requisitos, aparece el botón del certificado. Ese botón abre la página pública de verificación; desde allí se imprime el certificado real.",
+      "durationSeconds": 13.44,
+      "onStart": [
+        "focus:#certificate-link",
+        "click:#certificate-link"
+      ]
+    }
+  ]
+}

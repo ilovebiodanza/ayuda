@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda visual · Editor de actividades</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="contacts.css">
+  <link rel="stylesheet" href="activities-help.css">
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="https://ilovebiodanza.top/">Yo<span class="heart">❤</span>Biodanza</a>
+      <span class="demo-topbar-note">Ayuda audiovisual · Editor de actividades</span>
+      <a class="demo-back" href="index.html">← Todas las animaciones</a>
+    </header>
+
+    <main class="demo-grid">
+      <aside class="demo-intro">
+        <span class="demo-kicker">Animación 10</span>
+        <h1>Cómo crear y editar una actividad</h1>
+        <p>Completa los datos, carga personas y grupos, registra gastos y prepara el certificado.</p>
+        <ol class="demo-steps">
+          <li><span class="demo-step-number">1</span><span>Completa los datos básicos.</span></li>
+          <li><span class="demo-step-number">2</span><span>Agrega equipo, participantes y gastos.</span></li>
+          <li><span class="demo-step-number">3</span><span>Revisa y guarda la actividad.</span></li>
+        </ol>
+        <a class="demo-back" href="activities.html">← Ver lista y seguimiento</a>
+        <a class="demo-back" href="index.html">Volver a la galería</a>
+      </aside>
+
+      <div class="demo-stage-wrap">
+        <section class="demo-stage" data-audio-demo data-manifest="activity-editor.manifest.json" data-rate="0.9" data-chapter-mode="true" aria-label="Ayuda del editor de actividades con audio">
+          <div class="demo-browser">
+            <div class="demo-browser-bar"><span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-url">ilovebiodanza.top / actividades / editar</span></div>
+            <div class="demo-app">
+              <div class="demo-app-nav"><span class="demo-app-brand">Yo<span class="heart">❤</span>Biodanza</span><span class="demo-app-nav-right">Actividades <span class="demo-avatar">A</span></span></div>
+              <div class="demo-content">
+
+                <div class="demo-screen is-active" data-screen="editor-basic">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Actividades</span><h2 class="demo-heading">Editar actividad</h2></div><div class="editor-save-actions"><button class="demo-button" type="button">Guardar actividad</button><button class="demo-button is-secondary" type="button">Salir sin guardar</button></div></div>
+                    <div class="editor-tabs" id="editor-tabs"><span class="editor-tab is-active" id="tab-basic"><i class="bi bi-list-check"></i> Datos básicos</span><span class="editor-tab" id="tab-team"><i class="bi bi-person-video3"></i> Equipo</span><span class="editor-tab" id="tab-registers"><i class="bi bi-people"></i> Registrados</span><span class="editor-tab" id="tab-expenses"><i class="bi bi-cash-stack"></i> Gastos</span><span class="editor-tab" id="tab-other"><i class="bi bi-three-dots"></i> Otros datos</span></div>
+                    <div class="editor-form-card" id="basic-section">
+                      <div class="editor-field-grid">
+                        <div class="editor-field"><label>Tipo</label><div class="demo-input" id="activity-type">Taller</div></div>
+                        <div class="editor-field"><label>Modalidad</label><div class="demo-input">Presencial</div></div>
+                        <div class="editor-field is-wide"><label>Título</label><div class="demo-input" id="activity-title">Dionisio - Arquetipo de Biodanza</div></div>
+                        <div class="editor-field"><label>Fecha de inicio</label><div class="demo-input" id="activity-start">25/3/2026</div></div>
+                        <div class="editor-field"><label>Fecha de fin</label><div class="demo-input" id="activity-end">25/3/2026</div></div>
+                        <div class="editor-field"><label>Duración</label><div class="demo-input">4 horas</div></div>
+                        <div class="editor-field"><label>Costo</label><div class="demo-input">6,00</div></div>
+                        <div class="editor-field is-wide"><label>Descripción</label><div class="demo-input" id="activity-description">Un espacio para explorar el arquetipo dionisíaco.</div></div>
+                      </div>
+                      <div class="editor-checks"><span class="editor-check" id="evaluated"><span class="demo-check is-checked">✓</span> Evaluado</span><span class="editor-check" id="certified"><span class="demo-check is-checked">✓</span> Certificado</span></div>
+                      <div class="editor-field" style="margin-top:7px"><label>Nota aprobatoria</label><div class="demo-input" id="passing-grade">50 %</div></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-team">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Actividades</span><h2 class="demo-heading">Editar actividad</h2></div><div class="editor-save-actions"><button class="demo-button" type="button">Guardar actividad</button><button class="demo-button is-secondary" type="button">Salir sin guardar</button></div></div>
+                    <div class="editor-tabs"><span class="editor-tab"><i class="bi bi-list-check"></i> Datos básicos</span><span class="editor-tab is-active"><i class="bi bi-person-video3"></i> Equipo</span><span class="editor-tab"><i class="bi bi-people"></i> Registrados</span><span class="editor-tab"><i class="bi bi-cash-stack"></i> Gastos</span><span class="editor-tab"><i class="bi bi-three-dots"></i> Otros datos</span></div>
+                    <div class="editor-people-card" id="team-section">
+                      <div class="people-demo-head"><span>Persona</span><span>Rol</span><span></span></div>
+                      <div class="people-demo-row" id="team-row"><span>Ana Pérez<small>Facilitadora</small></span><span>Facilitadora</span><span class="people-demo-actions">⋯</span></div>
+                      <div class="people-demo-row"><span>Jesús Martín<small>Profesor de Biodanza</small></span><span>Facilitador</span><span class="people-demo-actions">⋯</span></div>
+                      <div class="group-load-button"><button class="demo-button is-secondary" id="team-group-button" type="button">+ Agregar grupo</button></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-registers">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Actividades</span><h2 class="demo-heading">Editar actividad</h2></div><div class="editor-save-actions"><button class="demo-button" type="button">Guardar actividad</button><button class="demo-button is-secondary" type="button">Salir sin guardar</button></div></div>
+                    <div class="editor-tabs"><span class="editor-tab"><i class="bi bi-list-check"></i> Datos básicos</span><span class="editor-tab"><i class="bi bi-person-video3"></i> Equipo</span><span class="editor-tab is-active"><i class="bi bi-people"></i> Registrados</span><span class="editor-tab"><i class="bi bi-cash-stack"></i> Gastos</span><span class="editor-tab"><i class="bi bi-three-dots"></i> Otros datos</span></div>
+                    <div class="editor-people-card" id="register-section">
+                      <div class="people-demo-head"><span>Participante</span><span>Pagó / Asistió</span><span></span></div>
+                      <div class="people-demo-row"><span>Altair de Almeida<small>Pagó · Asistió</small></span><span>✓ / ✓</span><span class="people-demo-actions">⋯</span></div>
+                      <div class="people-demo-row"><span>Andrew Webb<small>Exento · Asistió</small></span><span>— / ✓</span><span class="people-demo-actions">⋯</span></div>
+                      <div class="people-demo-row"><span>Claire Pierce<small>Sin pagar · Asistió</small></span><span>— / ✓</span><span class="people-demo-actions">⋯</span></div>
+                      <div class="group-load-button"><button class="demo-button is-secondary" id="register-group-button" type="button">+ Agregar grupo</button></div>
+                      <p class="expense-demo-note">El grupo se expande en personas individuales; no se guarda como vínculo.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-expenses">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Actividades</span><h2 class="demo-heading">Editar actividad</h2></div><div class="editor-save-actions"><button class="demo-button" type="button">Guardar actividad</button><button class="demo-button is-secondary" type="button">Salir sin guardar</button></div></div>
+                    <div class="editor-tabs"><span class="editor-tab"><i class="bi bi-list-check"></i> Datos básicos</span><span class="editor-tab"><i class="bi bi-person-video3"></i> Equipo</span><span class="editor-tab"><i class="bi bi-people"></i> Registrados</span><span class="editor-tab is-active"><i class="bi bi-cash-stack"></i> Gastos</span><span class="editor-tab"><i class="bi bi-three-dots"></i> Otros datos</span></div>
+                    <div class="editor-expense-card" id="expense-form">
+                      <div class="expense-demo-head"><div><span class="contacts-eyebrow">Gastos</span><strong>Registra los gastos de la actividad.</strong></div><span>Total <b id="editor-expense-total">7,00</b></span></div>
+                      <div class="expense-demo-row"><span class="demo-input" id="expense-description">Alquiler de sala</span><span class="demo-input" id="expense-amount">5,00</span><button class="demo-button" id="expense-add" type="button">Agregar</button></div>
+                      <div class="expense-demo-row"><span>Materiales</span><span>2,00</span><button class="demo-button is-secondary" type="button">Eliminar</button></div>
+                      <p class="expense-demo-note" id="expense-error">Cada gasto necesita descripción e importe válido.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-other">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Actividades</span><h2 class="demo-heading">Editar actividad</h2></div><div class="editor-save-actions"><button class="demo-button" type="button">Guardar actividad</button><button class="demo-button is-secondary" type="button">Salir sin guardar</button></div></div>
+                    <div class="editor-tabs"><span class="editor-tab"><i class="bi bi-list-check"></i> Datos básicos</span><span class="editor-tab"><i class="bi bi-person-video3"></i> Equipo</span><span class="editor-tab"><i class="bi bi-people"></i> Registrados</span><span class="editor-tab"><i class="bi bi-cash-stack"></i> Gastos</span><span class="editor-tab is-active"><i class="bi bi-three-dots"></i> Otros datos</span></div>
+                    <div class="editor-other-card" id="other-section">
+                      <div class="editor-other-grid">
+                        <div class="editor-field is-wide"><label>Requisitos</label><div class="demo-input">Abierto a personas interesadas en Biodanza.</div></div>
+                        <div class="editor-field"><label>Cupo máximo</label><div class="demo-input" id="max-participants">20 personas</div></div>
+                        <div class="editor-field"><label>Lugar, fecha y hora</label><div class="demo-input">Caracas · 25/3/2026 · 6:00 pm</div></div>
+                        <div class="editor-field is-wide"><label>Imagen de fondo del certificado</label><div class="demo-input" id="certificate-url">https://.../certificado-dionisio.jpg</div></div>
+                      </div>
+                      <div class="group-load-button"><button class="demo-button is-secondary" id="certificate-upload" type="button"><i class="bi bi-github"></i> Subir imagen a GitHub</button></div>
+                      <p class="expense-demo-note">La imagen se usa en el certificado real que se imprime.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="editor-save">
+                  <div class="editor-shell">
+                    <div class="editor-topline"><div class="editor-heading"><span class="contacts-eyebrow">Actividades</span><h2 class="demo-heading">Editar actividad</h2></div><div class="editor-save-actions"><button class="demo-button" id="save-button" type="button">Guardar actividad</button><button class="demo-button is-secondary" id="exit-button" type="button">Salir sin guardar</button></div></div>
+                    <div class="editor-tabs" id="editor-tabs"><span class="editor-tab"><i class="bi bi-list-check"></i> Datos básicos</span><span class="editor-tab"><i class="bi bi-person-video3"></i> Equipo</span><span class="editor-tab"><i class="bi bi-people"></i> Registrados</span><span class="editor-tab"><i class="bi bi-cash-stack"></i> Gastos</span><span class="editor-tab"><i class="bi bi-three-dots"></i> Otros datos</span></div>
+                    <div class="editor-form-card">
+                      <div class="editor-field-grid"><div class="editor-field is-wide"><label>Título</label><div class="demo-input">Dionisio - Arquetipo de Biodanza</div></div><div class="editor-field"><label>Tipo</label><div class="demo-input">Taller</div></div><div class="editor-field"><label>Fechas</label><div class="demo-input">25/3/2026 → 25/3/2026</div></div></div>
+                      <div class="save-success"><i class="bi bi-check2-circle"></i><div><strong>Cambios guardados</strong><small>La actividad ya aparece actualizada en la lista.</small></div></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-caption" data-caption></div>
+                <div class="demo-cursor" data-cursor aria-hidden="true"></div>
+                <div class="demo-progress"><span data-progress></span></div>
+                <div class="demo-audio-gate" data-audio-gate><span class="demo-gate-icon">▶</span><strong>Ayuda con audio</strong><p>Escucha la explicación capítulo por capítulo.</p><button class="demo-button" data-play-audio type="button" disabled>Reproducir con audio</button></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="editor-chapter-panel"><div class="editor-chapter-status" data-chapter-status>Capítulo 1 de 7 · Abrir el editor y recorrer las pestañas</div><div class="editor-chapter-nav" data-chapter-menu></div><button class="demo-button editor-continue" data-continue-chapter type="button" hidden>Continuar con el siguiente capítulo</button></div>
+        <button class="demo-replay" data-replay type="button" hidden>↻ Repetir desde el inicio</button>
+        <p class="demo-footnote">Voz generada provisional · Velocidad 0.9× · Subtítulos incluidos · Cada capítulo se detiene al finalizar.</p>
+      </div>
+    </main>
+  </div>
+  <script src="registration-audio.js"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+{
+  "id": "activity-editor",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo crear y editar una actividad",
+  "status": "audio-generated-provisional",
+  "format": "audio-driven-html-with-chapters",
+  "chapterMode": true,
+  "voice": {
+    "type": "generated",
+    "provider": "Google Translate TTS (provisional)",
+    "language": "es",
+    "speed": "135-150 wpm",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [
+      0.75,
+      0.9,
+      1,
+      1.25
+    ],
+    "autoplay": false,
+    "captions": true,
+    "stopAtChapterEnd": true
+  },
+  "audio": {
+    "directory": "audio/activity-editor/",
+    "format": "mp3",
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitrate": "64k",
+    "status": "generated-provisional"
+  },
+  "visual": {
+    "screenSequence": [
+      "editor-basic",
+      "editor-team",
+      "editor-registers",
+      "editor-expenses",
+      "editor-other",
+      "editor-save"
+    ]
+  },
+  "completionCaption": "La actividad queda lista para el seguimiento de participantes y gastos.",
+  "chapters": [
+    {
+      "id": "mapa",
+      "number": 1,
+      "title": "Abrir el editor y recorrer las pestañas",
+      "caption": "Alta y edición comparten el mismo formulario por pestañas.",
+      "durationSeconds": 26.568
+    },
+    {
+      "id": "basicos",
+      "number": 2,
+      "title": "Datos básicos",
+      "caption": "Tipo, fechas, costo, evaluación y certificación se definen aquí.",
+      "durationSeconds": 30.024
+    },
+    {
+      "id": "equipo",
+      "number": 3,
+      "title": "Equipo de trabajo y grupos",
+      "caption": "Carga un grupo como plantilla; cada integrante queda como persona individual.",
+      "durationSeconds": 28.296
+    },
+    {
+      "id": "registrados",
+      "number": 4,
+      "title": "Participantes y grupos",
+      "caption": "Los grupos facilitan la carga; el seguimiento siempre es individual.",
+      "durationSeconds": 23.28
+    },
+    {
+      "id": "gastos",
+      "number": 5,
+      "title": "Gastos",
+      "caption": "Agrega, corrige o elimina gastos; el total se actualiza solo.",
+      "durationSeconds": 25.704
+    },
+    {
+      "id": "otros",
+      "number": 6,
+      "title": "Otros datos y certificado",
+      "caption": "Completa recursos, cupo y la imagen de fondo del certificado.",
+      "durationSeconds": 29.592
+    },
+    {
+      "id": "guardar",
+      "number": 7,
+      "title": "Guardar y editar",
+      "caption": "Revisa, guarda y corrige; Salir sin guardar descarta los cambios.",
+      "durationSeconds": 26.544
+    }
+  ],
+  "segments": [
+    {
+      "id": "01-01",
+      "chapter": "mapa",
+      "audio": "01-01.mp3",
+      "scene": "editor-basic",
+      "caption": "Agregar actividad o Editar.",
+      "narration": "Para crear una actividad pulsa Agregar actividad. Para editar una existente, usa el botón Editar de su fila.",
+      "durationSeconds": 9.048,
+      "onStart": [
+        "focus:#editor-tabs"
+      ]
+    },
+    {
+      "id": "01-02",
+      "chapter": "mapa",
+      "audio": "01-02.mp3",
+      "scene": "editor-basic",
+      "caption": "Cinco pestañas para completar la actividad.",
+      "narration": "El formulario tiene cinco pestañas: datos básicos, equipo de trabajo, registrados, gastos y otros datos.",
+      "durationSeconds": 9.912,
+      "onStart": [
+        "focus:#tab-basic"
+      ]
+    },
+    {
+      "id": "01-03",
+      "chapter": "mapa",
+      "audio": "01-03.mp3",
+      "scene": "editor-basic",
+      "caption": "Guardar o salir; el formulario es compartido.",
+      "narration": "Abajo están los botones para guardar o salir sin guardar. Alta y edición usan el mismo formulario.",
+      "durationSeconds": 7.608,
+      "onStart": [
+        "focus:.editor-save-actions"
+      ]
+    },
+    {
+      "id": "02-01",
+      "chapter": "basicos",
+      "audio": "02-01.mp3",
+      "scene": "editor-basic",
+      "caption": "Completa tipo, título, modalidad, duración y costo.",
+      "narration": "En Datos básicos eliges el tipo de actividad, escribes el título, la modalidad, la duración y el costo.",
+      "durationSeconds": 9.072,
+      "onStart": [
+        "focus:#activity-type"
+      ]
+    },
+    {
+      "id": "02-02",
+      "chapter": "basicos",
+      "audio": "02-02.mp3",
+      "scene": "editor-basic",
+      "caption": "Define las fechas y la descripción.",
+      "narration": "Define la fecha de inicio y la fecha de fin. La descripción admite texto enriquecido.",
+      "durationSeconds": 6.792,
+      "onStart": [
+        "focus:#activity-start"
+      ]
+    },
+    {
+      "id": "02-03",
+      "chapter": "basicos",
+      "audio": "02-03.mp3",
+      "scene": "editor-basic",
+      "caption": "Activa la evaluación y la nota aprobatoria.",
+      "narration": "Si la actividad es evaluada, activa Evaluado e indica la nota aprobatoria.",
+      "durationSeconds": 6.672,
+      "onStart": [
+        "focus:#evaluated"
+      ]
+    },
+    {
+      "id": "02-04",
+      "chapter": "basicos",
+      "audio": "02-04.mp3",
+      "scene": "editor-basic",
+      "caption": "Activa el certificado cuando corresponda.",
+      "narration": "Activa Certificado si los participantes que cumplan los requisitos podrán obtener su certificado.",
+      "durationSeconds": 7.488,
+      "onStart": [
+        "focus:#certified"
+      ]
+    },
+    {
+      "id": "03-01",
+      "chapter": "equipo",
+      "audio": "03-01.mp3",
+      "scene": "editor-team",
+      "caption": "Agrega al equipo que prepara la actividad.",
+      "narration": "En Equipo de trabajo agregas a las personas que preparan o facilitan la actividad.",
+      "durationSeconds": 6.432,
+      "onStart": [
+        "focus:#team-section"
+      ]
+    },
+    {
+      "id": "03-02",
+      "chapter": "equipo",
+      "audio": "03-02.mp3",
+      "scene": "editor-team",
+      "caption": "Busca contactos o carga un grupo.",
+      "narration": "Puedes buscar un contacto por correo o teléfono. También puedes cargar un grupo completo.",
+      "durationSeconds": 6.648,
+      "onStart": [
+        "focus:#team-row"
+      ]
+    },
+    {
+      "id": "03-03",
+      "chapter": "equipo",
+      "audio": "03-03.mp3",
+      "scene": "editor-team",
+      "caption": "El grupo se expande en personas individuales.",
+      "narration": "Al cargar el grupo, sus integrantes se agregan como personas individuales, conservando el rol que tenían en el grupo. Después puedes cambiar o quitar a cada persona sin modificar el grupo original.",
+      "durationSeconds": 15.216,
+      "onStart": [
+        "focus:#team-group-button"
+      ]
+    },
+    {
+      "id": "04-01",
+      "chapter": "registrados",
+      "audio": "04-01.mp3",
+      "scene": "editor-registers",
+      "caption": "Agrega participantes individuales o por grupo.",
+      "narration": "En Registrados agregas a quienes participan en la actividad. Puedes buscar una persona o cargar un grupo ya registrado.",
+      "durationSeconds": 8.808,
+      "onStart": [
+        "focus:#register-section"
+      ]
+    },
+    {
+      "id": "04-02",
+      "chapter": "registrados",
+      "audio": "04-02.mp3",
+      "scene": "editor-registers",
+      "caption": "Cada participante tiene su propio control.",
+      "narration": "Cada participante conserva su propio control de pago, exención, asistencia y nota.",
+      "durationSeconds": 7.704,
+      "onStart": [
+        "focus:.people-demo-row"
+      ]
+    },
+    {
+      "id": "04-03",
+      "chapter": "registrados",
+      "audio": "04-03.mp3",
+      "scene": "editor-registers",
+      "caption": "El grupo es una plantilla, no un vínculo.",
+      "narration": "El grupo no se guarda como vínculo: solo evita transcribir personas una por una.",
+      "durationSeconds": 6.768,
+      "onStart": [
+        "focus:#register-group-button"
+      ]
+    },
+    {
+      "id": "05-01",
+      "chapter": "gastos",
+      "audio": "05-01.mp3",
+      "scene": "editor-expenses",
+      "caption": "Escribe descripción e importe, y agrega.",
+      "narration": "En Gastos escribes una descripción y un importe, y pulsas Agregar.",
+      "durationSeconds": 5.736,
+      "onStart": [
+        "focus:#expense-form"
+      ]
+    },
+    {
+      "id": "05-02",
+      "chapter": "gastos",
+      "audio": "05-02.mp3",
+      "scene": "editor-expenses",
+      "caption": "Corrige o elimina; el total se recalcula.",
+      "narration": "Cada gasto aparece en la lista, donde puedes corregir la descripción, cambiar el importe o eliminarlo. El total se recalcula automáticamente.",
+      "durationSeconds": 11.496,
+      "onStart": [
+        "focus:#expense-description"
+      ]
+    },
+    {
+      "id": "05-03",
+      "chapter": "gastos",
+      "audio": "05-03.mp3",
+      "scene": "editor-expenses",
+      "caption": "Los gastos se validan antes de guardar.",
+      "narration": "Si guardas un gasto sin descripción o con un importe inválido, el sistema muestra el error y no lo acepta.",
+      "durationSeconds": 8.472,
+      "onStart": [
+        "focus:#expense-error"
+      ]
+    },
+    {
+      "id": "06-01",
+      "chapter": "otros",
+      "audio": "06-01.mp3",
+      "scene": "editor-other",
+      "caption": "Completa requisitos, recursos y lugar.",
+      "narration": "En Otros datos completas los requisitos, la oferta de promoción, los recursos para participantes y para el equipo, y el lugar, la fecha y la hora.",
+      "durationSeconds": 11.712,
+      "onStart": [
+        "focus:#other-section"
+      ]
+    },
+    {
+      "id": "06-02",
+      "chapter": "otros",
+      "audio": "06-02.mp3",
+      "scene": "editor-other",
+      "caption": "Define el cupo máximo.",
+      "narration": "También puedes indicar el cupo máximo de participantes.",
+      "durationSeconds": 4.392,
+      "onStart": [
+        "focus:#max-participants"
+      ]
+    },
+    {
+      "id": "06-03",
+      "chapter": "otros",
+      "audio": "06-03.mp3",
+      "scene": "editor-other",
+      "caption": "Pega la URL o sube la imagen del certificado.",
+      "narration": "Para el certificado puedes pegar la URL de la imagen de fondo o subirla a GitHub, tanto al crear como al editar.",
+      "durationSeconds": 9.288,
+      "onStart": [
+        "focus:#certificate-url"
+      ]
+    },
+    {
+      "id": "06-04",
+      "chapter": "otros",
+      "audio": "06-04.mp3",
+      "scene": "editor-other",
+      "caption": "La imagen se usa en el certificado real.",
+      "narration": "La imagen se usa en el certificado real que se imprime.",
+      "durationSeconds": 4.2,
+      "onStart": [
+        "focus:#certificate-upload"
+      ]
+    },
+    {
+      "id": "07-01",
+      "chapter": "guardar",
+      "audio": "07-01.mp3",
+      "scene": "editor-save",
+      "caption": "Revisa el formulario antes de guardar.",
+      "narration": "Revisa las pestañas antes de guardar.",
+      "durationSeconds": 2.976,
+      "onStart": [
+        "focus:#editor-tabs"
+      ]
+    },
+    {
+      "id": "07-02",
+      "chapter": "guardar",
+      "audio": "07-02.mp3",
+      "scene": "editor-save",
+      "caption": "El servidor valida los datos antes de guardar.",
+      "narration": "El sistema valida los campos obligatorios, las fechas, el costo, la nota aprobatoria y los gastos.",
+      "durationSeconds": 8.76,
+      "onStart": [
+        "focus:#save-button"
+      ]
+    },
+    {
+      "id": "07-03",
+      "chapter": "guardar",
+      "audio": "07-03.mp3",
+      "scene": "editor-save",
+      "caption": "Guarda o sale sin guardar.",
+      "narration": "Al guardar, la actividad aparece o se actualiza en la lista. Si algo falla, el formulario conserva tus datos para que puedas corregirlo. Para cerrar sin cambios usa Salir sin guardar.",
+      "durationSeconds": 14.808,
+      "onStart": [
+        "click:#save-button"
+      ]
+    }
+  ]
+}
