@@ -1,0 +1,470 @@
+/* Animación de Danzas. Usa la base de demo.css. */
+.dances-screen {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.dances-heading-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 11px;
+}
+
+.dances-heading-row .demo-button {
+  white-space: nowrap;
+}
+
+.dances-eyebrow {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--demo-primary-strong);
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dances-title {
+  margin-bottom: 1px !important;
+}
+
+.dances-count {
+  margin: 0;
+  color: var(--demo-muted);
+  font-size: 0.6rem;
+}
+
+.dances-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+
+.dances-search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 7px;
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--demo-line);
+  border-radius: 999px;
+  color: var(--demo-muted);
+  font-size: 0.62rem;
+}
+
+.dances-search.is-active {
+  border-color: var(--demo-primary);
+  box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.12);
+}
+
+.dances-search .demo-caret {
+  height: 11px;
+}
+
+.dances-filter {
+  padding: 6px 10px;
+  border: 1px solid var(--demo-line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--demo-muted);
+  font-size: 0.58rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dances-filter.is-active {
+  border-color: var(--demo-primary);
+  color: var(--demo-primary-strong);
+  box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.1);
+}
+
+.dances-cards {
+  display: grid;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.dance-demo-card {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: start;
+  padding: 10px 11px;
+  border: 1px solid var(--demo-line);
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 5px 14px rgba(27, 55, 72, 0.045);
+}
+
+.dance-demo-card.is-highlighted {
+  border-color: rgba(47, 164, 231, 0.45);
+  box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.1);
+}
+
+.dance-demo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #2fa4e7, #1b87c4);
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 7px 14px rgba(47, 164, 231, 0.2);
+}
+
+.dance-demo-body {
+  min-width: 0;
+}
+
+.dance-demo-card h3 {
+  overflow: hidden;
+  margin: 0 0 4px;
+  color: var(--demo-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dances-title-button {
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dances-title-button:hover,
+.dances-title-button:focus-visible {
+  color: var(--demo-primary-strong);
+  outline: none;
+  text-decoration: underline;
+}
+
+.dances-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 7px;
+}
+
+.dances-chips > span {
+  padding: 3px 6px;
+  border: 1px solid var(--demo-line);
+  border-radius: 999px;
+  background: #f8fbfc;
+  color: var(--demo-muted);
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.dances-chips > span.is-private {
+  border-color: #f0d9a8;
+  background: #fff8e8;
+  color: #987025;
+}
+
+.dance-demo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--demo-muted);
+  font-size: 0.53rem;
+}
+
+.dance-demo-footer b {
+  color: var(--demo-primary-strong);
+}
+
+.dance-demo-link {
+  color: var(--demo-primary-strong);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dance-demo-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.dance-demo-actions button,
+.dance-demo-add,
+.dances-music-row button {
+  min-height: 24px;
+  padding: 0 7px;
+  border: 1px solid var(--demo-line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--demo-muted);
+  font: inherit;
+  font-size: 0.58rem;
+  cursor: pointer;
+}
+
+.dance-demo-actions button:first-child {
+  border-color: var(--demo-primary);
+  color: var(--demo-primary-strong);
+}
+
+.dances-detail {
+  max-width: 660px;
+  margin: auto;
+  padding: 18px;
+  border: 1px solid var(--demo-line);
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(27, 55, 72, 0.1);
+}
+
+.dances-detail-head,
+.dances-editor-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.dances-detail-head .demo-heading,
+.dances-editor-head .demo-heading {
+  margin-bottom: 4px;
+}
+
+.dance-demo-close {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--demo-line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--demo-muted);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.dances-description-box {
+  padding: 11px 12px;
+  border-left: 3px solid #b9ddec;
+  border-radius: 0 9px 9px 0;
+  background: #f8fbfc;
+  color: #44545e;
+  font-size: 0.68rem;
+  line-height: 1.55;
+}
+
+.dances-description-box p {
+  margin: 0;
+}
+
+.dances-description-note {
+  margin: 9px 0 0;
+  color: var(--demo-muted);
+  font-size: 0.55rem;
+}
+
+.dances-description-note a {
+  color: var(--demo-primary-strong);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.dances-editor-head {
+  align-items: center;
+}
+
+.dances-editor-head .dance-demo-mark {
+  flex: 0 0 auto;
+  width: 35px;
+  height: 35px;
+  font-size: 0.9rem;
+}
+
+.dances-editor-head > div:nth-child(2) {
+  flex: 1;
+}
+
+.dances-editor-tabs {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 9px;
+  padding: 3px;
+  border: 1px solid var(--demo-line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+.dances-editor-tabs span {
+  padding: 6px 9px;
+  border-radius: 6px;
+  color: var(--demo-muted);
+  font-size: 0.58rem;
+  font-weight: 700;
+}
+
+.dances-editor-tabs span.is-active {
+  background: #eaf7fd;
+  color: var(--demo-primary-strong);
+}
+
+.dances-editor-fields {
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  border: 1px solid var(--demo-line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.dances-field {
+  display: grid;
+  gap: 3px;
+}
+
+.dances-field.is-full {
+  grid-column: 1 / -1;
+}
+
+.dances-field > span:first-child {
+  color: #4b5d66;
+  font-size: 0.56rem;
+  font-weight: 800;
+}
+
+.dances-picker {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 27px;
+  padding: 0 8px;
+  border: 1px solid var(--demo-line);
+  border-radius: 7px;
+  color: #44545e;
+  font-size: 0.6rem;
+}
+
+.dances-picker i {
+  margin-left: auto;
+  color: #9aa8b0;
+  font-style: normal;
+}
+
+.dances-picker i + i {
+  margin-left: 2px;
+}
+
+.dances-help {
+  color: var(--demo-muted);
+  font-size: 0.52rem;
+}
+
+.dances-description-mini {
+  margin-top: 7px;
+  padding: 8px 10px;
+  border: 1px solid var(--demo-line);
+  border-radius: 9px;
+  background: #fbfdfe;
+}
+
+.dances-description-mini p {
+  overflow: hidden;
+  margin: 3px 0 0;
+  color: #44545e;
+  font-size: 0.56rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dances-editor-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.dances-editor-footer .demo-button.is-secondary {
+  background: #fff;
+  color: var(--demo-muted);
+  border: 1px solid var(--demo-line);
+}
+
+.dances-music-panel {
+  padding: 11px;
+  border: 1px solid var(--demo-line);
+  border-radius: 11px;
+  background: #fff;
+}
+
+.dances-music-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  color: var(--demo-dark);
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.dance-demo-add {
+  border-color: #cfe6ef;
+  background: #f1faff;
+  color: var(--demo-primary-strong);
+  font-size: 0.55rem;
+  font-weight: 700;
+}
+
+.dances-music-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid rgba(52, 58, 64, 0.09);
+  color: #44545e;
+  font-size: 0.6rem;
+  line-height: 1.35;
+}
+
+.dances-music-row b {
+  color: var(--demo-dark);
+}
+
+.dances-music-row small {
+  display: block;
+  color: var(--demo-muted);
+  font-size: 0.53rem;
+}
+
+.dances-music-row button {
+  margin-left: 4px;
+  padding: 0 7px;
+  color: var(--demo-primary-strong);
+}
+
+.dances-music-row button:last-child {
+  color: #b24a3f;
+}
+
+@media (max-width: 900px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-intro {
+    padding-top: 0;
+  }
+}

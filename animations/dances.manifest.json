@@ -1,0 +1,193 @@
+{
+  "id": "dances",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo usar Danzas",
+  "status": "script-approved",
+  "format": "audio-driven-html",
+  "voice": {
+    "type": "generated",
+    "provider": "Google Translate TTS (provisional)",
+    "fallback": "human or ElevenLabs if the generated voice is not accepted",
+    "tone": "cálida, clara y cercana",
+    "language": "es",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [
+      0.75,
+      0.9,
+      1,
+      1.25
+    ],
+    "autoplay": false,
+    "captions": true
+  },
+  "audio": {
+    "directory": "audio/dances/",
+    "format": "mp3",
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitrate": "64k",
+    "status": "generated-provisional"
+  },
+  "visual": {
+    "screenSequence": [
+      "dances-list",
+      "dances-search",
+      "dances-description",
+      "dances-editor",
+      "dances-music"
+    ],
+    "sampleData": {
+      "dance": "Dionisio - Arquetipo de Biodanza",
+      "ccre": "IBF-CIMEB · Edición 2018",
+      "type": "Danza de trance",
+      "search": "Dionisio"
+    }
+  },
+  "segments": [
+    {
+      "id": "01-intro",
+      "audio": "01-intro.mp3",
+      "durationSeconds": 10.008,
+      "estimatedSeconds": 11,
+      "scene": "dances-list",
+      "caption": "Danzas organiza el repertorio de tus clases.",
+      "narration": "Este es el módulo Danzas. Aquí organizas las danzas que usas en tus clases, con su origen, su clasificación y su música.",
+      "onStart": [
+        "focus:.dances-title"
+      ]
+    },
+    {
+      "id": "02-lista",
+      "audio": "02-lista.mp3",
+      "durationSeconds": 11.88,
+      "estimatedSeconds": 12,
+      "scene": "dances-list",
+      "caption": "Cada danza muestra su CCRE, su tipo y su estado.",
+      "narration": "Cada tarjeta muestra el nombre de la danza, su CCRE, su tipo y si es privada. La lista está pensada para revisar rápido el repertorio."
+    },
+    {
+      "id": "03-buscar",
+      "audio": "03-buscar.mp3",
+      "durationSeconds": 9.072,
+      "estimatedSeconds": 10,
+      "scene": "dances-search",
+      "caption": "Busca por nombre y filtra las privadas.",
+      "narration": "Usa el buscador para encontrar una danza por su nombre. Marca Only private para revisar solamente tus danzas privadas.",
+      "onStart": [
+        "focus:#dances-private-filter"
+      ],
+      "typing": [
+        {
+          "selector": "#dance-search",
+          "text": "Dionisio"
+        }
+      ]
+    },
+    {
+      "id": "04-descripcion",
+      "audio": "04-descripcion.mp3",
+      "durationSeconds": 11.208,
+      "estimatedSeconds": 12,
+      "scene": "dances-list",
+      "caption": "El título abre la descripción completa.",
+      "narration": "La descripción no se muestra en la lista. Pulsa el título de la danza o Leer descripción para abrir la ficha completa, que se obtiene desde Títulos.",
+      "onStart": [
+        "click:#dance-title"
+      ],
+      "onEnd": [
+        "show:dances-description"
+      ]
+    },
+    {
+      "id": "05-detalle",
+      "audio": "05-detalle.mp3",
+      "durationSeconds": 10.368,
+      "estimatedSeconds": 11,
+      "scene": "dances-description",
+      "caption": "La descripción es canónica y de solo lectura.",
+      "narration": "La descripción proviene de Títulos y aquí se muestra completa. Es de solo lectura: si necesitas cambiarla, hazlo en Títulos.",
+      "onStart": [
+        "focus:.dances-description-link"
+      ]
+    },
+    {
+      "id": "06-agregar",
+      "audio": "06-agregar.mp3",
+      "durationSeconds": 6.12,
+      "estimatedSeconds": 7,
+      "scene": "dances-list",
+      "caption": "Agrega una danza con el botón +.",
+      "narration": "Para crear una danza, pulsa Agregar danza. Se abre la ficha de edición.",
+      "onStart": [
+        "click:#add-dance"
+      ],
+      "onEnd": [
+        "show:dances-editor"
+      ]
+    },
+    {
+      "id": "07-identidad",
+      "audio": "07-identidad.mp3",
+      "durationSeconds": 11.544,
+      "estimatedSeconds": 12,
+      "scene": "dances-editor",
+      "caption": "CCRE, danza y tipo: los tres niveles tienen búsqueda.",
+      "narration": "Selecciona el CCRE y la danza. El tipo es opcional. Puedes escribir en los tres niveles para buscar y limpiar la selección con la X.",
+      "onStart": [
+        "focus:.dances-ccre"
+      ]
+    },
+    {
+      "id": "08-musica",
+      "audio": "08-musica.mp3",
+      "durationSeconds": 10.008,
+      "estimatedSeconds": 11,
+      "scene": "dances-editor",
+      "caption": "Agrega, reproduce o elimina la música.",
+      "narration": "En la pestaña Música puedes agregar una pista, reproducirla o eliminarla. El contador te ayuda a revisar la selección.",
+      "onStart": [
+        "click:#dances-music-tab"
+      ],
+      "onEnd": [
+        "show:dances-music"
+      ]
+    },
+    {
+      "id": "09-guardar",
+      "audio": "09-guardar.mp3",
+      "durationSeconds": 8.4,
+      "estimatedSeconds": 9,
+      "scene": "dances-editor",
+      "caption": "Guarda los cambios.",
+      "narration": "Cuando termines, pulsa Guardar danza. Las danzas nuevas quedan privadas hasta que un administrador las publique.",
+      "onStart": [
+        "focus:#dances-save"
+      ]
+    },
+    {
+      "id": "10-cierre",
+      "audio": "10-cierre.mp3",
+      "durationSeconds": 9.336,
+      "estimatedSeconds": 10,
+      "scene": "dances-list",
+      "caption": "Danzas listas para tus clases.",
+      "narration": "Danzas te permite mantener el repertorio ordenado, buscar rápido y llegar a la descripción completa cuando la necesites.",
+      "onStart": [
+        "focus:.dances-title"
+      ]
+    }
+  ],
+  "completionCaption": "Danzas listas para tus clases.",
+  "totalDurationSeconds": 97.944,
+  "totalAtDefaultRateSeconds": 108.827,
+  "decisions": [
+    "La descripción no se muestra en la lista; se abre desde el título o Leer descripción.",
+    "Los tres niveles de búsqueda (CCRE, tipo y danza) son buscables.",
+    "Las danzas nuevas se crean privadas.",
+    "Voz generada provisional; reemplazable por ElevenLabs sin cambiar nombres."
+  ]
+}

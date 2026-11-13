@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda visual · Danzas</title>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="dances.css">
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="https://ilovebiodanza.top/">Yo<span class="heart">❤</span>Biodanza</a>
+      <span class="demo-topbar-note">Ayuda audiovisual · Danzas</span>
+      <a class="demo-back" href="index.html">← Todas las animaciones</a>
+    </header>
+
+    <main class="demo-grid">
+      <aside class="demo-intro">
+        <span class="demo-kicker">Animación 11</span>
+        <h1>Cómo usar Danzas</h1>
+        <p>El repertorio de danzas de tus clases, con su origen, su descripción y su música.</p>
+        <ol class="demo-steps">
+          <li><span class="demo-step-number">1</span><span>Encuentra una danza por su nombre.</span></li>
+          <li><span class="demo-step-number">2</span><span>Abre su descripción completa desde Títulos.</span></li>
+          <li><span class="demo-step-number">3</span><span>Crea o edita una danza y su música.</span></li>
+        </ol>
+        <a class="demo-back" href="index.html">Volver a la galería</a>
+      </aside>
+
+      <div class="demo-stage-wrap">
+        <section class="demo-stage" data-audio-demo data-manifest="dances.manifest.json" data-rate="0.9" aria-label="Animación de Danzas con audio">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+              <span class="demo-url">ilovebiodanza.top / dances</span>
+            </div>
+            <div class="demo-app">
+              <div class="demo-app-nav">
+                <span class="demo-app-brand">Yo<span class="heart">❤</span>Biodanza</span>
+                <span class="demo-app-nav-right">Danzas <span class="demo-avatar">A</span></span>
+              </div>
+              <div class="demo-content">
+                <div class="demo-screen is-active" data-screen="dances-list">
+                  <div class="dances-screen">
+                    <div class="dances-heading-row">
+                      <div>
+                        <span class="dances-eyebrow">Repertorio</span>
+                        <h2 class="demo-heading dances-title">Danzas</h2>
+                        <p class="dances-count">3 danzas en tu repertorio</p>
+                      </div>
+                      <button class="demo-button" id="add-dance" type="button">+ Agregar danza</button>
+                    </div>
+                    <div class="dances-toolbar">
+                      <div class="dances-search">⌕ <span>Buscar danza...</span></div>
+                      <span class="dances-filter">Only private</span>
+                    </div>
+                    <div class="dances-cards">
+                      <article class="dance-demo-card">
+                        <div class="dance-demo-mark">♫</div>
+                        <div class="dance-demo-body">
+                          <span class="dances-eyebrow">IBF-CIMEB · EDICIÓN 2018</span>
+                          <h3><button class="dances-title-button" id="dance-title" type="button">Dionisio - Arquetipo de Biodanza</button></h3>
+                          <div class="dances-chips"><span>IBF-CIMEB</span><span>Danza de trance</span></div>
+                          <div class="dance-demo-footer"><span>♫ Músicas <b>2</b></span><span class="dance-demo-link">Leer descripción ↗</span></div>
+                        </div>
+                        <div class="dance-demo-actions"><button type="button" aria-label="Editar">✎</button><button type="button" aria-label="Más acciones">⋯</button></div>
+                      </article>
+                      <article class="dance-demo-card">
+                        <div class="dance-demo-mark">♫</div>
+                        <div class="dance-demo-body">
+                          <span class="dances-eyebrow">BIENVENIDA VIDA</span>
+                          <h3>Ronda de iniciación dulce</h3>
+                          <div class="dances-chips"><span>BIENVENIDA VIDA</span><span class="is-private">● Privado</span></div>
+                          <div class="dance-demo-footer"><span>♫ Músicas <b>1</b></span><span class="dance-demo-link">Leer descripción ↗</span></div>
+                        </div>
+                        <div class="dance-demo-actions"><button type="button" aria-label="Editar">✎</button><button type="button" aria-label="Más acciones">⋯</button></div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="dances-search">
+                  <div class="dances-screen">
+                    <div class="dances-heading-row">
+                      <div><span class="dances-eyebrow">Repertorio</span><h2 class="demo-heading">Danzas</h2><p class="dances-count">Resultado de búsqueda</p></div>
+                      <button class="demo-button" type="button">+ Agregar danza</button>
+                    </div>
+                    <div class="dances-toolbar">
+                      <div class="dances-search is-active">⌕ <span class="demo-value" id="dance-search" data-typed></span><span class="demo-caret"></span></div>
+                      <span class="dances-filter is-active" id="dances-private-filter">Only private</span>
+                    </div>
+                    <div class="dances-cards">
+                      <article class="dance-demo-card is-highlighted">
+                        <div class="dance-demo-mark">♫</div>
+                        <div class="dance-demo-body">
+                          <span class="dances-eyebrow">IBF-CIMEB · EDICIÓN 2018</span>
+                          <h3><button class="dances-title-button" type="button">Dionisio - Arquetipo de Biodanza</button></h3>
+                          <div class="dances-chips"><span>IBF-CIMEB</span><span>Danza de trance</span></div>
+                          <div class="dance-demo-footer"><span>♫ Músicas <b>2</b></span><span class="dance-demo-link">Leer descripción ↗</span></div>
+                        </div>
+                        <div class="dance-demo-actions"><button type="button" aria-label="Editar">✎</button><button type="button" aria-label="Más acciones">⋯</button></div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="dances-description">
+                  <div class="dances-screen">
+                    <article class="dances-detail">
+                      <div class="dances-detail-head">
+                        <div>
+                          <span class="dances-eyebrow">DESCRIPCIÓN CANÓNICA · DESDE TÍTULOS</span>
+                          <h2 class="demo-heading">Dionisio - Arquetipo de Biodanza</h2>
+                          <div class="dances-chips"><span>IBF-CIMEB</span><span>Danza de trance</span></div>
+                        </div>
+                        <button class="dance-demo-close" type="button" aria-label="Cerrar">×</button>
+                      </div>
+                      <div class="dances-description-box">
+                        <p>El taller de Dionisio se presenta como un espacio de exploración y conexión con la esencia del arquetipo dionisíaco, que simboliza la celebración de la vida, la creatividad y la liberación emocional.</p>
+                      </div>
+                      <p class="dances-description-note">Esta descripción es de solo lectura. Se edita en Títulos. <a class="dances-description-link" href="#">Abrir Títulos ↗</a></p>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="dances-editor">
+                  <div class="dances-screen">
+                    <div class="dances-editor-head">
+                      <div class="dance-demo-mark">♫</div>
+                      <div><span class="dances-eyebrow">FICHA DE LA DANZA</span><h2 class="demo-heading">Editar danza</h2></div>
+                      <button class="dance-demo-close" type="button" aria-label="Cerrar">×</button>
+                    </div>
+                    <div class="dances-editor-tabs"><span class="is-active">ⓘ Datos</span><span id="dances-music-tab">♫ Música <b>2</b></span></div>
+                    <div class="dances-editor-fields">
+                      <label class="dances-field dances-ccre"><span>CCRE *</span><span class="dances-picker">⌕ IBF-CIMEB · Edición 2018 <i>×</i><i>⌄</i></span></label>
+                      <label class="dances-field"><span>Tipo de danza</span><span class="dances-picker">⌕ Danza de trance <i>×</i><i>⌄</i></span></label>
+                      <label class="dances-field is-full"><span>Danza *</span><span class="dances-picker">⌕ Dionisio - Arquetipo de Biodanza <i>×</i><i>⌄</i></span></label>
+                      <div class="dances-help">Los tres niveles permiten buscar. La X limpia la selección.</div>
+                    </div>
+                    <div class="dances-description-mini"><span class="dances-eyebrow">DESCRIPCIÓN DESDE TÍTULOS</span><p>El taller de Dionisio se presenta como un espacio de exploración y conexión con la esencia del arquetipo dionisíaco.</p></div>
+                    <div class="dances-editor-footer"><button class="demo-button is-secondary" type="button">Cancelar</button><button class="demo-button" id="dances-save" type="button">Guardar danza</button></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="dances-music">
+                  <div class="dances-screen">
+                    <div class="dances-editor-head">
+                      <div class="dance-demo-mark">♫</div>
+                      <div><span class="dances-eyebrow">MÚSICA DE LA DANZA</span><h2 class="demo-heading">Dos pistas</h2></div>
+                      <button class="dance-demo-close" type="button" aria-label="Cerrar">×</button>
+                    </div>
+                    <div class="dances-editor-tabs"><span>ⓘ Datos</span><span class="is-active">♫ Música <b>2</b></span></div>
+                    <div class="dances-music-panel">
+                      <div class="dances-music-head"><span>Música</span><button class="dance-demo-add" type="button">+ Agregar música</button></div>
+                      <div class="dances-music-row"><span><b>BA26-01</b><br>Negrume da noite <small>Autor desconocido</small></span><span><button type="button" aria-label="Reproducir">▶</button><button type="button" aria-label="Eliminar">⌫</button></span></div>
+                      <div class="dances-music-row"><span><b>BA58-11</b><br>Lundu <small>Autor desconocido</small></span><span><button type="button" aria-label="Reproducir">▶</button><button type="button" aria-label="Eliminar">⌫</button></span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-caption" data-caption></div>
+                <div class="demo-cursor" data-cursor aria-hidden="true"></div>
+                <div class="demo-progress"><span data-progress></span></div>
+
+                <div class="demo-audio-gate" data-audio-gate>
+                  <span class="demo-gate-icon">▶</span>
+                  <strong>Ayuda con audio</strong>
+                  <p>Escucha la explicación mientras ves la animación.</p>
+                  <button class="demo-button" data-play-audio type="button" disabled>Reproducir con audio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button class="demo-replay" data-replay type="button" hidden>↻ Repetir animación</button>
+        <p class="demo-footnote">Voz generada provisional · Velocidad 0.9× · Subtítulos incluidos.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="registration-audio.js"></script>
+</body>
+</html>
