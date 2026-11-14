@@ -2,13 +2,30 @@
    Usa una paleta Bootstrap (Cerulean) como fallback para poder probarse
    fuera de la aplicación. */
 :root {
-  --demo-primary: #2fa4e7;
-  --demo-primary-strong: #1b87c4;
-  --demo-dark: #343a40;
-  --demo-light: #f8f9fa;
-  --demo-line: rgba(52, 58, 64, 0.14);
-  --demo-muted: #6c757d;
-  --demo-success: #56cc9d;
+  --demo-primary: var(--primary);
+  --demo-primary-strong: var(--primary);
+  --demo-primary-soft: var(--secondary);
+  --demo-on-primary: var(--white);
+  --demo-surface: var(--white);
+  --demo-surface-soft: var(--light);
+  --demo-page-bg: var(--light);
+  --demo-text: var(--dark);
+  --demo-dark: var(--dark);
+  --demo-light: var(--light);
+  --demo-line: var(--secondary);
+  --demo-line-strong: var(--secondary);
+  --demo-muted: var(--gray);
+  --demo-success: var(--success);
+  --demo-success-soft: var(--light);
+  --demo-info: var(--info);
+  --demo-info-soft: var(--light);
+  --demo-danger: var(--danger);
+  --demo-danger-soft: var(--light);
+  --demo-warning: var(--warning);
+  --demo-warning-soft: var(--light);
+  --demo-shadow: rgba(0, 0, 0, 0.1);
+  --demo-shadow-strong: rgba(0, 0, 0, 0.18);
+  --demo-focus-ring: rgba(0, 0, 0, 0.12);
   --demo-radius: 16px;
 }
 
@@ -23,7 +40,7 @@ body {
 }
 
 body {
-  background: #edf3f6;
+  background: var(--demo-page-bg);
   color: var(--demo-dark);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
     sans-serif;
@@ -52,7 +69,7 @@ body {
 }
 
 .demo-brand .heart {
-  color: #e74c3c;
+  color: var(--demo-danger);
 }
 
 .demo-topbar-note {
@@ -121,7 +138,7 @@ body {
   height: 20px;
   border-radius: 50%;
   background: var(--demo-primary);
-  color: #fff;
+  color: var(--demo-on-primary);
   font-size: 0.62rem;
   font-weight: 800;
 }
@@ -145,10 +162,10 @@ body {
   position: relative;
   overflow: hidden;
   aspect-ratio: 16 / 10;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--demo-on-primary);
   border-radius: 22px;
-  background: #fff;
-  box-shadow: 0 24px 60px rgba(27, 55, 72, 0.16);
+  background: var(--demo-surface);
+  box-shadow: 0 24px 60px var(--demo-shadow);
   isolation: isolate;
 }
 
@@ -166,7 +183,7 @@ body {
   gap: 6px;
   height: 30px;
   padding: 0 12px;
-  background: #e8eef1;
+  background: var(--demo-surface-soft);
   border-bottom: 1px solid var(--demo-line);
 }
 
@@ -174,22 +191,22 @@ body {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #b9c8cf;
+  background: var(--demo-line);
 }
 
 .demo-dot:nth-child(2) {
-  background: #d8c9a4;
+  background: var(--demo-line);
 }
 
 .demo-dot:nth-child(3) {
-  background: #b3d7c8;
+  background: var(--demo-success);
 }
 
 .demo-url {
   margin-left: 10px;
   padding: 3px 12px;
   border-radius: 999px;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-muted);
   font-size: 0.6rem;
 }
@@ -209,7 +226,7 @@ body {
   min-height: 44px;
   padding: 0 18px;
   background: var(--demo-primary);
-  color: #fff;
+  color: var(--demo-on-primary);
 }
 
 .demo-app-brand {
@@ -219,14 +236,14 @@ body {
 }
 
 .demo-app-brand .heart {
-  color: #ffe1dd;
+  color: var(--demo-danger);
 }
 
 .demo-app-nav-right {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--demo-on-primary);
   font-size: 0.58rem;
 }
 
@@ -236,9 +253,9 @@ body {
   justify-content: center;
   width: 22px;
   height: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid var(--demo-on-primary);
   border-radius: 50%;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-primary-strong);
   font-size: 0.58rem;
   font-weight: 800;
@@ -249,7 +266,7 @@ body {
   flex: 1;
   min-height: 0;
   padding: 18px 22px 48px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .demo-screen {
@@ -317,14 +334,14 @@ body {
   padding: 0 9px;
   border: 1px solid var(--demo-line);
   border-radius: 7px;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-dark);
   font-size: 0.66rem;
 }
 
 .demo-input.is-focus {
   border-color: var(--demo-primary);
-  box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.12);
+  box-shadow: 0 0 0 3px var(--demo-focus-ring);
 }
 
 .demo-value {
@@ -334,7 +351,7 @@ body {
 }
 
 .demo-value.is-muted {
-  color: #aab6bd;
+  color: var(--demo-muted);
 }
 
 .demo-caret {
@@ -360,7 +377,7 @@ body {
   border: 0;
   border-radius: 999px;
   background: var(--demo-primary);
-  color: #fff;
+  color: var(--demo-on-primary);
   font: inherit;
   font-size: 0.66rem;
   font-weight: 700;
@@ -370,7 +387,7 @@ body {
 
 .demo-button.is-secondary {
   border: 1px solid var(--demo-primary);
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-primary-strong);
 }
 
@@ -381,7 +398,7 @@ body {
 
 .demo-button.is-clicked {
   transform: scale(0.96);
-  box-shadow: 0 0 0 5px rgba(47, 164, 231, 0.16);
+  box-shadow: 0 0 0 5px var(--demo-focus-ring);
 }
 
 .demo-form-footer {
@@ -434,7 +451,7 @@ body {
   padding: 5px 8px;
   border: 1px solid var(--demo-line);
   border-radius: 8px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .demo-list-icon {
@@ -444,7 +461,7 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 7px;
-  background: rgba(47, 164, 231, 0.12);
+  background: var(--demo-focus-ring);
   color: var(--demo-primary-strong);
   font-size: 0.72rem;
   font-weight: 800;
@@ -469,8 +486,8 @@ body {
 .demo-status {
   padding: 3px 7px;
   border-radius: 999px;
-  background: rgba(86, 204, 157, 0.16);
-  color: #238561;
+  background: var(--demo-success-soft);
+  color: var(--demo-success);
   font-size: 0.54rem;
   font-weight: 800;
 }
@@ -481,7 +498,7 @@ body {
   justify-content: center;
   width: 16px;
   height: 16px;
-  border: 1px solid #b9c8cf;
+  border: 1px solid var(--demo-line);
   border-radius: 5px;
   color: transparent;
   font-size: 0.55rem;
@@ -491,7 +508,7 @@ body {
 .demo-check.is-checked {
   border-color: var(--demo-success);
   background: var(--demo-success);
-  color: #fff;
+  color: var(--demo-on-primary);
 }
 
 .demo-editor {
@@ -556,8 +573,8 @@ body {
   height: 48px;
   margin-bottom: 10px;
   border-radius: 50%;
-  background: rgba(86, 204, 157, 0.18);
-  color: #238561;
+  background: var(--demo-success-soft);
+  color: var(--demo-success);
   font-size: 1.4rem;
   font-weight: 900;
 }
@@ -592,10 +609,10 @@ body {
   left: 0;
   width: 13px;
   height: 18px;
-  border: 1.5px solid #fff;
+  border: 1.5px solid var(--demo-surface);
   border-radius: 2px 2px 7px 2px;
   background: var(--demo-dark);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px var(--demo-shadow);
   clip-path: polygon(0 0, 100% 55%, 58% 58%, 73% 100%, 55% 100%, 40% 62%, 0 80%);
   content: '';
 }
@@ -620,8 +637,8 @@ body {
   z-index: 8;
   padding: 9px 12px;
   border-radius: 9px;
-  background: rgba(21, 33, 41, 0.88);
-  color: #fff;
+  background: var(--demo-shadow-strong);
+  color: var(--demo-on-primary);
   font-size: 0.68rem;
   line-height: 1.35;
   opacity: 0;
@@ -635,7 +652,7 @@ body {
 }
 
 .demo-caption strong {
-  color: #fff;
+  color: var(--demo-on-primary);
 }
 
 .demo-progress {
@@ -645,7 +662,7 @@ body {
   left: 0;
   z-index: 9;
   height: 3px;
-  background: rgba(0, 0, 0, 0.08);
+  background: var(--demo-shadow);
 }
 
 .demo-progress span {
@@ -663,7 +680,7 @@ body {
   padding: 8px 14px;
   border: 1px solid var(--demo-primary);
   border-radius: 999px;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-primary-strong);
   font: inherit;
   font-size: 0.74rem;
@@ -673,7 +690,7 @@ body {
 
 .demo-replay:hover {
   background: var(--demo-primary);
-  color: #fff;
+  color: var(--demo-on-primary);
 }
 
 .demo-footnote {
@@ -690,10 +707,10 @@ body {
   width: 88px;
   height: 148px;
   padding: 5px;
-  border: 2px solid rgba(52, 58, 64, 0.3);
+  border: 2px solid var(--demo-muted);
   border-radius: 13px;
-  background: #fff;
-  box-shadow: 0 8px 16px rgba(27, 55, 72, 0.12);
+  background: var(--demo-surface);
+  box-shadow: 0 8px 16px var(--demo-shadow);
   transform: rotate(-7deg);
   opacity: 0.4;
 }
@@ -718,7 +735,7 @@ body {
   height: 6px;
   margin-top: 5px;
   border-radius: 2px;
-  background: rgba(52, 58, 64, 0.12);
+  background: var(--demo-line);
 }
 
 .demo-phone-line.short {
@@ -737,10 +754,10 @@ body {
   flex-direction: column;
   min-height: 235px;
   padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--demo-on-primary);
   border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 12px 32px rgba(27, 55, 72, 0.09);
+  background: var(--demo-surface);
+  box-shadow: 0 12px 32px var(--demo-shadow);
   color: var(--demo-dark);
   text-decoration: none;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -750,7 +767,7 @@ body {
   color: var(--demo-dark);
   text-decoration: none;
   transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgba(27, 55, 72, 0.14);
+  box-shadow: 0 18px 40px var(--demo-shadow);
 }
 
 .demo-gallery-number {
@@ -889,7 +906,7 @@ body {
   justify-content: center;
   gap: 6px;
   padding: 20px;
-  background: rgba(248, 249, 250, 0.94);
+  background: var(--demo-surface);
   text-align: center;
   backdrop-filter: blur(3px);
 }
@@ -911,7 +928,7 @@ body {
   margin-bottom: 4px;
   border-radius: 50%;
   background: var(--demo-primary);
-  color: #fff;
+  color: var(--demo-on-primary);
   font-size: 0.9rem;
 }
 
@@ -944,13 +961,13 @@ body {
 }
 
 .demo-alert-info {
-  background: rgba(47, 164, 231, 0.12);
-  color: #176c98;
+  background: var(--demo-focus-ring);
+  color: var(--demo-primary-strong);
 }
 
 .demo-alert-success {
-  background: rgba(86, 204, 157, 0.16);
-  color: #238561;
+  background: var(--demo-success-soft);
+  color: var(--demo-success);
 }
 
 .demo-email-card {
@@ -959,8 +976,8 @@ body {
   padding: 20px;
   border: 1px solid var(--demo-line);
   border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 10px 24px rgba(27, 55, 72, 0.08);
+  background: var(--demo-surface);
+  box-shadow: 0 10px 24px var(--demo-shadow);
   text-align: center;
 }
 
@@ -972,7 +989,7 @@ body {
   height: 36px;
   margin-bottom: 8px;
   border-radius: 50%;
-  background: rgba(47, 164, 231, 0.12);
+  background: var(--demo-focus-ring);
   color: var(--demo-primary-strong);
   font-size: 1rem;
 }
@@ -1012,7 +1029,7 @@ body {
   padding: 7px 9px;
   border: 1px solid var(--demo-line);
   border-radius: 8px;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-dark);
   font-size: 0.66rem;
   font-weight: 700;

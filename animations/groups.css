@@ -3,7 +3,7 @@
   overflow: hidden;
   border: 1px solid var(--demo-line);
   border-radius: 12px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .groups-head,
@@ -17,7 +17,7 @@
 
 .groups-head {
   min-height: 29px;
-  background: #f7f9fa;
+  background: var(--demo-surface-soft);
   color: var(--demo-muted);
   font-size: 0.52rem;
   font-weight: 800;
@@ -27,7 +27,7 @@
 
 .group-row {
   min-height: 58px;
-  border-top: 1px solid rgba(52, 58, 64, 0.09);
+  border-top: 1px solid var(--demo-line);
 }
 
 .group-row strong,
@@ -68,7 +68,7 @@
 }
 
 .group-row.is-highlighted {
-  background: rgba(47, 164, 231, 0.07);
+  background: var(--demo-primary-soft);
 }
 
 .group-form-card {
@@ -97,7 +97,7 @@
   align-items: center;
   gap: 8px;
   padding: 6px 8px;
-  border-bottom: 1px solid rgba(52, 58, 64, 0.08);
+  border-bottom: 1px solid var(--demo-line);
 }
 
 .group-person-row:last-child {
@@ -139,8 +139,8 @@
   padding: 17px;
   border: 1px solid var(--demo-line);
   border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(27, 55, 72, 0.1);
+  background: var(--demo-surface);
+  box-shadow: 0 12px 30px var(--demo-shadow);
 }
 
 .activity-demo-intro {
@@ -164,7 +164,7 @@
 }
 
 .activity-demo-tabs span:first-child {
-  background: #f1faff;
+  background: var(--demo-primary-soft);
   color: var(--demo-primary-strong);
   font-weight: 700;
 }
@@ -186,8 +186,8 @@
 }
 
 .activity-load-row.is-highlighted {
-  border-color: rgba(47, 164, 231, 0.48);
-  background: #f5fcff;
+  border-color: var(--demo-focus-ring);
+  background: var(--demo-primary-soft);
 }
 
 .activity-load-row strong,

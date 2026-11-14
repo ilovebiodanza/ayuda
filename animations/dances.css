@@ -61,7 +61,7 @@
 
 .dances-search.is-active {
   border-color: var(--demo-primary);
-  box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.12);
+  box-shadow: 0 0 0 3px var(--demo-focus-ring);
 }
 
 .dances-search .demo-caret {
@@ -72,7 +72,7 @@
   padding: 6px 10px;
   border: 1px solid var(--demo-line);
   border-radius: 999px;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-muted);
   font-size: 0.58rem;
   font-weight: 700;
@@ -82,7 +82,7 @@
 .dances-filter.is-active {
   border-color: var(--demo-primary);
   color: var(--demo-primary-strong);
-  box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.1);
+  box-shadow: 0 0 0 3px var(--demo-primary-soft);
 }
 
 .dances-cards {
@@ -99,13 +99,13 @@
   padding: 10px 11px;
   border: 1px solid var(--demo-line);
   border-radius: 13px;
-  background: #fff;
-  box-shadow: 0 5px 14px rgba(27, 55, 72, 0.045);
+  background: var(--demo-surface);
+  box-shadow: 0 5px 14px var(--demo-shadow);
 }
 
 .dance-demo-card.is-highlighted {
-  border-color: rgba(47, 164, 231, 0.45);
-  box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.1);
+  border-color: var(--demo-focus-ring);
+  box-shadow: 0 0 0 3px var(--demo-primary-soft);
 }
 
 .dance-demo-mark {
@@ -115,10 +115,10 @@
   width: 42px;
   height: 42px;
   border-radius: 11px;
-  background: linear-gradient(135deg, #2fa4e7, #1b87c4);
-  color: #fff;
+  background: linear-gradient(135deg, var(--demo-primary), var(--demo-primary-strong));
+  color: var(--demo-on-primary);
   font-size: 1.1rem;
-  box-shadow: 0 7px 14px rgba(47, 164, 231, 0.2);
+  box-shadow: 0 7px 14px var(--demo-focus-ring);
 }
 
 .dance-demo-body {
@@ -165,16 +165,16 @@
   padding: 3px 6px;
   border: 1px solid var(--demo-line);
   border-radius: 999px;
-  background: #f8fbfc;
+  background: var(--demo-surface-soft);
   color: var(--demo-muted);
   font-size: 0.5rem;
   font-weight: 700;
 }
 
 .dances-chips > span.is-private {
-  border-color: #f0d9a8;
-  background: #fff8e8;
-  color: #987025;
+  border-color: var(--demo-warning);
+  background: var(--demo-surface)8e8;
+  color: var(--demo-warning);
 }
 
 .dance-demo-footer {
@@ -208,7 +208,7 @@
   padding: 0 7px;
   border: 1px solid var(--demo-line);
   border-radius: 999px;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-muted);
   font: inherit;
   font-size: 0.58rem;
@@ -226,8 +226,8 @@
   padding: 18px;
   border: 1px solid var(--demo-line);
   border-radius: 15px;
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(27, 55, 72, 0.1);
+  background: var(--demo-surface);
+  box-shadow: 0 12px 30px var(--demo-shadow);
 }
 
 .dances-detail-head,
@@ -250,7 +250,7 @@
   padding: 0;
   border: 1px solid var(--demo-line);
   border-radius: 50%;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-muted);
   font-size: 0.9rem;
   line-height: 1;
@@ -258,10 +258,10 @@
 
 .dances-description-box {
   padding: 11px 12px;
-  border-left: 3px solid #b9ddec;
+  border-left: 3px solid var(--demo-line-strong);
   border-radius: 0 9px 9px 0;
-  background: #f8fbfc;
-  color: #44545e;
+  background: var(--demo-surface-soft);
+  color: var(--demo-text);
   font-size: 0.68rem;
   line-height: 1.55;
 }
@@ -304,7 +304,7 @@
   padding: 3px;
   border: 1px solid var(--demo-line);
   border-radius: 9px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .dances-editor-tabs span {
@@ -316,7 +316,7 @@
 }
 
 .dances-editor-tabs span.is-active {
-  background: #eaf7fd;
+  background: var(--demo-primary-soft);
   color: var(--demo-primary-strong);
 }
 
@@ -326,7 +326,7 @@
   padding: 10px;
   border: 1px solid var(--demo-line);
   border-radius: 10px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .dances-field {
@@ -339,7 +339,7 @@
 }
 
 .dances-field > span:first-child {
-  color: #4b5d66;
+  color: var(--demo-text);
   font-size: 0.56rem;
   font-weight: 800;
 }
@@ -352,13 +352,13 @@
   padding: 0 8px;
   border: 1px solid var(--demo-line);
   border-radius: 7px;
-  color: #44545e;
+  color: var(--demo-text);
   font-size: 0.6rem;
 }
 
 .dances-picker i {
   margin-left: auto;
-  color: #9aa8b0;
+  color: var(--demo-muted);
   font-style: normal;
 }
 
@@ -376,13 +376,13 @@
   padding: 8px 10px;
   border: 1px solid var(--demo-line);
   border-radius: 9px;
-  background: #fbfdfe;
+  background: var(--demo-surface-soft);
 }
 
 .dances-description-mini p {
   overflow: hidden;
   margin: 3px 0 0;
-  color: #44545e;
+  color: var(--demo-text);
   font-size: 0.56rem;
   line-height: 1.4;
   white-space: nowrap;
@@ -397,7 +397,7 @@
 }
 
 .dances-editor-footer .demo-button.is-secondary {
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-muted);
   border: 1px solid var(--demo-line);
 }
@@ -406,7 +406,7 @@
   padding: 11px;
   border: 1px solid var(--demo-line);
   border-radius: 11px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .dances-music-head {
@@ -420,8 +420,8 @@
 }
 
 .dance-demo-add {
-  border-color: #cfe6ef;
-  background: #f1faff;
+  border-color: var(--demo-line-strong);
+  background: var(--demo-primary-soft);
   color: var(--demo-primary-strong);
   font-size: 0.55rem;
   font-weight: 700;
@@ -433,8 +433,8 @@
   justify-content: space-between;
   gap: 10px;
   padding: 8px 0;
-  border-top: 1px solid rgba(52, 58, 64, 0.09);
-  color: #44545e;
+  border-top: 1px solid var(--demo-line);
+  color: var(--demo-text);
   font-size: 0.6rem;
   line-height: 1.35;
 }
@@ -456,7 +456,7 @@
 }
 
 .dances-music-row button:last-child {
-  color: #b24a3f;
+  color: var(--demo-danger);
 }
 
 @media (max-width: 900px) {

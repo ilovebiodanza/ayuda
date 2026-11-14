@@ -37,7 +37,7 @@
   padding: 3px;
   border: 1px solid var(--demo-line);
   border-radius: 9px;
-  background: #f8fafb;
+  background: var(--demo-surface-soft);
 }
 
 .editor-tab {
@@ -59,9 +59,9 @@
 }
 
 .editor-tab.is-active {
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-primary-strong);
-  box-shadow: 0 1px 4px rgba(27, 55, 72, 0.1);
+  box-shadow: 0 1px 4px var(--demo-shadow);
 }
 
 .editor-map-card,
@@ -73,7 +73,7 @@
   padding: 13px;
   border: 1px solid var(--demo-line);
   border-radius: 11px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .editor-map-card h3 {
@@ -112,7 +112,7 @@
 }
 
 .editor-dim {
-  background: rgba(241, 245, 248, 0.55);
+  background: var(--demo-surface-soft);
 }
 
 .editor-modal {
@@ -121,8 +121,8 @@
   padding: 14px;
   border: 1px solid var(--demo-line);
   border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 18px 45px rgba(27, 55, 72, 0.18);
+  background: var(--demo-surface);
+  box-shadow: 0 18px 45px var(--demo-shadow-strong);
 }
 
 .editor-modal-wide {
@@ -156,8 +156,8 @@
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: var(--demo-success, #28a745);
-  color: #fff;
+  background: var(--demo-success, var(--demo-success));
+  color: var(--demo-on-primary);
   font-size: 0.58rem;
   line-height: 1;
 }
@@ -169,7 +169,7 @@
   margin-top: 8px;
   padding: 7px 8px;
   border-radius: 7px;
-  background: #f3fbff;
+  background: var(--demo-primary-soft);
   color: var(--demo-muted);
   font-size: 0.58rem;
 }
@@ -199,7 +199,7 @@
   margin-top: 9px;
   padding: 7px 8px;
   border-left: 3px solid var(--demo-primary);
-  background: #f7fbfd;
+  background: var(--demo-surface-soft);
   color: var(--demo-muted);
   font-size: 0.59rem;
 }
@@ -212,7 +212,7 @@
   overflow: hidden;
   border: 1px solid var(--demo-line);
   border-radius: 10px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .dance-editor-row {
@@ -221,7 +221,7 @@
   align-items: center;
   gap: 7px;
   padding: 7px 9px;
-  border-bottom: 1px solid rgba(52, 58, 64, 0.08);
+  border-bottom: 1px solid var(--demo-line);
 }
 
 .dance-editor-row:last-child {
@@ -298,7 +298,7 @@
     to top,
     transparent 0,
     transparent 31px,
-    rgba(127, 127, 127, 0.09) 32px
+    var(--demo-line) 32px
   );
 }
 
@@ -309,9 +309,9 @@
   background: linear-gradient(
     135deg,
     transparent 0 20%,
-    rgba(47, 164, 231, 0.5) 20.5% 21%,
+    var(--demo-focus-ring) 20.5% 21%,
     transparent 21.5% 42%,
-    rgba(47, 164, 231, 0.6) 42.5% 43%,
+    var(--demo-focus-ring) 42.5% 43%,
     transparent 43.5%
   );
   clip-path: polygon(0 58%, 15% 30%, 35% 20%, 55% 50%, 75% 70%, 100% 55%, 100% 58%, 75% 74%, 55% 54%, 35% 24%, 15% 34%, 0 62%);
@@ -323,10 +323,10 @@
   top: var(--y);
   width: 8px;
   height: 8px;
-  border: 2px solid #fff;
+  border: 2px solid var(--demo-surface);
   border-radius: 50%;
   background: var(--demo-primary);
-  box-shadow: 0 1px 3px rgba(27, 55, 72, 0.25);
+  box-shadow: 0 1px 3px var(--demo-shadow-strong);
   transform: translate(-50%, -50%);
 }
 
@@ -355,7 +355,7 @@
 .editor-test-times span {
   padding: 4px 7px;
   border-radius: 5px;
-  background: #f4f8fa;
+  background: var(--demo-surface-soft);
   color: var(--demo-muted);
   font-size: 0.57rem;
 }
@@ -376,9 +376,9 @@
   width: min(100%, 430px);
   margin: 9px auto 0;
   padding: 9px 10px;
-  border: 1px solid rgba(47, 164, 231, 0.35);
+  border: 1px solid var(--demo-focus-ring);
   border-radius: 9px;
-  background: #f5fcff;
+  background: var(--demo-primary-soft);
 }
 
 .editor-execute-modal small,
@@ -413,7 +413,7 @@
 }
 
 .editor-save-card > i {
-  color: var(--demo-success, #28a745);
+  color: var(--demo-success, var(--demo-success));
   font-size: 1.2rem;
 }
 
@@ -427,7 +427,7 @@
   padding: 9px 10px;
   border: 1px solid var(--demo-line);
   border-radius: 11px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .editor-chapter-status {
@@ -447,7 +447,7 @@
   padding: 4px 7px;
   border: 1px solid var(--demo-line);
   border-radius: 999px;
-  background: #fbfdfe;
+  background: var(--demo-surface-soft);
   color: var(--demo-muted);
   font-size: 0.55rem;
   line-height: 1.2;
@@ -456,7 +456,7 @@
 
 .editor-chapter-button:hover,
 .editor-chapter-button:focus-visible {
-  border-color: rgba(47, 164, 231, 0.5);
+  border-color: var(--demo-focus-ring);
   color: var(--demo-primary-strong);
   outline: none;
 }
@@ -464,7 +464,7 @@
 .editor-chapter-button.is-active {
   border-color: transparent;
   background: var(--demo-primary);
-  color: #fff;
+  color: var(--demo-on-primary);
 }
 
 .editor-continue {
@@ -475,7 +475,7 @@
 }
 
 .demo-button.is-danger {
-  background: #c0392b;
+  background: var(--demo-danger);
 }
 
 @media (max-width: 760px) {

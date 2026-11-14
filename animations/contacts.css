@@ -61,7 +61,7 @@
 
 .contacts-search.is-search-active {
   border-color: var(--demo-primary);
-  box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.12);
+  box-shadow: 0 0 0 3px var(--demo-focus-ring);
 }
 
 .contacts-search .demo-caret {
@@ -72,7 +72,7 @@
   padding: 6px 10px;
   border: 1px solid var(--demo-line);
   border-radius: 999px;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-muted);
   font-size: 0.58rem;
   font-weight: 700;
@@ -82,14 +82,14 @@
 .contacts-filter-pill.is-highlighted {
   border-color: var(--demo-primary);
   color: var(--demo-primary-strong);
-  box-shadow: 0 0 0 3px rgba(47, 164, 231, 0.1);
+  box-shadow: 0 0 0 3px var(--demo-primary-soft);
 }
 
 .contacts-table {
   overflow: hidden;
   border: 1px solid var(--demo-line);
   border-radius: 12px;
-  background: #fff;
+  background: var(--demo-surface);
 }
 
 .contacts-table-head,
@@ -103,7 +103,7 @@
 
 .contacts-table-head {
   min-height: 29px;
-  background: #f7f9fa;
+  background: var(--demo-surface-soft);
   color: var(--demo-muted);
   font-size: 0.52rem;
   font-weight: 800;
@@ -113,7 +113,7 @@
 
 .contact-row {
   min-height: 53px;
-  border-top: 1px solid rgba(52, 58, 64, 0.09);
+  border-top: 1px solid var(--demo-line);
   transition: background 0.2s ease;
 }
 
@@ -136,7 +136,7 @@
 
 .contact-row small {
   margin-top: 2px;
-  color: #c0392b;
+  color: var(--demo-danger);
   font-size: 0.58rem;
 }
 
@@ -168,7 +168,7 @@
   padding: 0 8px;
   border: 1px solid var(--demo-primary);
   border-radius: 999px;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-primary-strong);
   font: inherit;
   font-size: 0.55rem;
@@ -184,12 +184,12 @@
 
 .contact-edit.is-pressed {
   background: var(--demo-primary);
-  color: #fff;
+  color: var(--demo-on-primary);
 }
 
 .contact-row.is-highlighted,
 .contact-row.is-focus-row {
-  background: rgba(47, 164, 231, 0.07);
+  background: var(--demo-primary-soft);
 }
 
 .contacts-form-card {
@@ -198,8 +198,8 @@
   padding: 16px;
   border: 1px solid var(--demo-line);
   border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(27, 55, 72, 0.1);
+  background: var(--demo-surface);
+  box-shadow: 0 12px 30px var(--demo-shadow);
 }
 
 .contacts-form-head {
@@ -220,7 +220,7 @@
   padding: 0;
   border: 1px solid var(--demo-line);
   border-radius: 50%;
-  background: #fff;
+  background: var(--demo-surface);
   color: var(--demo-muted);
   font-size: 0.9rem;
   line-height: 1;
@@ -261,7 +261,7 @@
 }
 
 .contact-muted {
-  color: #aab6bd;
+  color: var(--demo-muted);
 }
 
 .contacts-form-actions {
@@ -287,8 +287,8 @@
   padding: 9px 11px;
   border: 1px solid var(--demo-line);
   border-radius: 9px;
-  background: #fff;
-  box-shadow: 0 10px 24px rgba(27, 55, 72, 0.14);
+  background: var(--demo-surface);
+  box-shadow: 0 10px 24px var(--demo-shadow);
   color: var(--demo-dark);
   font-size: 0.58rem;
 }
