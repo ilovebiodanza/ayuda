@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda visual · Música</title>
+  <script src="help-theme.js"></script>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="music.css">
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="https://ilovebiodanza.top/">Yo<span class="heart">❤</span>Biodanza</a>
+      <span class="demo-topbar-note">Ayuda audiovisual · Música</span>
+      <a class="demo-back" href="index.html">← Todas las animaciones</a>
+    </header>
+
+    <main class="demo-grid">
+      <aside class="demo-intro">
+        <span class="demo-kicker">Animación 12</span>
+        <h1>Cómo usar Música</h1>
+        <p>Encuentra, escucha y organiza el repertorio que acompaña tus clases y tus danzas.</p>
+        <ol class="demo-steps">
+          <li><span class="demo-step-number">1</span><span>Encuentra una música en la lista compacta.</span></li>
+          <li><span class="demo-step-number">2</span><span>Escúchala, abre su reseña y consulta sus danzas.</span></li>
+          <li><span class="demo-step-number">3</span><span>Agrega o edita una música con su audio y su línea de vivencia.</span></li>
+        </ol>
+        <a class="demo-back" href="index.html">Volver a la galería</a>
+      </aside>
+
+      <div class="demo-stage-wrap">
+        <section class="demo-stage" data-audio-demo data-manifest="music.manifest.json" data-rate="0.9" aria-label="Animación de Música con audio">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+              <span class="demo-url">ilovebiodanza.top / musics</span>
+            </div>
+            <div class="demo-app">
+              <div class="demo-app-nav">
+                <span class="demo-app-brand">Yo<span class="heart">❤</span>Biodanza</span>
+                <span class="demo-app-nav-right">Música <span class="demo-avatar">A</span></span>
+              </div>
+              <div class="demo-content">
+
+                <div class="demo-screen is-active" data-screen="music-list">
+                  <div class="music-screen">
+                    <div class="music-heading-row">
+                      <div>
+                        <span class="music-eyebrow">Repertorio</span>
+                        <h2 class="demo-heading music-title">Músicas</h2>
+                        <p class="music-count">5 músicas · vista compacta</p>
+                      </div>
+                      <button class="demo-button" id="music-add" type="button">+ Agregar música</button>
+                    </div>
+                    <div class="music-toolbar">
+                      <div class="music-search" id="music-search-wrap">⌕ <span>Buscar música...</span></div>
+                      <span class="music-filter">Solo privados</span>
+                    </div>
+                    <div class="music-list">
+                      <article class="music-row is-featured">
+                        <div class="music-row-main">
+                          <h3><button class="music-title-button" id="music-row-title" type="button">NEGRUME DA NOITE</button></h3>
+                          <div class="music-meta"><span>BA26-01</span><span>AUTOR DESCONOCIDO</span><span>AFECTIVIDAD</span></div>
+                        </div>
+                        <div class="music-actions">
+                          <button class="music-action is-play" id="music-row-play" type="button" aria-label="Reproducir">▶</button>
+                          <button class="music-action" id="music-row-menu" type="button" aria-label="Acciones">⋯</button>
+                        </div>
+                        <button class="music-heart" id="music-dances-row-heart" type="button"><span class="heart-symbol">♥</span> Danzas <b>2</b> <span class="chevron">⌄</span></button>
+                      </article>
+                      <article class="music-row">
+                        <div class="music-row-main">
+                          <h3>GRACIAS A LA VIDA</h3>
+                          <div class="music-meta"><span>BA26-02</span><span>VIOLETA PARRA</span><span>VITALIDAD</span></div>
+                        </div>
+                        <div class="music-actions">
+                          <button class="music-action is-play" type="button" aria-label="Reproducir">▶</button>
+                          <button class="music-action" type="button" aria-label="Acciones">⋯</button>
+                        </div>
+                        <button class="music-heart" type="button"><span class="heart-symbol">♥</span> Danzas <b>1</b> <span class="chevron">⌄</span></button>
+                      </article>
+                      <article class="music-row">
+                        <div class="music-row-main">
+                          <h3>CAMINO A LO SUBLIME</h3>
+                          <div class="music-meta"><span>BA26-03</span><span>AUTOR DESCONOCIDO</span><span>TRASCENDENCIA</span></div>
+                        </div>
+                        <div class="music-actions">
+                          <button class="music-action is-play" type="button" aria-label="Reproducir">▶</button>
+                          <button class="music-action" type="button" aria-label="Acciones">⋯</button>
+                        </div>
+                        <button class="music-heart" type="button"><span class="heart-symbol">♥</span> Danzas <b>2</b> <span class="chevron">⌄</span></button>
+                      </article>
+                      <article class="music-row">
+                        <div class="music-row-main">
+                          <h3>EL AMOR DEL COSMO</h3>
+                          <div class="music-meta"><span>BA26-04</span><span>AUTOR DESCONOCIDO</span><span>AFECTIVIDAD</span></div>
+                        </div>
+                        <div class="music-actions">
+                          <button class="music-action is-play" type="button" aria-label="Reproducir">▶</button>
+                          <button class="music-action" type="button" aria-label="Acciones">⋯</button>
+                        </div>
+                        <button class="music-heart" type="button"><span class="heart-symbol">♥</span> Danzas <b>1</b> <span class="chevron">⌄</span></button>
+                      </article>
+                      <article class="music-row">
+                        <div class="music-row-main">
+                          <h3>TODO ES PERFECTO</h3>
+                          <div class="music-meta"><span>BA26-05</span><span>AUTOR DESCONOCIDO</span><span>TRASCENDENCIA</span></div>
+                        </div>
+                        <div class="music-actions">
+                          <button class="music-action is-play" type="button" aria-label="Reproducir">▶</button>
+                          <button class="music-action" type="button" aria-label="Acciones">⋯</button>
+                        </div>
+                        <button class="music-heart" type="button"><span class="heart-symbol">♥</span> Danzas <b>1</b> <span class="chevron">⌄</span></button>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="music-search">
+                  <div class="music-screen">
+                    <div class="music-heading-row">
+                      <div>
+                        <span class="music-eyebrow">Repertorio</span>
+                        <h2 class="demo-heading music-title">Músicas</h2>
+                        <p class="music-count">Resultado de búsqueda</p>
+                      </div>
+                      <button class="demo-button" type="button">+ Agregar música</button>
+                    </div>
+                    <div class="music-toolbar">
+                      <div class="music-search is-active">⌕ <span class="demo-value" id="music-search" data-typed></span><span class="demo-caret"></span></div>
+                      <span class="music-filter is-active">Solo privados</span>
+                    </div>
+                    <div class="music-list">
+                      <article class="music-row is-highlighted">
+                        <div class="music-row-main">
+                          <h3><button class="music-title-button" type="button">NEGRUME DA NOITE</button></h3>
+                          <div class="music-meta"><span>BA26-01</span><span>AUTOR DESCONOCIDO</span><span>AFECTIVIDAD</span></div>
+                        </div>
+                        <div class="music-actions">
+                          <button class="music-action is-play" type="button" aria-label="Reproducir">▶</button>
+                          <button class="music-action" type="button" aria-label="Acciones">⋯</button>
+                        </div>
+                        <button class="music-heart" type="button"><span class="heart-symbol">♥</span> Danzas <b>2</b> <span class="chevron">⌄</span></button>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="music-description">
+                  <div class="music-screen">
+                    <article class="music-detail">
+                      <div class="music-detail-head">
+                        <div>
+                          <span class="music-eyebrow">Descripción de la música</span>
+                          <h2 class="demo-heading">NEGRUME DA NOITE</h2>
+                          <div class="music-meta is-detail"><span>BA26-01</span><span>AUTOR DESCONOCIDO</span><span>AFECTIVIDAD</span></div>
+                        </div>
+                        <button class="music-close" type="button" aria-label="Cerrar">×</button>
+                      </div>
+                      <button class="music-heart is-open" id="music-dances-heart" type="button">
+                        <span class="heart-symbol">♥</span> Danzas <b>2</b> <span class="chevron">⌄</span>
+                      </button>
+                      <div class="music-description-box">
+                        <p>Una música para danzar el amor indiferenciado, la entrega y la presencia. Su pulso invita a un viaje cálido y profundo.</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="music-dances">
+                  <div class="music-screen">
+                    <article class="music-detail">
+                      <div class="music-detail-head">
+                        <div>
+                          <span class="music-eyebrow">Descripción de la música</span>
+                          <h2 class="demo-heading">NEGRUME DA NOITE</h2>
+                          <div class="music-meta is-detail"><span>BA26-01</span><span>AUTOR DESCONOCIDO</span><span>AFECTIVIDAD</span></div>
+                        </div>
+                        <button class="music-close" type="button" aria-label="Cerrar">×</button>
+                      </div>
+                      <button class="music-heart is-open" type="button"><span class="heart-symbol">♥</span> Danzas <b>2</b> <span class="chevron">⌃</span></button>
+                      <div class="music-description-box">
+                        <p>Una música para danzar el amor indiferenciado, la entrega y la presencia. Su pulso invita a un viaje cálido y profundo.</p>
+                      </div>
+                      <ul class="music-dance-list">
+                        <li><b>Dionisio - Arquetipo de Biodanza</b><span>IBF-CIMEB · Danza de trance</span></li>
+                        <li><b>Ronda de iniciación dulce</b><span>BIENVENIDA VIDA · Danza de encuentro</span></li>
+                      </ul>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="music-actions">
+                  <div class="music-screen">
+                    <div class="music-heading-row">
+                      <div><span class="music-eyebrow">Repertorio</span><h2 class="demo-heading music-title">Músicas</h2><p class="music-count">Acciones de la música</p></div>
+                    </div>
+                    <article class="music-row is-menu-open">
+                      <div class="music-row-main">
+                        <h3><button class="music-title-button" type="button">NEGRUME DA NOITE</button></h3>
+                        <div class="music-meta"><span>BA26-01</span><span>AUTOR DESCONOCIDO</span><span>AFECTIVIDAD</span></div>
+                      </div>
+                      <div class="music-actions">
+                        <button class="music-action is-play" type="button" aria-label="Reproducir">▶</button>
+                        <button class="music-action is-active" id="music-actions-menu" type="button" aria-label="Acciones">⋯</button>
+                      </div>
+                      <button class="music-heart" type="button"><span class="heart-symbol">♥</span> Danzas <b>2</b> <span class="chevron">⌄</span></button>
+                      <div class="music-menu" role="menu">
+                        <span>Descargar</span>
+                        <span>Editar</span>
+                        <span>Hacer privada</span>
+                        <span class="is-danger">Eliminar</span>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="music-editor">
+                  <div class="music-screen">
+                    <div class="music-editor-head">
+                      <div class="music-editor-mark">♪</div>
+                      <div><span class="music-eyebrow">Repertorio · editor</span><h2 class="demo-heading">Agregar música</h2></div>
+                      <button class="music-close" type="button" aria-label="Cerrar">×</button>
+                    </div>
+                    <div class="music-editor-body">
+                      <section class="music-editor-card">
+                        <div class="music-editor-card-head"><span class="music-eyebrow">Identidad</span><b>Título, código y autor</b></div>
+                        <div class="music-editor-grid">
+                          <label class="music-field is-full"><span>Título</span><span class="demo-input" id="music-editor-title">NEGRUME DA NOITE</span></label>
+                          <label class="music-field"><span>Código</span><span class="demo-input">BA26-01</span></label>
+                          <label class="music-field"><span>Autor</span><span class="demo-input">AUTOR DESCONOCIDO</span></label>
+                          <label class="music-field is-full"><span>Línea de vivencia</span><span class="demo-input">Afectividad <i>⌄</i></span></label>
+                        </div>
+                      </section>
+                      <section class="music-editor-card" id="music-editor-audio">
+                        <div class="music-editor-card-head"><span class="music-eyebrow">Audio</span><b>Archivos y enlaces</b></div>
+                        <div class="music-editor-grid">
+                          <label class="music-field"><span>MP3</span><span class="demo-input">https://…/negrume.mp3</span></label>
+                          <label class="music-field"><span>OGG</span><span class="demo-input">https://…/negrume.ogg</span></label>
+                        </div>
+                        <div class="music-upload"><span class="music-github">◉ Subir archivo a Github</span></div>
+                      </section>
+                      <section class="music-editor-card" id="music-editor-description">
+                        <div class="music-editor-card-head"><span class="music-eyebrow">Descripción</span><b>Reseña de la música</b></div>
+                        <div class="music-note"><span class="music-note-tools">B I U</span> Una música para danzar el amor indiferenciado…</div>
+                      </section>
+                    </div>
+                    <div class="music-editor-footer">
+                      <button class="demo-button is-secondary" type="button">Cancelar</button>
+                      <button class="demo-button" id="music-save" type="button">Guardar música</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-caption" data-caption></div>
+                <div class="demo-cursor" data-cursor aria-hidden="true"></div>
+                <div class="demo-progress"><span data-progress></span></div>
+
+                <div class="demo-audio-gate" data-audio-gate>
+                  <span class="demo-gate-icon">▶</span>
+                  <strong>Ayuda con audio</strong>
+                  <p>Escucha la explicación mientras ves la animación.</p>
+                  <button class="demo-button" data-play-audio type="button" disabled>Reproducir con audio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button class="demo-replay" data-replay type="button" hidden>↻ Repetir animación</button>
+        <p class="demo-footnote">Voz generada provisional · Velocidad 0.9× · Subtítulos incluidos.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="registration-audio.js"></script>
+</body>
+</html>
