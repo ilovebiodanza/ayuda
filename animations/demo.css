@@ -23,9 +23,9 @@
   --demo-danger-soft: var(--light);
   --demo-warning: var(--warning);
   --demo-warning-soft: var(--light);
-  --demo-shadow: rgba(0, 0, 0, 0.1);
-  --demo-shadow-strong: rgba(0, 0, 0, 0.18);
-  --demo-focus-ring: rgba(0, 0, 0, 0.12);
+  --demo-shadow: var(--secondary);
+  --demo-shadow-strong: var(--dark);
+  --demo-focus-ring: var(--primary);
   --demo-radius: 16px;
 }
 

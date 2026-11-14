@@ -6,14 +6,15 @@
   'use strict';
 
   const themes = new Set([
-    'cerulean', 'cosmo', 'cyborg', 'darkly', 'flatly', 'journal', 'litera',
+    'cerulean', 'ciborg', 'cosmo', 'cyborg', 'darkly', 'flatly', 'journal', 'litera',
     'lumen', 'lux', 'materia', 'minty', 'morph', 'pulse', 'quartz',
     'sandstone', 'simplex', 'sketchy', 'slate', 'solar', 'spacelab',
     'superhero', 'united', 'yeti',
   ]);
   const params = new URLSearchParams(window.location.search);
   const requested = String(params.get('theme') || '').toLowerCase();
-  const theme = themes.has(requested) ? requested : 'cerulean';
+  const aliases = { ciborg: 'cyborg' };
+  const theme = themes.has(requested) ? aliases[requested] || requested : 'cerulean';
   const base = String(
     window.HELP_THEME_BASE ||
       'https://cdn.jsdelivr.net/npm/bootswatch@4.6.2/dist',
