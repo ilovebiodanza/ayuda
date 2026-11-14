@@ -1,0 +1,59 @@
+{
+  "id": "music",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo usar Música",
+  "status": "script-approved",
+  "format": "audio-driven-html",
+  "voice": {
+    "type": "generated",
+    "provider": "pending",
+    "fallback": "human or ElevenLabs",
+    "tone": "cálida, clara y cercana",
+    "language": "es",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [0.75, 0.9, 1, 1.25],
+    "autoplay": false,
+    "captions": true
+  },
+  "audio": {
+    "directory": "audio/music/",
+    "format": "mp3",
+    "status": "pending"
+  },
+  "visual": {
+    "screenSequence": ["music-list", "music-description", "music-editor"],
+    "sampleData": {
+      "title": "NEGRUME DA NOITE",
+      "code": "BA26-01",
+      "author": "AUTOR DESCONOCIDO",
+      "line": "AFECTIVIDAD"
+    }
+  },
+  "segments": [
+    {"id":"01-intro","audio":"01-intro.mp3","estimatedSeconds":8,"scene":"music-list","caption":"Música organiza el repertorio de tus clases.","narration":"Este es el módulo Música. Aquí organizas el repertorio musical que acompaña tus clases y tus danzas."},
+    {"id":"02-lista","audio":"02-lista.mp3","estimatedSeconds":10,"scene":"music-list","caption":"Título, código, autor, línea y privacidad.","narration":"Cada ficha muestra el título, el código, el autor, la línea de experiencia y si la música es privada."},
+    {"id":"03-buscar","audio":"03-buscar.mp3","estimatedSeconds":10,"scene":"music-search","caption":"Busca por título, código, autor o línea; filtra las privadas.","narration":"Usa el buscador para encontrar por título, código, autor o línea. También puedes mostrar solamente tus músicas privadas."},
+    {"id":"04-reproducir","audio":"04-reproducir.mp3","estimatedSeconds":7,"scene":"music-list","caption":"Reproduce la música desde la ficha.","narration":"Pulsa el botón de reproducción para escuchar la música antes de usarla en una clase."},
+    {"id":"05-descripcion","audio":"05-descripcion.mp3","estimatedSeconds":9,"scene":"music-description","caption":"El título abre la descripción y las danzas asociadas.","narration":"Pulsa el título para abrir la descripción. Allí ves la reseña de la música y puedes desplegar las danzas asociadas."},
+    {"id":"06-danzas","audio":"06-danzas.mp3","estimatedSeconds":9,"scene":"music-description","caption":"El corazón muestra las danzas asociadas.","narration":"El corazón de Danzas despliega las danzas que usan esta música. La información se carga solamente cuando la necesitas."},
+    {"id":"07-acciones","audio":"07-acciones.mp3","estimatedSeconds":9,"scene":"music-list","caption":"Descargar, editar, privacidad y eliminar.","narration":"En el menú de tres puntos puedes descargar la música, editarla, cambiar su visibilidad o eliminarla."},
+    {"id":"08-agregar","audio":"08-agregar.mp3","estimatedSeconds":6,"scene":"music-list","caption":"Agrega una música con el botón más.","narration":"Para registrar una música nueva, pulsa Agregar música. Se abre el editor editorial."},
+    {"id":"09-identidad","audio":"09-identidad.mp3","estimatedSeconds":12,"scene":"music-editor","caption":"Título, código, autor y línea de experiencia.","narration":"Escribe el título, el código y el autor. El código se guarda en mayúsculas. Después selecciona la línea de experiencia."},
+    {"id":"10-audio","audio":"10-audio.mp3","estimatedSeconds":10,"scene":"music-editor","caption":"Enlaces de audio o carga a GitHub.","narration":"Agrega los enlaces MP3 u OGG. Si tienes permiso, también puedes subir el archivo a GitHub desde esta misma ficha."},
+    {"id":"11-resena","audio":"11-resena.mp3","estimatedSeconds":9,"scene":"music-editor","caption":"La reseña se edita en la sección Descripción.","narration":"En la sección Descripción escribe la reseña de la música. Esa reseña es la que se muestra al abrir su ficha."},
+    {"id":"12-guardar","audio":"12-guardar.mp3","estimatedSeconds":7,"scene":"music-editor","caption":"Guarda la música o cancela sin cambios.","narration":"Cuando termines, pulsa Guardar música. Para cancelar sin guardar, usa Cancelar."},
+    {"id":"13-cierre","audio":"13-cierre.mp3","estimatedSeconds":8,"scene":"music-list","caption":"Música lista para tus clases.","narration":"Música te permite mantener el repertorio ordenado, escucharlo y relacionarlo con tus danzas y clases."}
+  ],
+  "completionCaption": "Música lista para tus clases.",
+  "estimatedDurationSeconds": 114,
+  "decisions": [
+    "La ficha sigue el formato estándar de tarjetas.",
+    "El editor de alta y edición reutiliza el formato editorial de Danzas.",
+    "El corazón de Danzas está en la ficha y en el modal de descripción.",
+    "El código se normaliza a mayúsculas y admite hasta 12 caracteres."
+  ]
+}
