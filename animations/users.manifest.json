@@ -1,0 +1,207 @@
+{
+  "id": "users",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo usar Usuarios",
+  "status": "audio-generated-provisional",
+  "format": "audio-driven-html",
+  "voice": {
+    "type": "generated",
+    "provider": "Google Translate TTS (provisional)",
+    "fallback": "human or ElevenLabs",
+    "tone": "cálida, clara y cercana",
+    "language": "es",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [
+      0.75,
+      0.9,
+      1,
+      1.25
+    ],
+    "autoplay": false,
+    "captions": true
+  },
+  "audio": {
+    "directory": "audio/users/",
+    "format": "mp3",
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitrate": "64k",
+    "status": "generated-provisional"
+  },
+  "visual": {
+    "screenSequence": [
+      "users-list",
+      "user-detail",
+      "user-create",
+      "user-temp",
+      "user-message",
+      "user-bulk",
+      "user-actions"
+    ],
+    "sampleData": {
+      "name": "Ana Admin",
+      "email": "ana@ejemplo.com",
+      "role": "Admin"
+    }
+  },
+  "segments": [
+    {
+      "id": "01-intro",
+      "audio": "01-intro.mp3",
+      "caption": "Usuarios reúne cuentas, suscripciones y comunicación.",
+      "narration": "Este es el módulo Usuarios. Desde aquí administras las cuentas, las suscripciones y la comunicación con cada persona de Yo Biodanza.",
+      "scene": "users-list",
+      "onStart": [
+        "focus:.users-title"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.752
+    },
+    {
+      "id": "02-lista",
+      "audio": "02-lista.mp3",
+      "caption": "Nombre y rol; contacto, conexión, suscripción y vencimiento.",
+      "narration": "La lista muestra primero el nombre y el rol. En la segunda línea ves el teléfono, el correo, la conexión, el estado de la suscripción y la fecha de vencimiento.",
+      "scene": "users-list",
+      "onStart": [
+        "focus:.users-row"
+      ],
+      "onEnd": [],
+      "durationSeconds": 12.864
+    },
+    {
+      "id": "03-filtros",
+      "audio": "03-filtros.mp3",
+      "caption": "Resumen y filtros para encontrar cada cuenta.",
+      "narration": "Arriba tienes el resumen y los filtros por conexión, suscripción, estado y rol. Puedes buscar por nombre o correo y cambiar cuántos usuarios ves por página.",
+      "scene": "users-list",
+      "onStart": [
+        "focus:.users-summary"
+      ],
+      "onEnd": [],
+      "durationSeconds": 13.08
+    },
+    {
+      "id": "04-detalle",
+      "audio": "04-detalle.mp3",
+      "caption": "Sesiones, pagos y actividad en el detalle.",
+      "narration": "Al abrir el detalle ves la cuenta, las sesiones activas con IP y dispositivo, el historial de pagos y la actividad administrativa.",
+      "scene": "users-list",
+      "onStart": [
+        "click:#open-detail"
+      ],
+      "onEnd": [
+        "show:user-detail"
+      ],
+      "durationSeconds": 10.392
+    },
+    {
+      "id": "05-estadisticas",
+      "audio": "05-estadisticas.mp3",
+      "caption": "Contactos, grupos, clases, actividades y músicas.",
+      "narration": "El detalle también reúne contactos, grupos, clases, actividades y músicas propias. Las clases y actividades muestran cuántas se registraron en el último mes.",
+      "scene": "user-detail",
+      "onStart": [
+        "focus:.detail-stats"
+      ],
+      "onEnd": [],
+      "durationSeconds": 14.088
+    },
+    {
+      "id": "06-crear",
+      "audio": "06-crear.mp3",
+      "caption": "Agregar usuario: datos, rol y vencimiento.",
+      "narration": "Para crear una cuenta pulsa Agregar usuario. Elige nombre, correo, código IBFed, rol y vencimiento.",
+      "scene": "users-list",
+      "onStart": [
+        "click:#add-user"
+      ],
+      "onEnd": [
+        "show:user-create"
+      ],
+      "durationSeconds": 9.552
+    },
+    {
+      "id": "07-temporal",
+      "audio": "07-temporal.mp3",
+      "caption": "La clave temporal se muestra una sola vez.",
+      "narration": "El sistema genera una clave temporal. Se muestra una sola vez y la persona debe cambiarla al entrar por primera vez.",
+      "scene": "user-create",
+      "onStart": [
+        "click:#create-submit"
+      ],
+      "onEnd": [
+        "show:user-temp"
+      ],
+      "durationSeconds": 9.312
+    },
+    {
+      "id": "08-mensaje",
+      "audio": "08-mensaje.mp3",
+      "caption": "Mensaje editable con el resumen de la cuenta.",
+      "narration": "En Mensaje preparas un texto con el resumen de la cuenta y la situación actual. Puedes editarlo, copiarlo, abrirlo en WhatsApp o enviarlo por correo.",
+      "scene": "user-temp",
+      "onStart": [
+        "click:#open-message"
+      ],
+      "onEnd": [
+        "show:user-message"
+      ],
+      "durationSeconds": 11.881
+    },
+    {
+      "id": "09-general",
+      "audio": "09-general.mp3",
+      "caption": "Mensaje general y copia de correos o teléfonos.",
+      "narration": "Mensaje general permite escribir a los activos, a los que están por vencer, a los vencidos recientemente o a todos. Copiar correos y Copiar teléfonos respetan el filtro actual.",
+      "scene": "users-list",
+      "onStart": [
+        "click:#open-bulk"
+      ],
+      "onEnd": [
+        "show:user-bulk"
+      ],
+      "durationSeconds": 13.92
+    },
+    {
+      "id": "10-acciones",
+      "audio": "10-acciones.mp3",
+      "caption": "Archivar conserva el historial y se puede restaurar.",
+      "narration": "En el menú de cada usuario puedes archivar, restaurar, cerrar sesiones o registrar un pago. El archivo es lógico: conserva el historial y se puede revertir.",
+      "scene": "users-list",
+      "onStart": [
+        "click:#open-actions"
+      ],
+      "onEnd": [
+        "show:user-actions"
+      ],
+      "durationSeconds": 13.56
+    },
+    {
+      "id": "11-cierre",
+      "audio": "11-cierre.mp3",
+      "caption": "Administración, suscripción y comunicación en un solo lugar.",
+      "narration": "Usuarios reúne administración, suscripción y comunicación en un solo lugar. Recuerda revisar el estado antes de contactar a cada persona.",
+      "scene": "users-list",
+      "onStart": [
+        "focus:.users-title"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.704
+    }
+  ],
+  "completionCaption": "Usuarios: administración, suscripción y comunicación en un solo lugar.",
+  "totalDurationSeconds": 130.105,
+  "decisions": [
+    "La lista muestra nombre y rol en la primera línea; contacto, conexión, suscripción y vencimiento en la segunda.",
+    "La clave temporal se muestra una sola vez.",
+    "Los mensajes son editables antes de copiarlos.",
+    "La voz generada es provisional.",
+    "Velocidad inicial: 0.9×."
+  ],
+  "totalAtDefaultRateSeconds": 144.561
+}

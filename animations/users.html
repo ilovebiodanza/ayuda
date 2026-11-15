@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda visual · Usuarios</title>
+  <script src="help-theme.js"></script>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="users-help.css">
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="https://ilovebiodanza.top/">Yo<span class="heart">❤</span>Biodanza</a>
+      <span class="demo-topbar-note">Ayuda audiovisual · Usuarios</span>
+      <a class="demo-back" href="index.html">← Todas las animaciones</a>
+    </header>
+
+    <main class="demo-grid">
+      <aside class="demo-intro">
+        <span class="demo-kicker">Animación 13</span>
+        <h1>Cómo usar Usuarios</h1>
+        <p>Administra cuentas, suscripciones y comunicación desde un solo lugar.</p>
+        <ol class="demo-steps">
+          <li><span class="demo-step-number">1</span><span>Encuentra cada usuario y revisa su estado real.</span></li>
+          <li><span class="demo-step-number">2</span><span>Consulta sesiones, pagos y actividad.</span></li>
+          <li><span class="demo-step-number">3</span><span>Crea cuentas, comparte claves temporales y prepara mensajes.</span></li>
+        </ol>
+        <a class="demo-back" href="index.html">Volver a la galería</a>
+      </aside>
+
+      <div class="demo-stage-wrap">
+        <section class="demo-stage" data-audio-demo data-manifest="users.manifest.json" data-rate="0.9" aria-label="Animación de Usuarios con audio">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+              <span class="demo-url">ilovebiodanza.top / usuarios</span>
+            </div>
+            <div class="demo-app">
+              <div class="demo-app-nav">
+                <span class="demo-app-brand">Yo<span class="heart">❤</span>Biodanza</span>
+                <span class="demo-app-nav-right">Usuarios <span class="demo-avatar">A</span></span>
+              </div>
+              <div class="demo-content">
+
+                <div class="demo-screen is-active" data-screen="users-list">
+                  <div class="users-screen">
+                    <div class="users-heading-row">
+                      <div>
+                        <span class="users-eyebrow">Directorio</span>
+                        <h2 class="demo-heading users-title">Usuarios</h2>
+                        <p class="users-count">4 usuarios · vista compacta</p>
+                      </div>
+                      <button class="demo-button" id="add-user" type="button">+ Agregar usuario</button>
+                    </div>
+                    <div class="users-summary" id="summary">
+                      <span><b>4</b> Total</span><span class="is-online"><b>1</b> En línea</span><span class="is-warning"><b>2</b> Por vencer</span><span class="is-danger"><b>1</b> Expirado</span><span><b>0</b> Archivado</span>
+                    </div>
+                    <div class="users-bulk-row">
+                      <span class="users-bulk-button" id="open-bulk">Mensaje general</span>
+                      <span class="users-bulk-button">Copiar correos</span>
+                      <span class="users-bulk-button">Copiar teléfonos</span>
+                    </div>
+                    <div class="users-toolbar">
+                      <div class="users-search">⌕ <span>Buscar usuarios...</span></div>
+                      <span class="users-filter">Conexión</span><span class="users-filter">Suscripción</span><span class="users-filter">Estado</span><span class="users-filter">Rol</span>
+                    </div>
+                    <div class="users-list">
+                      <article class="users-row is-online">
+                        <div class="users-row-heading"><h3>Ana Admin <span class="users-role">Admin</span></h3><div class="users-row-actions"><span class="users-edit">Editar</span><span class="users-more" id="open-actions">⋯</span></div></div>
+                        <div class="users-row-meta"><span>+58 412 000 1111</span><span>ana@ejemplo.com</span><span class="users-connection is-online"><i></i> En línea · 1</span><span class="users-sub is-success">Activa</span><span>13 feb 2027</span></div>
+                      </article>
+                      <article class="users-row is-warning" id="open-detail">
+                        <div class="users-row-heading"><h3>Carlos Profesor <span class="users-role">Teacher</span></h3><div class="users-row-actions"><span class="users-edit">Editar</span><span class="users-more">⋯</span></div></div>
+                        <div class="users-row-meta"><span>+58 412 000 2222</span><span>carlos@ejemplo.com</span><span class="users-connection"><i></i> Sin conexión</span><span class="users-sub is-warning">Por vencer · 10 d</span><span>25 nov 2026</span></div>
+                      </article>
+                      <article class="users-row is-danger">
+                        <div class="users-row-heading"><h3>María Alumna <span class="users-role">Student</span></h3><div class="users-row-actions"><span class="users-edit">Editar</span><span class="users-more">⋯</span></div></div>
+                        <div class="users-row-meta"><span>+58 412 000 3333</span><span>maria@ejemplo.com</span><span class="users-connection"><i></i> Sin conexión</span><span class="users-sub is-danger">Expirado</span><span>10 nov 2026</span></div>
+                      </article>
+                    </div>
+                    <div class="users-pagination"><span>‹ Anterior</span><span>Pág. 1 de 1</span><span>Siguiente ›</span></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="user-detail">
+                  <div class="users-screen">
+                    <article class="users-modal users-detail-card">
+                      <div class="users-modal-head"><div><span class="users-eyebrow">Detalle del usuario</span><h2 class="demo-heading">Ana Admin</h2></div><span class="users-close">×</span></div>
+                      <div class="users-detail-identity"><span class="users-big-avatar">AA</span><div><b>Ana Admin</b><span>ana@ejemplo.com · ADMIN</span></div><span class="users-sub is-success">Activa</span></div>
+                      <div class="users-stat-grid detail-stats"><div><small>Vence</small><b>13 feb 2027</b></div><div><small>Pagó</small><b>$20.00 USD</b></div><div><small>Contactos</small><b>28</b></div><div><small>Grupos</small><b>4</b></div><div><small>Clases</small><b>16 <em>· 5 este mes</em></b></div><div><small>Actividades</small><b>9 <em>· 3 este mes</em></b></div><div><small>Músicas</small><b>12</b></div><div><small>Conexión</small><b class="is-success">En línea · 1</b></div></div>
+                      <div class="users-detail-cols"><section><h4>Sesiones activas</h4><p><b>Chrome · Windows</b><span>190.12.4.8 · hace 2 min</span></p><p><b>iPhone · Safari</b><span>190.12.4.9 · hace 18 min</span></p></section><section><h4>Historial de pagos</h4><p><b>$20.00 · Efectivo</b><span>13 nov 2026 · hasta 13 feb 2027</span></p><p><b>$20.00 · Transferencia</b><span>13 ago 2026 · hasta 13 nov 2026</span></p></section></div>
+                      <div class="users-detail-foot"><span>Último ingreso: 15 nov 2026</span><button class="users-small-button" id="open-message-detail" type="button">Mensaje</button><button class="users-small-button" type="button">Registrar pago</button></div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="user-create">
+                  <div class="users-screen">
+                    <article class="users-modal users-form-card">
+                      <div class="users-modal-head"><div><span class="users-eyebrow">Nuevo usuario</span><h2 class="demo-heading">Agregar usuario</h2></div><span class="users-close">×</span></div>
+                      <div class="users-form-grid">
+                        <label class="users-field is-full"><span>Nombre *</span><b>Lucía Ejemplo</b></label>
+                        <label class="users-field"><span>Correo *</span><b>lucia@ejemplo.com</b></label>
+                        <label class="users-field"><span>Código IBFed *</span><b>IBF-2026</b></label>
+                        <label class="users-field"><span>Rol</span><b>Participante ⌄</b></label>
+                        <label class="users-field"><span>Vence</span><b>15 feb 2027</b></label>
+                        <label class="users-field is-full"><span>Nota</span><b>Alta desde administración</b></label>
+                      </div>
+                      <div class="users-modal-actions"><span class="users-cancel">Cancelar</span><button class="demo-button" id="create-submit" type="button">Crear usuario</button></div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="user-temp">
+                  <div class="users-screen">
+                    <article class="users-modal users-temp-card">
+                      <div class="users-temp-icon">✓</div>
+                      <span class="users-eyebrow">Usuario creado</span>
+                      <h2 class="demo-heading">Clave temporal</h2>
+                      <p class="users-temp-note">Compártela por un canal seguro. Se muestra una sola vez y debe cambiarse al entrar.</p>
+                      <div class="users-password-box">Tmp1!a8f3c2d9e1b4</div>
+                      <div class="users-modal-actions"><span class="users-cancel" id="open-message">Mensaje</span><button class="demo-button" type="button">Copiar clave</button></div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="user-message">
+                  <div class="users-screen">
+                    <article class="users-modal users-message-card">
+                      <div class="users-modal-head"><div><span class="users-eyebrow">Mensaje</span><h2 class="demo-heading">Mensaje para el usuario</h2></div><span class="users-close">×</span></div>
+                      <p class="users-context">Ana Admin · ana@ejemplo.com · Suscripción activa</p>
+                      <div class="users-message-body">Hola Ana:<br><br>Resumen de tu cuenta:<br>· Último ingreso: 15 nov 2026<br>· Contactos: 28 · Clases: 16 (5 este mes)<br>· Músicas propias: 12 · Conexión: en línea<br><br>Tu suscripción está activa hasta el 13 feb 2027. Gracias por acompañarnos.<br><br>Equipo Yo❤Biodanza</div>
+                      <div class="users-modal-actions"><span class="users-copy">Copiar mensaje</span><span class="users-whatsapp">WhatsApp</span><span class="users-email">Correo</span></div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="user-bulk">
+                  <div class="users-screen">
+                    <article class="users-modal users-message-card">
+                      <div class="users-modal-head"><div><span class="users-eyebrow">Comunicación</span><h2 class="demo-heading">Mensaje general</h2></div><span class="users-close">×</span></div>
+                      <div class="users-select">Destinatarios: <b>Todos los activos ⌄</b></div>
+                      <p class="users-context">4 usuarios · 4 correos · 3 teléfonos</p>
+                      <div class="users-message-body is-short">Hola:<br><br>Te escribimos desde Yo❤Biodanza para compartirte información sobre tu cuenta. Si tienes alguna duda, responde a este mensaje.<br><br>Equipo Yo❤Biodanza</div>
+                      <div class="users-modal-actions"><span class="users-copy">Copiar mensaje</span><span class="users-email">Copiar correos</span><span class="users-whatsapp">Copiar teléfonos</span></div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="user-actions">
+                  <div class="users-screen">
+                    <div class="users-heading-row"><div><span class="users-eyebrow">Directorio</span><h2 class="demo-heading">Usuarios</h2><p class="users-count">Acciones de la cuenta</p></div></div>
+                    <div class="users-list is-actions">
+                      <article class="users-row is-menu">
+                        <div class="users-row-heading"><h3>Carlos Profesor <span class="users-role">Teacher</span></h3><div class="users-row-actions"><span class="users-edit">Editar</span><span class="users-more is-active">⋯</span></div></div>
+                        <div class="users-row-meta"><span>carlos@ejemplo.com</span><span class="users-sub is-warning">Por vencer · 10 d</span><span>25 nov 2026</span></div>
+                        <div class="users-menu"><span>Ver detalle</span><span>Mensaje</span><span>Registrar pago</span><span>Cerrar sesiones</span><span class="is-danger">Archivar</span></div>
+                      </article>
+                    </div>
+                    <p class="users-footnote">Archivar conserva el historial y permite restaurar.</p>
+                  </div>
+                </div>
+
+                <div class="demo-caption" data-caption></div>
+                <div class="demo-cursor" data-cursor aria-hidden="true"></div>
+                <div class="demo-progress"><span data-progress></span></div>
+
+                <div class="demo-audio-gate" data-audio-gate>
+                  <span class="demo-gate-icon">▶</span>
+                  <strong>Ayuda con audio</strong>
+                  <p>Escucha la explicación mientras ves la animación.</p>
+                  <button class="demo-button" data-play-audio type="button" disabled>Reproducir con audio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button class="demo-replay" data-replay type="button" hidden>↻ Repetir animación</button>
+        <p class="demo-footnote">Voz generada provisional · Velocidad 0.9× · Subtítulos incluidos.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="registration-audio.js"></script>
+</body>
+</html>
