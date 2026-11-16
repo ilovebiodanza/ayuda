@@ -1,0 +1,195 @@
+{
+  "id": "ibfeds",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo usar IBFed",
+  "status": "audio-generated-provisional",
+  "format": "audio-driven-html",
+  "voice": {
+    "type": "generated",
+    "provider": "Google Translate TTS (provisional)",
+    "fallback": "human or ElevenLabs",
+    "tone": "cálida, clara y cercana",
+    "language": "es",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [
+      0.75,
+      0.9,
+      1,
+      1.25
+    ],
+    "autoplay": false,
+    "captions": true
+  },
+  "audio": {
+    "directory": "audio/ibfeds/",
+    "format": "mp3",
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitrate": "64k",
+    "status": "generated-provisional"
+  },
+  "visual": {
+    "screenSequence": [
+      "ibfed-list",
+      "ibfed-detail",
+      "ibfed-add",
+      "ibfed-batch",
+      "ibfed-missing",
+      "ibfed-sync"
+    ],
+    "sampleData": {
+      "name": "Adriana Cecilia Antúnez",
+      "role": "Didact",
+      "code": "SYM 1928",
+      "country": "Chile",
+      "year": "2014"
+    }
+  },
+  "segments": [
+    {
+      "id": "01-intro",
+      "audio": "01-intro.mp3",
+      "caption": "IBFed reúne el catálogo de facilitadores y didactas.",
+      "narration": "Este es el módulo IBFed. Aquí administras el catálogo de facilitadores y didactas, su estado en la fuente y sus datos de contacto.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "focus:.ibfed-title"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.896
+    },
+    {
+      "id": "02-lista",
+      "audio": "02-lista.mp3",
+      "caption": "Ordenado por año, de mayor a menor.",
+      "narration": "La lista se ordena por año de mayor a menor. Cada fila muestra nombre, rol, código, país, año y estado en la fuente.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "focus:.ibfed-row"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.776
+    },
+    {
+      "id": "03-filtros",
+      "audio": "03-filtros.mp3",
+      "caption": "Resumen, búsqueda y filtros por fuente y rol.",
+      "narration": "Arriba ves el resumen y puedes filtrar por estado en la fuente o por rol. La búsqueda incluye nombre, código, email, teléfono, país, año y rol.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "focus:.ibfed-summary"
+      ],
+      "onEnd": [],
+      "durationSeconds": 13.704
+    },
+    {
+      "id": "04-detalle",
+      "audio": "04-detalle.mp3",
+      "caption": "El detalle reúne datos, estado y auditoría.",
+      "narration": "Abre el detalle para revisar datos de contacto, estado en la fuente, última sincronización y actividad administrativa.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "click:#open-detail"
+      ],
+      "onEnd": [
+        "show:ibfed-detail"
+      ],
+      "durationSeconds": 9.648
+    },
+    {
+      "id": "05-agregar",
+      "audio": "05-agregar.mp3",
+      "caption": "Agregar un registro manual.",
+      "narration": "Para crear un registro manual pulsa Agregar IBFed. Completa nombre, código, rol, país, año y datos de contacto.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "click:#open-add"
+      ],
+      "onEnd": [
+        "show:ibfed-add"
+      ],
+      "durationSeconds": 11.016
+    },
+    {
+      "id": "06-carga",
+      "audio": "06-carga.mp3",
+      "caption": "Carga masiva: valida antes de escribir.",
+      "narration": "La carga masiva valida las filas y usa bloques. Descarta totales y filas sin código o nombre, y muestra el detalle si alguna fila falla.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "click:#open-batch"
+      ],
+      "onEnd": [
+        "show:ibfed-batch"
+      ],
+      "durationSeconds": 11.304
+    },
+    {
+      "id": "07-faltantes",
+      "audio": "07-faltantes.mp3",
+      "caption": "Los faltantes se revisan; no se borran solos.",
+      "narration": "Si un registro desaparece de la fuente, se marca como faltante y se muestra en rojo. No se borra automáticamente. Revísalo antes de eliminarlo.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "click:#open-missing"
+      ],
+      "onEnd": [
+        "show:ibfed-missing"
+      ],
+      "durationSeconds": 11.616
+    },
+    {
+      "id": "08-respaldo",
+      "audio": "08-respaldo.mp3",
+      "caption": "Cada sincronización crea una copia.",
+      "narration": "Antes de sincronizar se guarda una copia completa del catálogo. También se conserva el JSON anterior del scraper.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "click:#open-sync"
+      ],
+      "onEnd": [
+        "show:ibfed-sync"
+      ],
+      "durationSeconds": 8.52
+    },
+    {
+      "id": "09-identidad",
+      "audio": "09-identidad.mp3",
+      "caption": "El código puede repetirse; la identidad es código y nombre.",
+      "narration": "El código IBFed puede repetirse, por ejemplo FRTA. La identidad real es el código junto con el nombre normalizado. Los roles son Student, Teacher y Didact.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "focus:.ibfed-row"
+      ],
+      "onEnd": [],
+      "durationSeconds": 14.568
+    },
+    {
+      "id": "10-cierre",
+      "audio": "10-cierre.mp3",
+      "caption": "IBFed: catálogo, fuente y respaldo bajo control.",
+      "narration": "IBFed queda ordenado por año, con filtros, auditoría, revisión de faltantes y respaldos antes de cada sincronización.",
+      "scene": "ibfed-list",
+      "onStart": [
+        "focus:.ibfed-title"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.632
+    }
+  ],
+  "completionCaption": "IBFed: catálogo, fuente y respaldo bajo control.",
+  "totalDurationSeconds": 112.68,
+  "decisions": [
+    "La lista se ordena por año descendente.",
+    "El código puede repetirse; la identidad es código + nombre normalizado.",
+    "Los faltantes se revisan y no se borran automáticamente.",
+    "Cada sincronización crea un respaldo.",
+    "La voz generada es provisional.",
+    "Velocidad inicial: 0.9×."
+  ],
+  "totalAtDefaultRateSeconds": 125.2
+}

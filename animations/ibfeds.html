@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda visual · IBFed</title>
+  <script src="help-theme.js"></script>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="ibfeds-help.css">
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="https://ilovebiodanza.top/">Yo<span class="heart">❤</span>Biodanza</a>
+      <span class="demo-topbar-note">Ayuda audiovisual · IBFed</span>
+      <a class="demo-back" href="index.html">← Todas las animaciones</a>
+    </header>
+
+    <main class="demo-grid">
+      <aside class="demo-intro">
+        <span class="demo-kicker">Animación 14</span>
+        <h1>Cómo usar IBFed</h1>
+        <p>Catálogo de facilitadores, didactas y su estado en la fuente.</p>
+        <ol class="demo-steps">
+          <li><span class="demo-step-number">1</span><span>Encuentra y ordena por año.</span></li>
+          <li><span class="demo-step-number">2</span><span>Revisa contacto, fuente y auditoría.</span></li>
+          <li><span class="demo-step-number">3</span><span>Carga, revisa faltantes y respalda.</span></li>
+        </ol>
+        <a class="demo-back" href="index.html">Volver a la galería</a>
+      </aside>
+
+      <div class="demo-stage-wrap">
+        <section class="demo-stage" data-audio-demo data-manifest="ibfeds.manifest.json" data-rate="0.9" aria-label="Animación de IBFed con audio">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+              <span class="demo-url">ilovebiodanza.top / ibfeds</span>
+            </div>
+            <div class="demo-app">
+              <div class="demo-app-nav">
+                <span class="demo-app-brand">Yo<span class="heart">❤</span>Biodanza</span>
+                <span class="demo-app-nav-right">IBFed <span class="demo-avatar">A</span></span>
+              </div>
+              <div class="demo-content">
+
+                <div class="demo-screen is-active" data-screen="ibfed-list">
+                  <div class="ibfed-screen">
+                    <div class="ibfed-heading-row">
+                      <div><span class="ibfed-eyebrow">Administración</span><h2 class="demo-heading ibfed-title">IBFeds</h2><p class="ibfed-count">8.311 registros · año descendente</p></div>
+                      <div class="ibfed-heading-actions"><span class="ibfed-small-button" id="open-batch">Carga masiva</span><button class="demo-button" id="open-add" type="button">+ Agregar IBFed</button></div>
+                    </div>
+                    <div class="ibfed-summary" id="ibfed-summary">
+                      <span><b>8.311</b> Total</span><span class="is-present"><b>8.120</b> En fuente</span><span class="is-missing" id="open-missing"><b>191</b> Faltantes</span><span><b>0</b> Manuales</span><span class="is-sync" id="open-sync">Última sincronización: 1 nov 2026</span>
+                    </div>
+                    <div class="ibfed-toolbar"><span class="ibfed-search">⌕ Buscar nombre, código, país o rol...</span><span class="ibfed-filter">Fuente: Todas</span><span class="ibfed-filter">Rol: Todos</span></div>
+                    <div class="ibfed-list">
+                      <article class="ibfed-row is-manual" id="open-detail">
+                        <div class="ibfed-row-head"><h3>Manual 2026 <span class="ibfed-role">Teacher</span></h3><span class="ibfed-more">⋯</span></div>
+                        <div class="ibfed-row-meta"><span>MAN 0001</span><span>España</span><span class="ibfed-year">2026</span><span class="ibfed-source is-manual">Manual</span></div>
+                      </article>
+                      <article class="ibfed-row is-present">
+                        <div class="ibfed-row-head"><h3>Carlos Profesor <span class="ibfed-role">Teacher</span></h3><span class="ibfed-more">⋯</span></div>
+                        <div class="ibfed-row-meta"><span>BA26-01</span><span>Argentina</span><span class="ibfed-year">2020</span><span class="ibfed-source is-present">En fuente</span></div>
+                      </article>
+                      <article class="ibfed-row is-present">
+                        <div class="ibfed-row-head"><h3>Adriana Cecilia Antúnez <span class="ibfed-role">Didact</span></h3><span class="ibfed-more">⋯</span></div>
+                        <div class="ibfed-row-meta"><span>SYM 1928</span><span>Chile</span><span class="ibfed-year">2014</span><span class="ibfed-source is-present">En fuente</span></div>
+                      </article>
+                      <article class="ibfed-row is-missing">
+                        <div class="ibfed-row-head"><h3>Guy Barrington <span class="ibfed-role">Teacher</span></h3><span class="ibfed-more">⋯</span></div>
+                        <div class="ibfed-row-meta"><span>—</span><span>Sin país</span><span class="ibfed-year">—</span><span class="ibfed-source is-missing">Falta en fuente</span></div>
+                      </article>
+                    </div>
+                    <p class="ibfed-footnote">El año vacío se muestra después de los años conocidos.</p>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="ibfed-detail">
+                  <div class="ibfed-screen">
+                    <article class="ibfed-modal">
+                      <div class="ibfed-modal-head"><div><span class="ibfed-eyebrow">IBFed · detalle</span><h2 class="demo-heading">Adriana Cecilia Antúnez</h2><p>Didact · SYM 1928</p></div><span class="ibfed-close">×</span></div>
+                      <div class="ibfed-detail-grid">
+                        <div><small>País</small><b>Chile</b></div><div><small>Año</small><b>2014</b></div><div><small>Rol</small><b>Didact</b></div>
+                        <div><small>Email</small><b>adriana@ejemplo.com</b></div><div><small>Teléfono</small><b>+56 9 1234 5678</b></div><div><small>Fuente</small><b class="is-present">En fuente</b></div>
+                      </div>
+                      <div class="ibfed-detail-line"><b>Última sincronización</b><span>1 nov 2026 · 03:00</span></div>
+                      <h4 class="ibfed-subtitle">Actividad reciente</h4>
+                      <ul class="ibfed-history"><li><b>ibfed.updated</b><span>15 oct 2026 · Admin</span></li><li><b>ibfed.synced</b><span>1 oct 2026 · 03:00</span></li></ul>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="ibfed-add">
+                  <div class="ibfed-screen">
+                    <article class="ibfed-modal">
+                      <div class="ibfed-modal-head"><div><span class="ibfed-eyebrow">Nuevo registro</span><h2 class="demo-heading">Agregar IBFed</h2></div><span class="ibfed-close">×</span></div>
+                      <div class="ibfed-form-grid">
+                        <div><small>Nombre</small><b>Lucía Ejemplo</b></div><div><small>Código</small><b>ESP 9999</b></div><div><small>Rol</small><b>Teacher ⌄</b></div><div><small>País</small><b>España</b></div><div><small>Año</small><b>2026</b></div><div><small>Email</small><b>lucia@ejemplo.com</b></div>
+                      </div>
+                      <p class="ibfed-note">Los registros creados aquí quedan como <b>Manual</b> hasta una nueva sincronización.</p>
+                      <div class="ibfed-actions"><span class="ibfed-cancel">Cancelar</span><button class="demo-button" type="button">Guardar IBFed</button></div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="ibfed-batch">
+                  <div class="ibfed-screen">
+                    <article class="ibfed-modal">
+                      <div class="ibfed-modal-head"><div><span class="ibfed-eyebrow">Carga masiva</span><h2 class="demo-heading">Actualizar desde la fuente</h2></div><span class="ibfed-close">×</span></div>
+                      <div class="ibfed-source-box">&lt;table&gt;… nombre, código, país, año …&lt;/table&gt;</div>
+                      <div class="ibfed-progress"><span></span></div><p class="ibfed-status is-success">Filas válidas: 8.234 · Totales y filas vacías descartadas.</p>
+                      <div class="ibfed-actions"><span class="ibfed-cancel">Cerrar</span><button class="demo-button" type="button">Actualizar</button></div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="ibfed-missing">
+                  <div class="ibfed-screen">
+                    <div class="ibfed-heading-row"><div><span class="ibfed-eyebrow">Revisión</span><h2 class="demo-heading">Faltantes en la fuente</h2><p class="ibfed-count">191 registros para revisar</p></div></div>
+                    <div class="ibfed-warning">Estos registros ya no aparecen en la fuente. No se eliminan automáticamente.</div>
+                    <div class="ibfed-list">
+                      <article class="ibfed-row is-missing"><div class="ibfed-row-head"><h3>Guy Barrington <span class="ibfed-role">Teacher</span></h3><span class="ibfed-more">⋯</span></div><div class="ibfed-row-meta"><span>Sin código</span><span>Sin país</span><span class="ibfed-source is-missing">Falta en fuente</span></div></article>
+                      <article class="ibfed-row is-missing"><div class="ibfed-row-head"><h3>Registro antiguo <span class="ibfed-role">Teacher</span></h3><span class="ibfed-more">⋯</span></div><div class="ibfed-row-meta"><span>ANT 001</span><span>Colombia</span><span class="ibfed-source is-missing">Falta en fuente</span></div></article>
+                    </div>
+                    <p class="ibfed-footnote">Antes de borrar se pide una confirmación específica.</p>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="ibfed-sync">
+                  <div class="ibfed-screen">
+                    <article class="ibfed-modal">
+                      <div class="ibfed-modal-head"><div><span class="ibfed-eyebrow">Sincronización</span><h2 class="demo-heading">Fuente y respaldos</h2></div><span class="ibfed-close">×</span></div>
+                      <div class="ibfed-sync-grid">
+                        <div><small>Última sincronización</small><b>1 nov 2026 · 03:00</b></div><div><small>Registros leídos</small><b>8.234</b></div><div><small>Insertados</small><b>12</b></div><div><small>Actualizados</small><b>8.210</b></div><div><small>Faltantes</small><b class="is-missing">191</b></div><div><small>Respaldo</small><b>ibfed-sync-2026-11-01.json</b></div>
+                      </div>
+                      <p class="ibfed-note">La sincronización nunca borra registros. Si la fuente falla o viene vacía, se detiene.</p>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-caption" data-caption></div>
+                <div class="demo-cursor" data-cursor aria-hidden="true"></div>
+                <div class="demo-progress"><span data-progress></span></div>
+
+                <div class="demo-audio-gate" data-audio-gate>
+                  <span class="demo-gate-icon">▶</span>
+                  <strong>Ayuda con audio</strong>
+                  <p>Escucha la explicación mientras ves la animación.</p>
+                  <button class="demo-button" data-play-audio type="button" disabled>Reproducir con audio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button class="demo-replay" data-replay type="button" hidden>↻ Repetir animación</button>
+        <p class="demo-footnote">Voz generada provisional · Velocidad 0.9× · Subtítulos incluidos.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="registration-audio.js"></script>
+</body>
+</html>
