@@ -1,9 +1,9 @@
 {
   "id": "payments",
-  "version": 1,
+  "version": 2,
   "language": "es",
   "title": "Cómo usar Pagos",
-  "status": "audio-generated-provisional",
+  "status": "audio-generated-updated",
   "format": "audio-driven-html",
   "voice": {
     "type": "generated",
@@ -37,6 +37,8 @@
       "payments-list",
       "payments-filters",
       "payments-detail",
+      "payments-manual",
+      "payments-rates",
       "payments-refund",
       "payments-webhook",
       "payments-security",
@@ -47,7 +49,8 @@
       "payments": 5,
       "payer": "Yordana Durán",
       "amount": "$20.00 USD",
-      "capture": "2BS076492C006490L"
+      "capture": "2BS076492C006490L",
+      "rate": "$20.00 USD / 365 días"
     }
   },
   "completionCaption": "Ayuda de Pagos completada. Puedes repetir la animación o volver a la galería.",
@@ -79,7 +82,7 @@
     {
       "id": "03-resumen",
       "audio": "03-resumen.mp3",
-      "caption": "El resumen muestra el total neto, los pagos del mes y los reembolsos.",
+      "caption": "El resumen muestra el total neto, el mes y los reembolsos.",
       "narration": "Arriba, el resumen muestra el total neto recibido, la cantidad de pagos, el mes actual, los reembolsos y el último pago.",
       "scene": "payments-list",
       "onStart": [
@@ -98,7 +101,7 @@
         "focus:.pay-toolbar"
       ],
       "onEnd": [],
-      "durationSeconds": 10.536
+      "durationSeconds": 10.512
     },
     {
       "id": "05-detalle",
@@ -113,8 +116,32 @@
       "durationSeconds": 8.088
     },
     {
-      "id": "06-estados",
-      "audio": "06-estados.mp3",
+      "id": "06-manual",
+      "audio": "06-manual.mp3",
+      "caption": "Registra un pago: busca al usuario, indica monto y fecha.",
+      "narration": "También puedes registrar un pago manual. Busca al usuario por nombre, correo o código; escribe el monto y la fecha. El sistema calcula la duración y propone el vencimiento, que puedes ajustar antes de guardar.",
+      "scene": "payments-manual",
+      "onStart": [
+        "focus:.pay-manual-search"
+      ],
+      "onEnd": [],
+      "durationSeconds": 16.248
+    },
+    {
+      "id": "07-tarifas",
+      "audio": "07-tarifas.mp3",
+      "caption": "Las tarifas tienen monto, duración y fecha de vigencia.",
+      "narration": "Las tarifas las administra el administrador. Cada tarifa tiene un monto, una duración en días y una fecha de vigencia. El pago usa la tarifa vigente en su fecha.",
+      "scene": "payments-rates",
+      "onStart": [
+        "focus:.pay-rates"
+      ],
+      "onEnd": [],
+      "durationSeconds": 12.552
+    },
+    {
+      "id": "08-estados",
+      "audio": "08-estados.mp3",
       "caption": "Reembolsos y disputas cambian el estado y descuentan el monto.",
       "narration": "Si PayPal informa un reembolso o una disputa, el estado cambia y el monto reembolsado se descuenta del total.",
       "scene": "payments-refund",
@@ -125,9 +152,9 @@
       "durationSeconds": 8.616
     },
     {
-      "id": "07-webhook",
-      "audio": "07-webhook.mp3",
-      "caption": "Los webhooks actualizan cada pago después de verificar la firma.",
+      "id": "09-webhook",
+      "audio": "09-webhook.mp3",
+      "caption": "Los webhooks actualizan cada pago tras verificar la firma.",
       "narration": "Los webhooks de PayPal actualizan los pagos automáticamente. El sistema verifica la firma antes de aceptar cada evento.",
       "scene": "payments-webhook",
       "onStart": [
@@ -137,8 +164,8 @@
       "durationSeconds": 9.36
     },
     {
-      "id": "08-seguridad",
-      "audio": "08-seguridad.mp3",
+      "id": "10-seguridad",
+      "audio": "10-seguridad.mp3",
       "caption": "Solo administradores ven Pagos; no se edita a mano.",
       "narration": "Solo administradores ven esta pantalla. Los pagos no se editan a mano; se concilian con la información verificada de PayPal.",
       "scene": "payments-security",
@@ -149,8 +176,8 @@
       "durationSeconds": 9.624
     },
     {
-      "id": "09-auditoria",
-      "audio": "09-auditoria.mp3",
+      "id": "11-auditoria",
+      "audio": "11-auditoria.mp3",
       "caption": "Cada evento queda registrado para evitar duplicados.",
       "narration": "Cada pago guarda su estado, sus fechas y los eventos recibidos. Así puedes revisar qué ocurrió y mantener la conciliación al día.",
       "scene": "payments-security",
@@ -161,8 +188,8 @@
       "durationSeconds": 10.128
     },
     {
-      "id": "10-cierre",
-      "audio": "10-cierre.mp3",
+      "id": "12-cierre",
+      "audio": "12-cierre.mp3",
       "caption": "Pagos claros, con montos, estados y conciliación completa.",
       "narration": "Con Pagos puedes saber cuánto dinero recibiste, quién pagó y el estado de cada pago. Mantén PayPal y los webhooks configurados para una conciliación completa.",
       "scene": "payments-close",

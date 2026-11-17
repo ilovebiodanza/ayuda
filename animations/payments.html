@@ -20,10 +20,10 @@
       <aside class="demo-intro">
         <span class="demo-kicker">Animación 15</span>
         <h1>Cómo usar Pagos</h1>
-        <p>Los pagos recibidos por PayPal, sus montos, filtros y estados de conciliación.</p>
+        <p>Los pagos recibidos por PayPal, el registro manual, las tarifas y la conciliación.</p>
         <ol class="demo-steps">
           <li><span class="demo-step-number">1</span><span>Consulta solo las capturas completadas.</span></li>
-          <li><span class="demo-step-number">2</span><span>Filtra por período, estado y moneda.</span></li>
+          <li><span class="demo-step-number">2</span><span>Filtra, registra pagos y ajusta tarifas.</span></li>
           <li><span class="demo-step-number">3</span><span>Revisa reembolsos, disputas y webhooks.</span></li>
         </ol>
         <a class="demo-back" href="index.html">Volver a la galería</a>
@@ -47,7 +47,11 @@
                   <div class="pay-screen">
                     <div class="pay-heading-row">
                       <div><span class="pay-eyebrow">Administración</span><h2 class="demo-heading pay-title">Pagos</h2><p class="pay-count">5 pagos recibidos · $81.25 USD</p></div>
-                      <span class="pay-badge">Solo capturas completadas</span>
+                      <div class="pay-actions">
+                        <span class="pay-badge">Solo capturas completadas</span>
+                        <span class="pay-button">+ Registrar pago</span>
+                        <span class="pay-button is-secondary">Tarifas</span>
+                      </div>
                     </div>
                     <div class="pay-summary" id="pay-summary">
                       <span><small>Total recibido</small><b>$81.25 USD</b></span>
@@ -113,6 +117,47 @@
                       </div>
                       <div class="pay-detail-note"><b>Conciliación:</b> este pago corresponde a una captura completada de PayPal.</div>
                     </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="payments-manual">
+                  <div class="pay-screen">
+                    <div class="pay-heading-row"><div><span class="pay-eyebrow">Pago manual</span><h2 class="demo-heading pay-title">Registrar pago</h2><p class="pay-count">Calcula la vigencia antes de guardar</p></div><span class="pay-badge">Solo administradores</span></div>
+                    <article class="pay-manual">
+                      <div class="pay-manual-search">⌕ <span>Yordana Durán · yordana@ejemplo.com</span></div>
+                      <div class="pay-manual-grid">
+                        <div><small>Usuario</small><b>Yordana Durán</b></div>
+                        <div><small>Monto</small><b>$20.00 USD</b></div>
+                        <div><small>Fecha del pago</small><b>17 nov 2026</b></div>
+                        <div><small>Método</small><b>Transferencia</b></div>
+                      </div>
+                      <div class="pay-preview">
+                        <div><small>Vencimiento anterior</small><b>25 mar 2025</b></div>
+                        <div><small>Base de cálculo</small><b>17 nov 2026</b></div>
+                        <div><small>Duración</small><b>365 días</b></div>
+                        <div><small>Tarifa aplicada</small><b>$20.00 USD · 365 días</b></div>
+                        <div class="is-wide"><small>Vencimiento propuesto</small><b>17 nov 2027</b></div>
+                      </div>
+                      <div class="pay-date-edit"><small>Puedes dejar o cambiar la fecha</small><span>17 nov 2027</span><span class="pay-date-icon">▣</span></div>
+                      <div class="pay-manual-actions"><span class="pay-button is-secondary">Cancelar</span><span class="pay-button">Guardar pago</span></div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="payments-rates">
+                  <div class="pay-screen">
+                    <div class="pay-heading-row"><div><span class="pay-eyebrow">Configuración</span><h2 class="demo-heading pay-title">Tarifas</h2><p class="pay-count">Monto, duración y fecha de vigencia</p></div><span class="pay-badge">Solo administradores</span></div>
+                    <div class="pay-rates">
+                      <div class="pay-rate-row is-head"><span>Tarifa</span><span>Monto</span><span>Duración</span><span>Vigente desde</span></div>
+                      <div class="pay-rate-row"><span>Tarifa anual</span><span>$20.00 USD</span><span>365 días</span><span>01 ene 2020</span></div>
+                      <div class="pay-rate-row"><span>Tarifa semestral</span><span>$10.00 USD</span><span>180 días</span><span>01 jun 2026</span></div>
+                    </div>
+                    <div class="pay-rate-new">
+                      <span class="pay-eyebrow">Nueva tarifa</span>
+                      <div class="pay-rate-form"><span>Nombre</span><span>$20.00</span><span>365 días</span><span>Vigente desde</span></div>
+                      <div class="pay-manual-actions"><span class="pay-button">Agregar tarifa</span></div>
+                    </div>
+                    <p class="pay-footnote">Las tarifas anteriores se conservan; cada pago usa la tarifa vigente en su fecha.</p>
                   </div>
                 </div>
 
