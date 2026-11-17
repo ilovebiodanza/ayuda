@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda visual · Pagos</title>
+  <script src="help-theme.js"></script>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="payments-help.css">
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="https://ilovebiodanza.top/">Yo<span class="heart">❤</span>Biodanza</a>
+      <span class="demo-topbar-note">Ayuda audiovisual · Pagos</span>
+      <a class="demo-back" href="index.html">← Todas las animaciones</a>
+    </header>
+
+    <main class="demo-grid">
+      <aside class="demo-intro">
+        <span class="demo-kicker">Animación 15</span>
+        <h1>Cómo usar Pagos</h1>
+        <p>Los pagos recibidos por PayPal, sus montos, filtros y estados de conciliación.</p>
+        <ol class="demo-steps">
+          <li><span class="demo-step-number">1</span><span>Consulta solo las capturas completadas.</span></li>
+          <li><span class="demo-step-number">2</span><span>Filtra por período, estado y moneda.</span></li>
+          <li><span class="demo-step-number">3</span><span>Revisa reembolsos, disputas y webhooks.</span></li>
+        </ol>
+        <a class="demo-back" href="index.html">Volver a la galería</a>
+      </aside>
+
+      <div class="demo-stage-wrap">
+        <section class="demo-stage" data-audio-demo data-manifest="payments.manifest.json" data-rate="0.9" aria-label="Animación de Pagos con audio">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+              <span class="demo-url">ilovebiodanza.top / payments</span>
+            </div>
+            <div class="demo-app">
+              <div class="demo-app-nav">
+                <span class="demo-app-brand">Yo<span class="heart">❤</span>Biodanza</span>
+                <span class="demo-app-nav-right">Pagos <span class="demo-avatar">A</span></span>
+              </div>
+              <div class="demo-content">
+
+                <div class="demo-screen is-active" data-screen="payments-list">
+                  <div class="pay-screen">
+                    <div class="pay-heading-row">
+                      <div><span class="pay-eyebrow">Administración</span><h2 class="demo-heading pay-title">Pagos</h2><p class="pay-count">5 pagos recibidos · $81.25 USD</p></div>
+                      <span class="pay-badge">Solo capturas completadas</span>
+                    </div>
+                    <div class="pay-summary" id="pay-summary">
+                      <span><small>Total recibido</small><b>$81.25 USD</b></span>
+                      <span><small>Pagos</small><b>5</b></span>
+                      <span><small>Este mes</small><b>$0.00 USD</b></span>
+                      <span><small>Reembolsos</small><b>$0.00 USD</b></span>
+                      <span><small>Último pago</small><b>25 mar 2025</b></span>
+                    </div>
+                    <div class="pay-toolbar">
+                      <span class="pay-search">⌕ Buscar pagador, correo o captura...</span>
+                      <span class="pay-filter">Período: Todo</span>
+                      <span class="pay-filter">Estado: Todos</span>
+                      <span class="pay-filter">Moneda: USD</span>
+                    </div>
+                    <div class="pay-list">
+                      <article class="pay-row is-focus" data-payment-row>
+                        <div class="pay-row-main"><div><div class="pay-row-kicker">Pago · COMPLETED</div><h3>$20.00 <small>USD</small></h3></div><span class="pay-status is-ok">Completado</span></div>
+                        <div class="pay-row-meta"><span>Yordana Durán</span><span>25 mar 2025</span><span>Captura 2BS076...490L</span></div>
+                      </article>
+                      <article class="pay-row">
+                        <div class="pay-row-main"><div><div class="pay-row-kicker">Pago · COMPLETED</div><h3>$20.00 <small>USD</small></h3></div><span class="pay-status is-ok">Completado</span></div>
+                        <div class="pay-row-meta"><span>Cesar Frieri</span><span>16 jul 2024</span><span>Captura 609301...174K</span></div>
+                      </article>
+                      <article class="pay-row">
+                        <div class="pay-row-main"><div><div class="pay-row-kicker">Pago · COMPLETED</div><h3>$1.25 <small>USD</small></h3></div><span class="pay-status is-ok">Completado</span></div>
+                        <div class="pay-row-meta"><span>Francisco Suárez</span><span>7 may 2024</span><span>Captura 905156...143J</span></div>
+                      </article>
+                    </div>
+                    <p class="pay-footnote">Los intentos de compra no se muestran como pagos.</p>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="payments-filters">
+                  <div class="pay-screen">
+                    <div class="pay-heading-row"><div><span class="pay-eyebrow">Consulta</span><h2 class="demo-heading pay-title">Pagos</h2><p class="pay-count">Filtra y encuentra un pago</p></div></div>
+                    <div class="pay-toolbar is-emphasis">
+                      <span class="pay-search">⌕ Yordana</span>
+                      <span class="pay-filter is-active">Período: Este año</span>
+                      <span class="pay-filter is-active">Estado: Reembolsado</span>
+                      <span class="pay-filter">Moneda: USD</span>
+                    </div>
+                    <div class="pay-list">
+                      <article class="pay-row">
+                        <div class="pay-row-main"><div><div class="pay-row-kicker">Pago · REFUNDED</div><h3>$20.00 <small>USD</small></h3></div><span class="pay-status is-refund">Reembolsado</span></div>
+                        <div class="pay-row-meta"><span>Yordana Durán</span><span>25 mar 2025</span><span>Reembolso: $20.00</span></div>
+                      </article>
+                    </div>
+                    <p class="pay-footnote">La búsqueda cubre pagador, correo del pagador, usuario y captura.</p>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="payments-detail">
+                  <div class="pay-screen">
+                    <article class="pay-detail">
+                      <div class="pay-detail-head"><div><span class="pay-eyebrow">Pago recibido</span><h2 class="demo-heading">$20.00 USD</h2><p>Yordana Durán · 25 mar 2025</p></div><span class="pay-status is-ok">Completado</span></div>
+                      <div class="pay-detail-grid">
+                        <div><small>Pagador</small><b>Yordana Durán</b></div>
+                        <div><small>Correo</small><b>yordana@ejemplo.com</b></div>
+                        <div><small>Usuario</small><b>Yordana Durán</b></div>
+                        <div><small>Fecha de pago</small><b>25 mar 2025 · 19:48</b></div>
+                        <div><small>Moneda</small><b>USD</b></div>
+                        <div><small>ID de captura</small><b class="is-mono">2BS076492C006490L</b></div>
+                      </div>
+                      <div class="pay-detail-note"><b>Conciliación:</b> este pago corresponde a una captura completada de PayPal.</div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="payments-refund">
+                  <div class="pay-screen">
+                    <div class="pay-heading-row"><div><span class="pay-eyebrow">Reembolsos y disputas</span><h2 class="demo-heading pay-title">Estado del pago</h2><p class="pay-count">La información llega desde PayPal</p></div></div>
+                    <div class="pay-warning">Un reembolso completo descuenta el monto y puede revertir la extensión de la suscripción.</div>
+                    <div class="pay-list">
+                      <article class="pay-row is-refund">
+                        <div class="pay-row-main"><div><div class="pay-row-kicker">Pago · REFUNDED</div><h3>$20.00 <small>USD</small></h3></div><span class="pay-status is-refund">Reembolsado</span></div>
+                        <div class="pay-row-meta"><span>Yordana Durán</span><span>Reembolso: $20.00</span><span>25 mar 2025</span></div>
+                      </article>
+                      <article class="pay-row is-dispute">
+                        <div class="pay-row-main"><div><div class="pay-row-kicker">Pago · DISPUTED</div><h3>$20.00 <small>USD</small></h3></div><span class="pay-status is-dispute">En disputa</span></div>
+                        <div class="pay-row-meta"><span>Cesar Frieri</span><span>Disputa abierta</span><span>16 jul 2024</span></div>
+                      </article>
+                    </div>
+                    <p class="pay-footnote">Los eventos se guardan para evitar procesarlos dos veces.</p>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="payments-webhook">
+                  <div class="pay-screen">
+                    <div class="pay-heading-row"><div><span class="pay-eyebrow">Automatización</span><h2 class="demo-heading pay-title">Webhooks de PayPal</h2><p class="pay-count">Conciliación sin editar pagos a mano</p></div></div>
+                    <div class="pay-flow">
+                      <div class="pay-flow-step"><span>1</span><b>PayPal</b><small>Captura, reembolso o disputa</small></div>
+                      <div class="pay-flow-arrow">→</div>
+                      <div class="pay-flow-step is-key"><span>2</span><b>Firma</b><small>Se verifica el evento</small></div>
+                      <div class="pay-flow-arrow">→</div>
+                      <div class="pay-flow-step"><span>3</span><b>Pago</b><small>Estado y monto actualizados</small></div>
+                    </div>
+                    <div class="pay-events">
+                      <div><b>PAYMENT.CAPTURE.COMPLETED</b><span>Pago confirmado</span></div>
+                      <div><b>PAYMENT.CAPTURE.REFUNDED</b><span>Reembolso</span></div>
+                      <div><b>CUSTOMER.DISPUTE.*</b><span>Disputa o contracargo</span></div>
+                    </div>
+                    <p class="pay-footnote">Configura PYP_WEBHOOK_ID y la URL pública /orders/webhook.</p>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="payments-security">
+                  <div class="pay-screen">
+                    <div class="pay-heading-row"><div><span class="pay-eyebrow">Control</span><h2 class="demo-heading pay-title">Seguridad y auditoría</h2><p class="pay-count">Información financiera protegida</p></div></div>
+                    <div class="pay-security">
+                      <div class="pay-security-item"><b>Solo administradores</b><span>La lista y el resumen requieren permiso de Pagos.</span></div>
+                      <div class="pay-security-item"><b>Firma verificada</b><span>Los webhooks se aceptan solo si PayPal confirma la firma.</span></div>
+                      <div class="pay-security-item"><b>Sin edición manual</b><span>Los pagos se concilian desde la captura de PayPal.</span></div>
+                      <div class="pay-security-item"><b>Eventos auditados</b><span>Cada evento se registra para evitar duplicados.</span></div>
+                    </div>
+                    <div class="pay-audit"><span class="pay-eyebrow">Registro</span><b>PaymentEvent</b><span class="pay-audit-line">Evento verificado · Pago actualizado · Fecha conservada</span></div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="payments-close">
+                  <div class="pay-screen pay-close">
+                    <span class="pay-eyebrow">En resumen</span>
+                    <h2 class="demo-heading">Pagos claros, conciliación completa.</h2>
+                    <div class="pay-close-grid">
+                      <div><b>Consulta</b><span>Solo capturas completadas</span></div>
+                      <div><b>Filtra</b><span>Período, estado y moneda</span></div>
+                      <div><b>Concilia</b><span>Reembolsos, disputas y webhooks</span></div>
+                    </div>
+                    <p>Mantén PayPal y los webhooks configurados para que cada pago quede actualizado automáticamente.</p>
+                  </div>
+                </div>
+
+                <div class="demo-caption" data-caption></div>
+                <div class="demo-cursor" data-cursor aria-hidden="true"></div>
+                <div class="demo-progress"><span data-progress></span></div>
+
+                <div class="demo-audio-gate" data-audio-gate>
+                  <span class="demo-gate-icon">▶</span>
+                  <strong>Ayuda con audio</strong>
+                  <p>Escucha la explicación mientras ves la animación.</p>
+                  <button class="demo-button" data-play-audio type="button" disabled>Reproducir con audio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button class="demo-replay" data-replay type="button" hidden>↻ Repetir animación</button>
+        <p class="demo-footnote">Voz generada provisional · Velocidad 0.9× · Subtítulos incluidos.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="registration-audio.js"></script>
+</body>
+</html>

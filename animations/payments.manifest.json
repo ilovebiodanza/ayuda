@@ -1,0 +1,176 @@
+{
+  "id": "payments",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo usar Pagos",
+  "status": "audio-generated-provisional",
+  "format": "audio-driven-html",
+  "voice": {
+    "type": "generated",
+    "provider": "Google Translate TTS (provisional)",
+    "fallback": "human or ElevenLabs",
+    "tone": "cálida, clara y cercana",
+    "language": "es",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [
+      0.75,
+      0.9,
+      1,
+      1.25
+    ],
+    "autoplay": false,
+    "captions": true
+  },
+  "audio": {
+    "directory": "audio/payments/",
+    "format": "mp3",
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitrate": "64k",
+    "status": "generated-provisional"
+  },
+  "visual": {
+    "screenSequence": [
+      "payments-list",
+      "payments-filters",
+      "payments-detail",
+      "payments-refund",
+      "payments-webhook",
+      "payments-security",
+      "payments-close"
+    ],
+    "sampleData": {
+      "total": "$81.25 USD",
+      "payments": 5,
+      "payer": "Yordana Durán",
+      "amount": "$20.00 USD",
+      "capture": "2BS076492C006490L"
+    }
+  },
+  "completionCaption": "Ayuda de Pagos completada. Puedes repetir la animación o volver a la galería.",
+  "segments": [
+    {
+      "id": "01-intro",
+      "audio": "01-intro.mp3",
+      "caption": "Pagos reúne las capturas completadas de PayPal.",
+      "narration": "Este es el módulo Pagos. Aquí ves los pagos recibidos por PayPal, no los intentos de compra.",
+      "scene": "payments-list",
+      "onStart": [
+        "focus:.pay-summary"
+      ],
+      "onEnd": [],
+      "durationSeconds": 7.896
+    },
+    {
+      "id": "02-lista",
+      "audio": "02-lista.mp3",
+      "caption": "Cada pago muestra monto, pagador, fecha y captura.",
+      "narration": "Cada fila representa una captura completada. Ves el monto, la moneda, el pagador, la fecha y el identificador de la captura.",
+      "scene": "payments-list",
+      "onStart": [
+        "focus:.pay-row"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.536
+    },
+    {
+      "id": "03-resumen",
+      "audio": "03-resumen.mp3",
+      "caption": "El resumen muestra el total neto, los pagos del mes y los reembolsos.",
+      "narration": "Arriba, el resumen muestra el total neto recibido, la cantidad de pagos, el mes actual, los reembolsos y el último pago.",
+      "scene": "payments-list",
+      "onStart": [
+        "focus:.pay-summary"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.416
+    },
+    {
+      "id": "04-filtros",
+      "audio": "04-filtros.mp3",
+      "caption": "Filtra por período, estado y moneda, o busca un pagador.",
+      "narration": "Puedes filtrar por período, estado del pago y moneda. La búsqueda encuentra pagador, correo, usuario o identificador de captura.",
+      "scene": "payments-filters",
+      "onStart": [
+        "focus:.pay-toolbar"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.536
+    },
+    {
+      "id": "05-detalle",
+      "audio": "05-detalle.mp3",
+      "caption": "El detalle conserva usuario, correo, fecha e ID de captura.",
+      "narration": "Cada pago conserva el usuario asociado, su correo y el identificador de PayPal para conciliar la venta.",
+      "scene": "payments-detail",
+      "onStart": [
+        "focus:.pay-detail"
+      ],
+      "onEnd": [],
+      "durationSeconds": 8.088
+    },
+    {
+      "id": "06-estados",
+      "audio": "06-estados.mp3",
+      "caption": "Reembolsos y disputas cambian el estado y descuentan el monto.",
+      "narration": "Si PayPal informa un reembolso o una disputa, el estado cambia y el monto reembolsado se descuenta del total.",
+      "scene": "payments-refund",
+      "onStart": [
+        "focus:.pay-row.is-refund"
+      ],
+      "onEnd": [],
+      "durationSeconds": 8.616
+    },
+    {
+      "id": "07-webhook",
+      "audio": "07-webhook.mp3",
+      "caption": "Los webhooks actualizan cada pago después de verificar la firma.",
+      "narration": "Los webhooks de PayPal actualizan los pagos automáticamente. El sistema verifica la firma antes de aceptar cada evento.",
+      "scene": "payments-webhook",
+      "onStart": [
+        "focus:.pay-flow"
+      ],
+      "onEnd": [],
+      "durationSeconds": 9.36
+    },
+    {
+      "id": "08-seguridad",
+      "audio": "08-seguridad.mp3",
+      "caption": "Solo administradores ven Pagos; no se edita a mano.",
+      "narration": "Solo administradores ven esta pantalla. Los pagos no se editan a mano; se concilian con la información verificada de PayPal.",
+      "scene": "payments-security",
+      "onStart": [
+        "focus:.pay-security"
+      ],
+      "onEnd": [],
+      "durationSeconds": 9.624
+    },
+    {
+      "id": "09-auditoria",
+      "audio": "09-auditoria.mp3",
+      "caption": "Cada evento queda registrado para evitar duplicados.",
+      "narration": "Cada pago guarda su estado, sus fechas y los eventos recibidos. Así puedes revisar qué ocurrió y mantener la conciliación al día.",
+      "scene": "payments-security",
+      "onStart": [
+        "focus:.pay-audit"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.128
+    },
+    {
+      "id": "10-cierre",
+      "audio": "10-cierre.mp3",
+      "caption": "Pagos claros, con montos, estados y conciliación completa.",
+      "narration": "Con Pagos puedes saber cuánto dinero recibiste, quién pagó y el estado de cada pago. Mantén PayPal y los webhooks configurados para una conciliación completa.",
+      "scene": "payments-close",
+      "onStart": [
+        "focus:.pay-close"
+      ],
+      "onEnd": [],
+      "durationSeconds": 12.0
+    }
+  ]
+}
