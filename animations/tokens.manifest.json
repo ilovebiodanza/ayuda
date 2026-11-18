@@ -1,0 +1,176 @@
+{
+  "id": "tokens",
+  "version": 1,
+  "language": "es",
+  "title": "Cómo usar Tokens",
+  "status": "audio-generated-provisional",
+  "format": "audio-driven-html",
+  "voice": {
+    "type": "generated",
+    "provider": "Google Translate TTS (provisional)",
+    "fallback": "human or ElevenLabs",
+    "tone": "cálida, clara y cercana",
+    "language": "es",
+    "music": false
+  },
+  "playback": {
+    "defaultRate": 0.9,
+    "allowedRates": [
+      0.75,
+      0.9,
+      1,
+      1.25
+    ],
+    "autoplay": false,
+    "captions": true
+  },
+  "audio": {
+    "directory": "audio/tokens/",
+    "format": "mp3",
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitrate": "64k",
+    "status": "generated-provisional"
+  },
+  "visual": {
+    "screenSequence": [
+      "tokens-list",
+      "tokens-filters",
+      "tokens-row",
+      "tokens-create",
+      "tokens-permissions",
+      "tokens-detail",
+      "tokens-revoke",
+      "tokens-security"
+    ],
+    "sampleData": {
+      "description": "Integración musical",
+      "user": "Admin",
+      "scope": "own",
+      "expires": "15 dic 2026"
+    }
+  },
+  "completionCaption": "Ayuda de Tokens completada. Puedes repetir la animación o volver a la galería.",
+  "segments": [
+    {
+      "id": "01-intro",
+      "audio": "01-intro.mp3",
+      "caption": "Gestiona accesos temporales a la API.",
+      "narration": "Este es el módulo Tokens. Aquí administras los accesos de integración a la API mediante tokens.",
+      "scene": "tokens-list",
+      "onStart": [
+        "focus:.tok-summary"
+      ],
+      "onEnd": [],
+      "durationSeconds": 7.752
+    },
+    {
+      "id": "02-lista",
+      "audio": "02-lista.mp3",
+      "caption": "Resumen, tabla y paginación real.",
+      "narration": "La lista usa TableCrud. Arriba ves el resumen de tokens totales, activos, próximos a vencer, vencidos y revocados.",
+      "scene": "tokens-list",
+      "onStart": [
+        "focus:.tok-summary"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.68
+    },
+    {
+      "id": "03-filtros",
+      "audio": "03-filtros.mp3",
+      "caption": "Busca y filtra por usuario, estado o colección.",
+      "narration": "Puedes buscar por descripción o usuario y filtrar por usuario, estado y colección. La paginación ahora es real.",
+      "scene": "tokens-filters",
+      "onStart": [
+        "focus:.tok-toolbar"
+      ],
+      "onEnd": [],
+      "durationSeconds": 9.096
+    },
+    {
+      "id": "04-fila",
+      "audio": "04-fila.mp3",
+      "caption": "Cada fila resume el acceso y su vencimiento.",
+      "narration": "Cada fila muestra la descripción, el usuario, el alcance de datos, las colecciones permitidas, la fecha de creación y el vencimiento.",
+      "scene": "tokens-row",
+      "onStart": [
+        "focus:.tok-detail"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.896
+    },
+    {
+      "id": "05-crear",
+      "audio": "05-crear.mp3",
+      "caption": "Crea un token con descripción, usuario y expiración.",
+      "narration": "Para crear un token pulsa Nuevo token. Indica una descripción, selecciona el usuario y define la expiración.",
+      "scene": "tokens-create",
+      "onStart": [
+        "focus:.tok-form"
+      ],
+      "onEnd": [],
+      "durationSeconds": 8.88
+    },
+    {
+      "id": "06-alcance",
+      "audio": "06-alcance.mp3",
+      "caption": "Define alcance, colecciones y acciones.",
+      "narration": "Elige el alcance de datos: propio, público, propio más público, o todos. Y marca las colecciones y acciones permitidas.",
+      "scene": "tokens-permissions",
+      "onStart": [
+        "focus:.tok-permissions"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.968
+    },
+    {
+      "id": "07-detalle",
+      "audio": "07-detalle.mp3",
+      "caption": "El detalle muestra token y servicios disponibles.",
+      "narration": "Ver detalle muestra el token completo y los servicios de API disponibles según sus permisos. Desde ahí puedes copiar la configuración.",
+      "scene": "tokens-detail",
+      "onStart": [
+        "focus:.tok-detail-columns"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.464
+    },
+    {
+      "id": "08-revocar",
+      "audio": "08-revocar.mp3",
+      "caption": "Revoca el acceso cuando ya no sea necesario.",
+      "narration": "Para revocar un token usa el botón rojo y confirma. La lista y el resumen se actualizan inmediatamente.",
+      "scene": "tokens-revoke",
+      "onStart": [
+        "focus:.tok-warning"
+      ],
+      "onEnd": [],
+      "durationSeconds": 8.208
+    },
+    {
+      "id": "09-seguridad",
+      "audio": "09-seguridad.mp3",
+      "caption": "El token completo no se expone en la lista.",
+      "narration": "Los tokens son información sensible. El listado ya no expone el token completo; se solicita solo al copiar o ver el detalle.",
+      "scene": "tokens-security",
+      "onStart": [
+        "focus:.tok-security-grid"
+      ],
+      "onEnd": [],
+      "durationSeconds": 10.056
+    },
+    {
+      "id": "10-cierre",
+      "audio": "10-cierre.mp3",
+      "caption": "Accesos temporales y controlados.",
+      "narration": "Con Tokens puedes crear accesos temporales, controlar permisos y revocarlos cuando ya no se necesiten.",
+      "scene": "tokens-security",
+      "onStart": [
+        "focus:.tok-close-screen"
+      ],
+      "onEnd": [],
+      "durationSeconds": 8.16
+    }
+  ]
+}

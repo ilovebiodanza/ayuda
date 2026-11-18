@@ -1,0 +1,80 @@
+/* Animación del módulo Tokens */
+.tok-screen { display:flex; flex:1; flex-direction:column; min-height:0; overflow:hidden; padding:14px 16px 8px; }
+.tok-heading-row { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:8px; }
+.tok-eyebrow { display:block; margin-bottom:2px; color:var(--demo-primary-strong); font-size:.5rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+.tok-title { margin:0; font-size:1.22rem !important; line-height:1.05; }
+.tok-count { margin:2px 0 0; color:var(--demo-muted); font-size:.58rem; }
+.tok-button { padding:6px 9px; border-radius:999px; background:var(--demo-primary); color:var(--demo-on-primary); font-size:.5rem; font-weight:800; white-space:nowrap; }
+.tok-summary { display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:5px; margin-bottom:7px; }
+.tok-summary > span { padding:5px 7px; border:1px solid var(--demo-line); border-radius:8px; background:var(--demo-surface); }
+.tok-summary small { display:block; color:var(--demo-muted); font-size:.43rem; letter-spacing:.03em; text-transform:uppercase; }
+.tok-summary b { display:block; color:var(--demo-dark); font-size:.68rem; }
+.tok-summary b.is-ok { color:var(--demo-success); }
+.tok-summary b.is-warn { color:var(--demo-warning); }
+.tok-summary b.is-danger { color:var(--demo-danger); }
+.tok-toolbar { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:7px; }
+.tok-search { flex:1 1 150px; min-height:25px; padding:0 9px; border:1px solid var(--demo-line); border-radius:999px; color:var(--demo-muted); font-size:.53rem; line-height:25px; }
+.tok-filter { padding:5px 7px; border:1px solid var(--demo-line); border-radius:999px; color:var(--demo-muted); font-size:.49rem; white-space:nowrap; }
+.tok-filter.is-active { border-color:var(--demo-primary); background:var(--demo-primary-soft); color:var(--demo-primary-strong); font-weight:700; }
+.tok-toolbar.is-emphasis .tok-search { border-color:var(--demo-primary); box-shadow:0 0 0 2px var(--demo-primary-soft); }
+.tok-filters-note { margin-bottom:7px; padding:6px 8px; border-left:3px solid var(--demo-primary); background:var(--demo-surface-soft); color:var(--demo-muted); font-size:.52rem; }
+.tok-list { display:flex; flex-direction:column; gap:5px; min-height:0; overflow:hidden; }
+.tok-row { padding:7px 9px; border:1px solid var(--demo-line); border-left:3px solid var(--demo-success); border-radius:10px; background:var(--demo-surface); box-shadow:0 3px 10px var(--demo-shadow); }
+.tok-row.is-revoked { border-left-color:var(--demo-muted); opacity:.78; }
+.tok-row-head { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.tok-kicker { color:var(--demo-muted); font-size:.44rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+.tok-row h3 { margin:1px 0 0; color:var(--demo-primary); font-size:.72rem; line-height:1.2; }
+.tok-status { padding:3px 6px; border-radius:999px; font-size:.46rem; font-weight:800; white-space:nowrap; }
+.tok-status.is-ok { background:var(--demo-success-soft); color:var(--demo-success); }
+.tok-status.is-muted { background:var(--demo-surface-soft); color:var(--demo-muted); }
+.tok-meta { display:flex; flex-wrap:wrap; gap:4px 9px; margin-top:4px; color:var(--demo-muted); font-size:.5rem; }
+.tok-footnote { margin:auto 0 0; padding-top:5px; color:var(--demo-muted); font-size:.49rem; text-align:center; }
+.tok-detail { margin:auto 0; padding:12px 14px; border:1px solid var(--demo-line); border-radius:12px; background:var(--demo-surface); box-shadow:0 10px 30px var(--demo-shadow); }
+.tok-detail-head { display:flex; justify-content:space-between; gap:10px; margin-bottom:8px; }
+.tok-detail-head h3 { margin:1px 0 0; color:var(--demo-primary); font-size:.9rem; }
+.tok-detail-head p { margin:2px 0 0; color:var(--demo-muted); font-size:.53rem; }
+.tok-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:5px; }
+.tok-grid > div, .tok-form > div { min-width:0; padding:5px 6px; border:1px solid var(--demo-line); border-radius:7px; background:var(--demo-surface-soft); }
+.tok-grid small, .tok-form small, .tok-token-box small { display:block; color:var(--demo-muted); font-size:.45rem; }
+.tok-grid b, .tok-form b { display:block; overflow:hidden; color:var(--demo-dark); font-size:.54rem; text-overflow:ellipsis; white-space:nowrap; }
+.tok-actions { display:flex; justify-content:flex-end; gap:5px; margin-top:8px; }
+.tok-action { padding:5px 8px; border-radius:999px; background:var(--demo-primary); color:var(--demo-on-primary); font-size:.49rem; font-weight:800; white-space:nowrap; }
+.tok-action.is-secondary { border:1px solid var(--demo-line); background:var(--demo-surface); color:var(--demo-primary-strong); }
+.tok-action.is-danger { background:var(--demo-danger); }
+.tok-modal { margin:auto 0; padding:12px 14px; border:1px solid var(--demo-line); border-radius:12px; background:var(--demo-surface); box-shadow:0 10px 30px var(--demo-shadow); }
+.tok-modal.is-wide { width:100%; }
+.tok-modal-head { display:flex; justify-content:space-between; gap:10px; margin-bottom:8px; }
+.tok-modal-head .demo-heading { margin:0; font-size:1rem !important; }
+.tok-modal-head p { margin:2px 0 0; color:var(--demo-muted); font-size:.52rem; }
+.tok-close { color:var(--demo-muted); font-size:1rem; }
+.tok-form { display:grid; grid-template-columns:1fr 1fr; gap:5px; }
+.tok-note { margin:8px 0 0; padding:6px 8px; border-left:3px solid var(--demo-primary); background:var(--demo-surface-soft); color:var(--demo-muted); font-size:.52rem; line-height:1.4; }
+.tok-permissions { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:5px; }
+.tok-permission { padding:8px 9px; border:1px solid var(--demo-line); border-radius:9px; background:var(--demo-surface); }
+.tok-permission.is-selected { border-color:var(--demo-success); }
+.tok-permission-head { display:flex; justify-content:space-between; margin-bottom:6px; }
+.tok-permission-head b { color:var(--demo-dark); font-size:.65rem; }
+.tok-check { color:var(--demo-success); font-weight:800; }
+.tok-methods { display:flex; flex-wrap:wrap; gap:3px; }
+.tok-methods span { padding:2px 5px; border:1px solid var(--demo-line); border-radius:4px; color:var(--demo-muted); font-size:.45rem; }
+.tok-methods span.is-on { border-color:var(--demo-success); background:var(--demo-success-soft); color:var(--demo-success); font-weight:800; }
+.tok-detail-columns { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+.tok-services h4 { margin:0 0 5px; font-size:.6rem; }
+.tok-service { display:flex; gap:6px; padding:4px 0; border-bottom:1px solid var(--demo-line); font-size:.5rem; }
+.tok-service b { color:var(--demo-success); }
+.tok-service span { color:var(--demo-muted); }
+.tok-token-box { padding:7px; border:1px solid var(--demo-line); border-radius:7px; background:var(--demo-surface-soft); }
+.tok-token-value { padding:5px 6px; margin:4px 0; border-radius:4px; background:var(--demo-surface); color:var(--demo-dark); font-family:ui-monospace, monospace; font-size:.45rem; overflow:hidden; }
+.tok-token-value span { float:right; color:var(--demo-muted); }
+.tok-warning { margin:0 0 8px; padding:7px 9px; border-left:3px solid var(--demo-danger); background:var(--demo-danger-soft); color:var(--demo-danger); font-size:.54rem; }
+.tok-close-screen { justify-content:center; text-align:center; }
+.tok-close-screen .demo-heading { margin:4px 0 10px; font-size:1.15rem !important; }
+.tok-security-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:9px; text-align:left; }
+.tok-security-grid > div { padding:8px; border:1px solid var(--demo-line); border-radius:8px; background:var(--demo-surface); }
+.tok-security-grid b { display:block; color:var(--demo-primary-strong); font-size:.57rem; }
+.tok-security-grid span { display:block; margin-top:2px; color:var(--demo-muted); font-size:.48rem; }
+.tok-close-screen p { margin:0 auto; max-width:430px; color:var(--demo-muted); font-size:.53rem; line-height:1.45; }
+@media (max-width:720px) {
+  .tok-summary { grid-template-columns:1fr 1fr; }
+  .tok-grid, .tok-form, .tok-detail-columns, .tok-permissions, .tok-security-grid { grid-template-columns:1fr 1fr; }
+}

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda visual · Tokens</title>
+  <script src="help-theme.js"></script>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="tokens-help.css">
+</head>
+<body>
+  <div class="demo-page">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="https://ilovebiodanza.top/">Yo<span class="heart">❤</span>Biodanza</a>
+      <span class="demo-topbar-note">Ayuda audiovisual · Tokens</span>
+      <a class="demo-back" href="index.html">← Todas las animaciones</a>
+    </header>
+
+    <main class="demo-grid">
+      <aside class="demo-intro">
+        <span class="demo-kicker">Animación 16</span>
+        <h1>Cómo usar Tokens</h1>
+        <p>Accesos temporales a la API, permisos por colección y control de vencimientos.</p>
+        <ol class="demo-steps">
+          <li><span class="demo-step-number">1</span><span>Consulta el resumen y filtra tokens.</span></li>
+          <li><span class="demo-step-number">2</span><span>Crea un token con alcance y permisos.</span></li>
+          <li><span class="demo-step-number">3</span><span>Copia, revisa o revoca el acceso.</span></li>
+        </ol>
+        <a class="demo-back" href="index.html">Volver a la galería</a>
+      </aside>
+
+      <div class="demo-stage-wrap">
+        <section class="demo-stage" data-audio-demo data-manifest="tokens.manifest.json" data-rate="0.9" aria-label="Animación de Tokens con audio">
+          <div class="demo-browser">
+            <div class="demo-browser-bar">
+              <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+              <span class="demo-url">ilovebiodanza.top / tokens</span>
+            </div>
+            <div class="demo-app">
+              <div class="demo-app-nav">
+                <span class="demo-app-brand">Yo<span class="heart">❤</span>Biodanza</span>
+                <span class="demo-app-nav-right">Tokens <span class="demo-avatar">A</span></span>
+              </div>
+              <div class="demo-content">
+
+                <div class="demo-screen is-active" data-screen="tokens-list">
+                  <div class="tok-screen">
+                    <div class="tok-heading-row">
+                      <div><span class="tok-eyebrow">Administración</span><h2 class="demo-heading tok-title">Tokens</h2><p class="tok-count">3 tokens · 2 activos</p></div>
+                      <span class="tok-button">+ Crear token</span>
+                    </div>
+                    <div class="tok-summary">
+                      <span><small>Total</small><b>3</b></span>
+                      <span><small>Activos</small><b class="is-ok">2</b></span>
+                      <span><small>Vencen pronto</small><b class="is-warn">1</b></span>
+                      <span><small>Vencidos</small><b class="is-danger">0</b></span>
+                      <span><small>Revocados</small><b>1</b></span>
+                    </div>
+                    <div class="tok-toolbar"><span class="tok-search">⌕ Buscar tokens...</span><span class="tok-filter">Usuario: Todos</span><span class="tok-filter">Estado: Todos</span><span class="tok-filter">Colección: Todas</span></div>
+                    <div class="tok-list">
+                      <article class="tok-row">
+                        <div class="tok-row-head"><div><span class="tok-kicker">Activo</span><h3>Aplicación móvil</h3></div><span class="tok-status is-ok">Activo</span></div>
+                        <div class="tok-meta"><span>Admin</span><span>own+public</span><span>titles: GET</span><span>Vence 30 nov 2026</span></div>
+                      </article>
+                      <article class="tok-row">
+                        <div class="tok-row-head"><div><span class="tok-kicker">Activo</span><h3>Integración musical</h3></div><span class="tok-status is-ok">Activo</span></div>
+                        <div class="tok-meta"><span>Admin</span><span>own</span><span>musics: GET</span><span>Vence 15 dic 2026</span></div>
+                      </article>
+                      <article class="tok-row is-revoked">
+                        <div class="tok-row-head"><div><span class="tok-kicker">Revocado</span><h3>Prueba antigua</h3></div><span class="tok-status is-muted">Revocado</span></div>
+                        <div class="tok-meta"><span>Usuario</span><span>public</span><span>titles: GET</span><span>Revocado</span></div>
+                      </article>
+                    </div>
+                    <p class="tok-footnote">La lista usa TableCrud y la paginación es real.</p>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="tokens-filters">
+                  <div class="tok-screen">
+                    <div class="tok-heading-row"><div><span class="tok-eyebrow">Consulta</span><h2 class="demo-heading tok-title">Encontrar un token</h2><p class="tok-count">Búsqueda y filtros del servidor</p></div></div>
+                    <div class="tok-toolbar is-emphasis"><span class="tok-search">⌕ administrador</span><span class="tok-filter is-active">Usuario: Admin</span><span class="tok-filter is-active">Estado: Activo</span><span class="tok-filter">Colección: titles</span></div>
+                    <div class="tok-filters-note">La búsqueda cubre descripción, nombre y correo del usuario.</div>
+                    <div class="tok-list"><article class="tok-row"><div class="tok-row-head"><div><span class="tok-kicker">Activo</span><h3>Panel de administración</h3></div><span class="tok-status is-ok">Activo</span></div><div class="tok-meta"><span>admin@ejemplo.com</span><span>titles: GET, POST</span><span>Vence 12 ene 2027</span></div></article></div>
+                    <p class="tok-footnote">Puedes combinar usuario, estado y colección.</p>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="tokens-row">
+                  <div class="tok-screen">
+                    <div class="tok-heading-row"><div><span class="tok-eyebrow">Fila</span><h2 class="demo-heading tok-title">Datos del token</h2><p class="tok-count">Descripción, usuario, alcance, permisos y vencimiento</p></div></div>
+                    <article class="tok-detail">
+                      <div class="tok-detail-head"><div><span class="tok-kicker">Activo</span><h3>Integración musical</h3><p>Admin · admin@ejemplo.com</p></div><span class="tok-status is-ok">Activo</span></div>
+                      <div class="tok-grid">
+                        <div><small>Alcance</small><b>own</b></div><div><small>Colecciones</small><b>musics: GET</b></div><div><small>Creado</small><b>12 nov 2026</b></div><div><small>Vence</small><b>15 dic 2026</b></div>
+                      </div>
+                      <div class="tok-actions"><span class="tok-action">Copiar</span><span class="tok-action is-secondary">Ver detalle</span><span class="tok-action is-danger">Revocar</span></div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="tokens-create">
+                  <div class="tok-screen">
+                    <div class="tok-modal">
+                      <div class="tok-modal-head"><div><span class="tok-eyebrow">Nuevo acceso</span><h2 class="demo-heading">Crear token</h2></div><span class="tok-close">×</span></div>
+                      <div class="tok-form">
+                        <div><small>Descripción</small><b>Aplicación móvil</b></div>
+                        <div><small>Usuario</small><b>Administrador</b></div>
+                        <div><small>Expiración</small><b>1 año</b></div>
+                        <div><small>Alcance</small><b>own+public</b></div>
+                      </div>
+                      <p class="tok-note">El token se muestra una sola vez al generarlo.</p>
+                      <div class="tok-actions"><span class="tok-action is-secondary">Cancelar</span><span class="tok-action">Generar token</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="tokens-permissions">
+                  <div class="tok-screen">
+                    <div class="tok-heading-row"><div><span class="tok-eyebrow">Permisos</span><h2 class="demo-heading tok-title">Colecciones y acciones</h2><p class="tok-count">Solo lo necesario para la integración</p></div></div>
+                    <div class="tok-permissions">
+                      <article class="tok-permission is-selected"><div class="tok-permission-head"><b>Titles</b><span class="tok-check">✓</span></div><div class="tok-methods"><span class="is-on">GET</span><span>POST</span><span>PUT</span><span>PATCH</span><span>DELETE</span></div></article>
+                      <article class="tok-permission is-selected"><div class="tok-permission-head"><b>Musics</b><span class="tok-check">✓</span></div><div class="tok-methods"><span class="is-on">GET</span><span>POST</span><span>PUT</span><span>PATCH</span><span>DELETE</span></div></article>
+                    </div>
+                    <p class="tok-footnote">El alcance limita qué registros puede leer o modificar el token.</p>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="tokens-detail">
+                  <div class="tok-screen">
+                    <div class="tok-modal is-wide">
+                      <div class="tok-modal-head"><div><span class="tok-eyebrow">Detalle</span><h2 class="demo-heading">Aplicación móvil</h2><p>Admin · own+public · Activo</p></div><span class="tok-close">×</span></div>
+                      <div class="tok-detail-columns">
+                        <div class="tok-services"><h4>Servicios disponibles</h4><div class="tok-service"><b>GET</b><span>/titles/api/search</span></div><div class="tok-service"><b>GET</b><span>/musics/api/search</span></div></div>
+                        <div class="tok-token-box"><small>Token</small><div class="tok-token-value">eyJhbGciOi...<span>••••••••</span></div><span class="tok-action">Copiar</span></div>
+                      </div>
+                      <p class="tok-note">El token completo se solicita solo al ver el detalle o copiar.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="tokens-revoke">
+                  <div class="tok-screen">
+                    <div class="tok-modal">
+                      <div class="tok-modal-head"><div><span class="tok-eyebrow">Seguridad</span><h2 class="demo-heading">Revocar token</h2></div><span class="tok-close">×</span></div>
+                      <p class="tok-warning">¿Seguro que quieres revocar este token? Las aplicaciones que lo usen dejarán de funcionar inmediatamente.</p>
+                      <div class="tok-actions"><span class="tok-action is-secondary">Cancelar</span><span class="tok-action is-danger">Revocar token</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="demo-screen" data-screen="tokens-security">
+                  <div class="tok-screen tok-close-screen">
+                    <span class="tok-eyebrow">Buenas prácticas</span>
+                    <h2 class="demo-heading">Accesos temporales y controlados.</h2>
+                    <div class="tok-security-grid">
+                      <div><b>Mínimo permiso</b><span>Asigna solo colecciones y acciones necesarias.</span></div>
+                      <div><b>Vencimiento</b><span>Usa el tiempo más corto que necesite la integración.</span></div>
+                      <div><b>Revocación</b><span>Retira el acceso en cuanto deje de ser necesario.</span></div>
+                      <div><b>Token privado</b><span>No compartas el token ni lo publiques.</span></div>
+                    </div>
+                    <p>La lista, el resumen y los filtros se actualizan con cada cambio.</p>
+                  </div>
+                </div>
+
+                <div class="demo-caption" data-caption></div>
+                <div class="demo-cursor" data-cursor aria-hidden="true"></div>
+                <div class="demo-progress"><span data-progress></span></div>
+
+                <div class="demo-audio-gate" data-audio-gate>
+                  <span class="demo-gate-icon">▶</span>
+                  <strong>Ayuda con audio</strong>
+                  <p>Escucha la explicación mientras ves la animación.</p>
+                  <button class="demo-button" data-play-audio type="button" disabled>Reproducir con audio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button class="demo-replay" data-replay type="button" hidden>↻ Repetir animación</button>
+        <p class="demo-footnote">Voz generada provisional · Velocidad 0.9× · Subtítulos incluidos.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="registration-audio.js"></script>
+</body>
+</html>
